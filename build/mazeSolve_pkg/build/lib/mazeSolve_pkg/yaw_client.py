@@ -19,7 +19,7 @@ class YawClient(Node):
         gms = Move.Goal()
         gms.turn_angle = math.radians(target)
         gms.forward_distance = 0.0
-      
+        gms.right_distance = 0.0
         # send goal
         self.send_goal_future = self.actionC.send_goal_async(gms,feedback_callback = self.feedback)
         # check if server accepted

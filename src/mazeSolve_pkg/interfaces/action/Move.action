@@ -1,7 +1,7 @@
 ### goal
 float32 forward_distance
 float32  turn_angle
-float32 right_distance
+
 ---
 ###result
 bool success
