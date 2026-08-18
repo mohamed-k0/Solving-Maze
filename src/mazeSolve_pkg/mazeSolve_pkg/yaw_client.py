@@ -22,3 +22,10 @@ class YawClient(Node):
         self.send_future = self.actionC.send_goal_async(gms,feedback_callback = self.feedback)
         # check if server accepted
         self.send_future.add_done_callback(self.goal_callback)
+    def feedback(self , fmsg):
+        # get the feedback msg
+        f = fmsg.feedback
+        # how many degrees ledt
+        left_to_turn = math.degres(f.remaining)
+        # print it 
+        self.get_logger().info(f'left to turn = {left_to_turn}')
