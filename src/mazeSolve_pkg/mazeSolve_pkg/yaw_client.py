@@ -4,15 +4,13 @@ from rclpy.action import ActionClient
 import math
 
 from interfaces.action import Move
-# TODO :
-# create feedback function 
-# create goal_Callback
+
 
 class YawClient(Node):
     def __init__(self):
         super().__init__('yaw_client')
         #creating action client 
-        self.actionC = ActionClient(self,Move,'rotate_absolute')
+        self.actionC = ActionClient(self,Move,'rotate')
     def send(self,target):
         #waiting for server to start
         self.get_logger().info("waiting")
@@ -30,7 +28,7 @@ class YawClient(Node):
         # get the feedback msg
         f = fmsg.feedback
         # print it 
-        self.get_logger().info(f'feedback = {f.current_action,f.progress}')
+        self.get_logger().info(f'feedback = current action = {f.current_action}  progress = {f.progress}')
     def goal_callback(self ,future):
         # got result 
         goal = future.result()
@@ -40,17 +38,21 @@ class YawClient(Node):
             return
         else:
             self.get_logger().info('accepted')
+            self.result_future = goal_handle.get_result_async()
+            self.result_future.add_done_callback(self.result_callback)
             return 
     def result_callback(self ,future):
-        result  = future.result()
+        result  = future.result().result
         if result.success:
             self.get_logger().info(f"success {result.message}")
         else:
-            self.get_logger.error(result.message)
+            self.get_logger().error(result.message)
 def main():
-    rcply.init()
+    rclpy.init()
     node = YawClient()
-    node.send()
-    rcply.spin(node)
+    node.send(90)
+    rclpy.spin(node)
     node.destroy_node(node)
-    rcply.shutdown()
+    rclpy.shutdown()
+if __name__ == '__main__':
+    main()
