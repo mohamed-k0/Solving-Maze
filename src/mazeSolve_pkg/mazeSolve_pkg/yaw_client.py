@@ -47,6 +47,31 @@ class YawClient(Node):
             self.get_logger().info(f"success {result.message}")
         else:
             self.get_logger().error(result.message)
+
+
+
+class MoveClient(Node):
+    def __init__(self):
+
+        # Initiating the move_client node
+        super().__init__("move_client")
+        self.action_client = ActionClient(self, Move, "move")
+
+
+    def send_goal(self):
+
+        # Wait for the action server to be available
+        self.get_logger().info("Waiting for movement server......")
+        self.action_client.wait_for_server(timeout_sec=1.5)
+
+        # Create a goal message
+        goal_msg = Move.Goal()
+        goal_msg.turn_angle = 0.0
+        goal_msg.forward_distance = 1.0
+        
+
+
+    
 def main():
     rclpy.init()
     node = YawClient()
