@@ -2,6 +2,7 @@ import rclpy
 from rclpy.node import Node
 from rclpy.action import ActionClient
 import math
+from std_srvs.srv import SetBool
 
 from interfaces.action import Move
 
@@ -106,6 +107,31 @@ class MoveClient(Node):
             self.get_logger().error(f"Action failed: {result.message}")
 
 
+class WallService(Node):
+    def __init__(self):
+        super.__init__("wall_client")
+        self.client = self.create_client(SetBool,'/toggle_walls_1_2') #create service client
+
+    def send_req(self):
+        if not self.client.wait_for_service(
+            timeout_sec=5.0
+        ):
+            self.get_logger().error("service not available") #checks if the service is available
+            return
+        req= SetBool.Request() #sends request to service
+        req.data = True
+        future = self.client.call_async(req)
+        future.add_done_callback(
+            self.service_response
+        )
+
+    def service_responce(self,future):
+        response = future.result()
+        self.get_logger().info( f'success={response.success}') #prints the case
+        self.get_logger().info( f'message={response.message}') # prints a message of the walls
+
+
+
     
 def main():
     rclpy.init()
@@ -113,6 +139,9 @@ def main():
     yaw_node.send(90)
     move_node = MoveClient()
     move_node.send_goal()
+    wall_node = WallService()
+    wall_node.send_req()
+    rclpy.spin(wall_node)
 
     # Spin the nodes until both actions are completed
     # This was done so that the nodes can handle feedback and results from both actions concurrently
@@ -127,6 +156,7 @@ def main():
     rclpy.spin(yaw_node)
     yaw_node.destroy_node()
     move_node.destroy_node()
+    wall_node.destroy_node()
     rclpy.shutdown()
 
 
