@@ -73,23 +73,28 @@ class MoveClient(Node):
         self.send_goal_future = self.action_client.send_goal_async(goal_msg, feedback_callback=self.feedback)
         self.send_goal_future.add_done_callback(self.goal_response_callback)
 
+
     def goal_response_callback(self, future):
 
         # Check if the goal was accepted by the server
         goal_handle = future.result()
+
         if not goal_handle.accepted:
             self.get_logger().info("Goal rejected by server.")
             return
+        
         self.get_logger().info("Goal accepted by the server.")
 
         self.result_future = goal_handle.get_result_async()
         self.result_future.add_done_callback(self.result_callback)
+
 
     def feedback(self, feedback_msg):
 
         # Handle feedback from the action server
         feedback = feedback_msg.feedback
         self.get_logger().info(f"Feedback received: Current action = {feedback.current_action}, Progress = {feedback.progress}")
+
 
     def result_callback(self, future):
 
@@ -100,13 +105,31 @@ class MoveClient(Node):
         else:
             self.get_logger().error(f"Action failed: {result.message}")
 
+
     
 def main():
     rclpy.init()
-    node = YawClient()
-    node.send(90)
-    rclpy.spin(node)
-    node.destroy_node(node)
+    yaw_node = YawClient()
+    yaw_node.send(90)
+    move_node = MoveClient()
+    move_node.send_goal()
+
+    # Spin the nodes until both actions are completed
+    # This was done so that the nodes can handle feedback and results from both actions concurrently
+    # Otherwise one node would block the other from receiving feedback or results
+
+    while True:
+        rclpy.spin_once(yaw_node)
+        rclpy.spin_once(move_node)
+        if yaw_node.result_future.done() and move_node.result_future.done():
+            break
+
+    rclpy.spin(yaw_node)
+    yaw_node.destroy_node()
+    move_node.destroy_node()
     rclpy.shutdown()
+
+
+
 if __name__ == '__main__':
     main()
