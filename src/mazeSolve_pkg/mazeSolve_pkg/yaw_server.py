@@ -64,7 +64,7 @@ class MoveYawServer(Node):
         while delta > math.pi :
             delta -= 2 * math.pi
 
-        while delta < math.pi:
+        while delta < -math.pi:
             delta += 2 * math.pi
 
         return delta

@@ -48,6 +48,13 @@ class MoveYawServer(Node):
         self.get_logger().info('Yaw Server has started.')
 
 
+    def stop_bot(self):
+        stop_msg = Twist()
+        stop_msg.linear.x = 0.0
+        stop_msg.linear.y = 0.0
+        stop_msg.angular.z = 0.0        
+        self.vel_publisher.publish(stop_msg)
+
     def calculate_delta(self, target_yaw):
 
         # Calculate the difference in positions
@@ -57,7 +64,7 @@ class MoveYawServer(Node):
         while delta > math.pi :
             delta -= 2 * math.pi
 
-        while delta < math.pi:
+        while delta < -math.pi:
             delta += 2 * math.pi
 
         return delta
@@ -75,14 +82,14 @@ class MoveYawServer(Node):
             delta_yaw = self.calculate_delta(target_yaw)
 
             # Check whether the change is within an acceptable range (It won't be perfectly aligned to zero value)
-            if abs(delta_yaw) <= 0.1:
+            if abs(delta_yaw) <= 0.05:
                 break
 
             if delta_yaw > 0:
-                angular_velocity = 10.0
+                angular_velocity = 1.0
 
             elif delta_yaw < 0:
-                angular_velocity = -10.0
+                angular_velocity = -1.0
 
             # Create the command to be sent to /cmd_vel
             msg = Twist()
@@ -103,12 +110,8 @@ class MoveYawServer(Node):
             time.sleep(0.1)
 
         # Stop the robot after reaching target yaw
-        stop_msg = Twist()
-        stop_msg.linear.x = 0.0
-        stop_msg.linear.y = 0.0
-        stop_msg.angular.z = 0.0
-
-        self.vel_publisher.publish(stop_msg)
+        self.stop_bot()
+        
 
         goal.succeed()
 
@@ -161,6 +164,7 @@ def main():
 
     executor.spin()
 
+    yaw_server.stop_bot()
     yaw_server.destroy_node()
     rclpy.shutdown()
 
