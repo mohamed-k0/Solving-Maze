@@ -1,0 +1,16 @@
+## goal
+
+float32 target_yaw
+
+---
+
+## result
+
+bool success
+string message
+
+---
+
+## feedback
+
+float32 progress

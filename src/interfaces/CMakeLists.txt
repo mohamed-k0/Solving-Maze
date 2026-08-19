@@ -11,10 +11,16 @@ find_package(rosidl_default_generators REQUIRED)
 find_package(action_msgs REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
-  "action/MoveX.action"
+
+  "action/MoveX.action",
+
+  "action/MoveYaw.action"
+
   DEPENDENCIES action_msgs
 )
 
 ament_export_dependencies(rosidl_default_runtime)
 
+
 ament_package()
+
