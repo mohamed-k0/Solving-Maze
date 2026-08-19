@@ -55,6 +55,10 @@ class MoveYawServer(Node):
             # Check whether the change is within an acceptable range
             if abs(delta_yaw) < 0.1:
                 break
+
+            # Create the command to be sent to /cmd_vel
+            msg = Twist()
+            msg.linear.x = 0.0
             
             if delta_yaw > 0:
                 angular_velocity = 10.0
@@ -62,9 +66,6 @@ class MoveYawServer(Node):
             elif delta_yaw < 0:
                 angular_velocity = -10.0
 
-            # Create the command to be sent to /cmd_vel
-            msg = Twist()
-            msg.linear.x = 0.0
             msg.angular.z = angular_velocity
 
             self.vel_publisher.publish(msg)
@@ -81,6 +82,8 @@ class MoveYawServer(Node):
         stop_msg.angular.z = 0.0
 
         self.vel_publisher.publish(stop_msg)
+
+        goal.succeed()
 
 
         # Create the result action
