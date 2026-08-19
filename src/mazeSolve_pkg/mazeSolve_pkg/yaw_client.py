@@ -69,7 +69,23 @@ class MoveClient(Node):
         goal_msg.turn_angle = 0.0
         goal_msg.forward_distance = 1.0
         
+        # Send the goal to the action server
+        self.send_goal_future = self.action_client.send_goal_async(goal_msg, feedback_callback=self.feedback)
+        self.send_goal_future.add_done_callback(self.goal_response_callback)
 
+    def goal_response_callback(self, future):
+
+        # Check if the goal was accepted by the server
+        goal_handle = future.result()
+        if not goal_handle.accepted:
+            self.get_logger().info("Goal rejected by server.")
+            return
+        self.get_logger().info("Goal accepted by the server.")
+
+        self.result_future = goal_handle.get_result_async()
+        self.result_future.add_done_callback(self.result_callback)
+
+    
 
     
 def main():
