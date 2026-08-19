@@ -12,7 +12,7 @@ find_package(action_msgs REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
 
-  "action/MoveX.action",
+  "action/MoveX.action"
 
   "action/MoveYaw.action"
 
