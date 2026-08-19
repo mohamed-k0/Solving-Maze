@@ -47,7 +47,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/interfaces/action" TYPE FILE FILES "/home/a/Solving-Maze/build/interfaces/rosidl_generator_type_description/interfaces/action/MoveX.json")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/interfaces/action" TYPE FILE FILES "/home/a/Solving-Maze/build/interfaces/rosidl_generator_type_description/interfaces/action/Move.json")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -371,11 +371,11 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/interfaces/action" TYPE FILE FILES "/home/a/Solving-Maze/build/interfaces/rosidl_adapter/interfaces/action/MoveX.idl")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/interfaces/action" TYPE FILE FILES "/home/a/Solving-Maze/build/interfaces/rosidl_adapter/interfaces/action/Move.idl")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/interfaces/action" TYPE FILE FILES "/home/a/Solving-Maze/src/interfaces/action/MoveX.action")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/interfaces/action" TYPE FILE FILES "/home/a/Solving-Maze/src/interfaces/action/Move.action")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)

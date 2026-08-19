@@ -1,6 +1,6 @@
 {
   "package_name": "interfaces",
   "non_idl_tuples": [
-    "/home/a/Solving-Maze/src/interfaces:action/MoveX.action"
+    "/home/a/Solving-Maze/src/interfaces:action/Move.action"
   ]
 }

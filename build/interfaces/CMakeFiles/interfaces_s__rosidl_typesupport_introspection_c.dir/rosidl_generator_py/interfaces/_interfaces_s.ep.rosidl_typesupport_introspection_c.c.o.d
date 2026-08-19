@@ -229,10 +229,10 @@ CMakeFiles/interfaces_s__rosidl_typesupport_introspection_c.dir/rosidl_generator
  /opt/ros/jazzy/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h \
  /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/service_type_support_struct.h \
  /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/action_type_support_struct.h \
- /home/a/Solving-Maze/build/interfaces/rosidl_generator_c/interfaces/action/detail/move_x__type_support.h \
+ /home/a/Solving-Maze/build/interfaces/rosidl_generator_c/interfaces/action/detail/move__type_support.h \
  /home/a/Solving-Maze/build/interfaces/rosidl_generator_c/interfaces/msg/rosidl_generator_c__visibility_control.h \
- /home/a/Solving-Maze/build/interfaces/rosidl_generator_c/interfaces/action/detail/move_x__struct.h \
+ /home/a/Solving-Maze/build/interfaces/rosidl_generator_c/interfaces/action/detail/move__struct.h \
  /opt/ros/jazzy/include/unique_identifier_msgs/unique_identifier_msgs/msg/detail/uuid__struct.h \
  /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h \
  /opt/ros/jazzy/include/service_msgs/service_msgs/msg/detail/service_event_info__struct.h \
- /home/a/Solving-Maze/build/interfaces/rosidl_generator_c/interfaces/action/detail/move_x__functions.h
+ /home/a/Solving-Maze/build/interfaces/rosidl_generator_c/interfaces/action/detail/move__functions.h

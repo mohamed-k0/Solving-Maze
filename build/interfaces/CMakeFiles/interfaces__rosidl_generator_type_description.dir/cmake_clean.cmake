@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/interfaces__rosidl_generator_type_description"
-  "rosidl_generator_type_description/interfaces/action/MoveX.json"
+  "rosidl_generator_type_description/interfaces/action/Move.json"
 )
 
 # Per-language clean rules from dependency scanning.

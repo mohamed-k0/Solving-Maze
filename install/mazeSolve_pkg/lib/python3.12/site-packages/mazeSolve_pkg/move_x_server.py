@@ -1,7 +1,7 @@
 from rclpy.node import Node
 import rclpy, math, time
 from rclpy.action import ActionServer
-from interfaces.action import MoveX
+from interfaces.action import Move
 from nav_msgs.msg import Odometry
 from geometry_msgs.msg import Twist
 
@@ -15,11 +15,12 @@ class MoveX_Server(Node):
     def __init__(self):
         super().__init__("action_x_server")
 
+        # To Prevent Intersecting Threads
         self.cb_group = ReentrantCallbackGroup()
 
 
         
-        self.action_server = ActionServer(self, MoveX, "move_robot_x", execute_callback = self.execute_callback, callback_group = self.cb_group)
+        self.action_server = ActionServer(self, Move, "move_robot_x", execute_callback = self.execute_callback, callback_group = self.cb_group)
         
         self.odom_subscriber = self.create_subscription(Odometry, "/odom", self.odom_callback, 10, callback_group = self.cb_group)
 
@@ -37,11 +38,12 @@ class MoveX_Server(Node):
 
     def execute_callback(self, goal):
     
-        result = MoveX.Result()
-        feedback = MoveX.Feedback()
+        result = Move.Result()
+        feedback = Move.Feedback()
 
         start_time = time.time()
 
+        # Odometry Data Missing (Edge Case 1)
         while self.position is None:
             if time.time() - start_time > 5.0:
                 self.get_logger().info("No Odometry Data Recieved")
@@ -57,7 +59,7 @@ class MoveX_Server(Node):
         initial_x = self.position.x
         initial_y = self.position.y
 
-        
+        # Forward and Backward Movement
         if target > 0:
             speed = 0.2
             forward = True
@@ -87,6 +89,7 @@ class MoveX_Server(Node):
 
         while rclpy.ok():
 
+            #Timeout (Edge Case 2)
             if time.time() - motion_start_time > max_duration:
                 self.stop_robot()
                 goal.abort()
@@ -104,7 +107,7 @@ class MoveX_Server(Node):
             feedback.progress = float(dist_done / abs(target))*100
             goal.publish_feedback(feedback)
 
-            
+            # Target Reached
             if dist_done >= abs(target):
                 break
 

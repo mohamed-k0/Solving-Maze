@@ -66,16 +66,16 @@ include CMakeFiles/interfaces__rosidl_generator_type_description.dir/compiler_de
 # Include the progress variables for this target.
 include CMakeFiles/interfaces__rosidl_generator_type_description.dir/progress.make
 
-CMakeFiles/interfaces__rosidl_generator_type_description: rosidl_generator_type_description/interfaces/action/MoveX.json
+CMakeFiles/interfaces__rosidl_generator_type_description: rosidl_generator_type_description/interfaces/action/Move.json
 
-rosidl_generator_type_description/interfaces/action/MoveX.json: /opt/ros/jazzy/lib/rosidl_generator_type_description/rosidl_generator_type_description
-rosidl_generator_type_description/interfaces/action/MoveX.json: /opt/ros/jazzy/lib/python3.12/site-packages/rosidl_generator_type_description/__init__.py
-rosidl_generator_type_description/interfaces/action/MoveX.json: rosidl_adapter/interfaces/action/MoveX.idl
+rosidl_generator_type_description/interfaces/action/Move.json: /opt/ros/jazzy/lib/rosidl_generator_type_description/rosidl_generator_type_description
+rosidl_generator_type_description/interfaces/action/Move.json: /opt/ros/jazzy/lib/python3.12/site-packages/rosidl_generator_type_description/__init__.py
+rosidl_generator_type_description/interfaces/action/Move.json: rosidl_adapter/interfaces/action/Move.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/a/Solving-Maze/build/interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating type hashes for ROS interfaces"
 	/usr/bin/python3 /opt/ros/jazzy/lib/rosidl_generator_type_description/rosidl_generator_type_description --generator-arguments-file /home/a/Solving-Maze/build/interfaces/rosidl_generator_type_description__arguments.json
 
 interfaces__rosidl_generator_type_description: CMakeFiles/interfaces__rosidl_generator_type_description
-interfaces__rosidl_generator_type_description: rosidl_generator_type_description/interfaces/action/MoveX.json
+interfaces__rosidl_generator_type_description: rosidl_generator_type_description/interfaces/action/Move.json
 interfaces__rosidl_generator_type_description: CMakeFiles/interfaces__rosidl_generator_type_description.dir/build.make
 .PHONY : interfaces__rosidl_generator_type_description
 

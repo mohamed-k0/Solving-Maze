@@ -69,9 +69,9 @@ include /home/a/Solving-Maze/build/interfaces/interfaces__py/CMakeFiles/interfac
 /home/a/Solving-Maze/build/interfaces/interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 /home/a/Solving-Maze/build/interfaces/interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_introspection_c.c
 /home/a/Solving-Maze/build/interfaces/interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_c.c
-/home/a/Solving-Maze/build/interfaces/interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/action/_move_x.py
+/home/a/Solving-Maze/build/interfaces/interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/action/_move.py
 /home/a/Solving-Maze/build/interfaces/interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/action/__init__.py
-/home/a/Solving-Maze/build/interfaces/interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/action/_move_x_s.c
+/home/a/Solving-Maze/build/interfaces/interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/action/_move_s.c
 
 rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/lib/rosidl_generator_py/rosidl_generator_py
 rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/lib/python3.12/site-packages/rosidl_generator_py/__init__.py
@@ -86,7 +86,7 @@ rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c:
 rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/rosidl_generator_py/resource/_msg.py.em
 rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/rosidl_generator_py/resource/_srv_pkg_typesupport_entry_point.c.em
 rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/rosidl_generator_py/resource/_srv.py.em
-rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/interfaces/action/MoveX.idl
+rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/interfaces/action/Move.idl
 rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/action_msgs/msg/GoalInfo.idl
 rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/action_msgs/msg/GoalStatus.idl
 rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/share/action_msgs/msg/GoalStatusArray.idl
@@ -104,22 +104,22 @@ rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_introspection
 rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_c.c: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_c.c
 
-rosidl_generator_py/interfaces/action/_move_x.py: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/interfaces/action/_move_x.py
+rosidl_generator_py/interfaces/action/_move.py: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/interfaces/action/_move.py
 
 rosidl_generator_py/interfaces/action/__init__.py: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/interfaces/action/__init__.py
 
-rosidl_generator_py/interfaces/action/_move_x_s.c: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/interfaces/action/_move_x_s.c
+rosidl_generator_py/interfaces/action/_move_s.c: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/interfaces/action/_move_s.c
 
 interfaces__py: /home/a/Solving-Maze/build/interfaces/interfaces__py/CMakeFiles/interfaces__py
 interfaces__py: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_c.c
 interfaces__py: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 interfaces__py: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_introspection_c.c
 interfaces__py: rosidl_generator_py/interfaces/action/__init__.py
-interfaces__py: rosidl_generator_py/interfaces/action/_move_x.py
-interfaces__py: rosidl_generator_py/interfaces/action/_move_x_s.c
+interfaces__py: rosidl_generator_py/interfaces/action/_move.py
+interfaces__py: rosidl_generator_py/interfaces/action/_move_s.c
 interfaces__py: /home/a/Solving-Maze/build/interfaces/interfaces__py/CMakeFiles/interfaces__py.dir/build.make
 .PHONY : interfaces__py
 

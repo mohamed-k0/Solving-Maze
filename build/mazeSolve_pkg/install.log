@@ -1,6 +1,8 @@
+/home/a/Solving-Maze/install/mazeSolve_pkg/lib/python3.12/site-packages/mazeSolve_pkg/yawserver.py
 /home/a/Solving-Maze/install/mazeSolve_pkg/lib/python3.12/site-packages/mazeSolve_pkg/move_x_server.py
 /home/a/Solving-Maze/install/mazeSolve_pkg/lib/python3.12/site-packages/mazeSolve_pkg/yaw_client.py
 /home/a/Solving-Maze/install/mazeSolve_pkg/lib/python3.12/site-packages/mazeSolve_pkg/__init__.py
+/home/a/Solving-Maze/install/mazeSolve_pkg/lib/python3.12/site-packages/mazeSolve_pkg/__pycache__/yawserver.cpython-312.pyc
 /home/a/Solving-Maze/install/mazeSolve_pkg/lib/python3.12/site-packages/mazeSolve_pkg/__pycache__/move_x_server.cpython-312.pyc
 /home/a/Solving-Maze/install/mazeSolve_pkg/lib/python3.12/site-packages/mazeSolve_pkg/__pycache__/yaw_client.cpython-312.pyc
 /home/a/Solving-Maze/install/mazeSolve_pkg/lib/python3.12/site-packages/mazeSolve_pkg/__pycache__/__init__.cpython-312.pyc
@@ -14,3 +16,5 @@
 /home/a/Solving-Maze/install/mazeSolve_pkg/lib/python3.12/site-packages/mazeSolve_pkg-0.0.0-py3.12.egg-info/requires.txt
 /home/a/Solving-Maze/install/mazeSolve_pkg/lib/python3.12/site-packages/mazeSolve_pkg-0.0.0-py3.12.egg-info/SOURCES.txt
 /home/a/Solving-Maze/install/mazeSolve_pkg/lib/mazeSolve_pkg/action_x_server
+/home/a/Solving-Maze/install/mazeSolve_pkg/lib/mazeSolve_pkg/yaw_client
+/home/a/Solving-Maze/install/mazeSolve_pkg/lib/mazeSolve_pkg/yawserver

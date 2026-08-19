@@ -1,7 +1,7 @@
 from rclpy.node import Node
 import rclpy, math, time
 from rclpy.action import ActionServer
-from interfaces.action import MoveX
+from interfaces.action import Move
 from nav_msgs.msg import Odometry
 from geometry_msgs.msg import Twist
 
@@ -20,7 +20,7 @@ class MoveX_Server(Node):
 
 
         
-        self.action_server = ActionServer(self, MoveX, "move_robot_x", execute_callback = self.execute_callback, callback_group = self.cb_group)
+        self.action_server = ActionServer(self, Move, "move_robot_x", execute_callback = self.execute_callback, callback_group = self.cb_group)
         
         self.odom_subscriber = self.create_subscription(Odometry, "/odom", self.odom_callback, 10, callback_group = self.cb_group)
 
@@ -38,8 +38,8 @@ class MoveX_Server(Node):
 
     def execute_callback(self, goal):
     
-        result = MoveX.Result()
-        feedback = MoveX.Feedback()
+        result = Move.Result()
+        feedback = Move.Feedback()
 
         start_time = time.time()
 

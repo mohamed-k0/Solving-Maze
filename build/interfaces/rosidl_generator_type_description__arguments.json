@@ -2,7 +2,7 @@
   "package_name": "interfaces",
   "output_dir": "/home/a/Solving-Maze/build/interfaces/rosidl_generator_type_description/interfaces",
   "idl_tuples": [
-    "/home/a/Solving-Maze/build/interfaces/rosidl_adapter/interfaces:action/MoveX.idl"
+    "/home/a/Solving-Maze/build/interfaces/rosidl_adapter/interfaces:action/Move.idl"
   ],
   "include_paths": [
     "action_msgs:/opt/ros/jazzy/share/action_msgs",

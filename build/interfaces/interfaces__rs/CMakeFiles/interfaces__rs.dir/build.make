@@ -84,8 +84,8 @@ rosidl_generator_rs/interfaces/rust/src/lib.rs: /opt/ros/jazzy/share/rosidl_gene
 rosidl_generator_rs/interfaces/rust/src/lib.rs: /opt/ros/jazzy/share/rosidl_generator_rs/resource/templates/msg_rmw.rs.em
 rosidl_generator_rs/interfaces/rust/src/lib.rs: /opt/ros/jazzy/share/rosidl_generator_rs/resource/templates/srv_idiomatic.rs.em
 rosidl_generator_rs/interfaces/rust/src/lib.rs: /opt/ros/jazzy/share/rosidl_generator_rs/resource/templates/srv_rmw.rs.em
-rosidl_generator_rs/interfaces/rust/src/lib.rs: rosidl_adapter/interfaces/action/MoveX.idl
-rosidl_generator_rs/interfaces/rust/src/lib.rs: rosidl_adapter/interfaces/action/MoveX.idl
+rosidl_generator_rs/interfaces/rust/src/lib.rs: rosidl_adapter/interfaces/action/Move.idl
+rosidl_generator_rs/interfaces/rust/src/lib.rs: rosidl_adapter/interfaces/action/Move.idl
 rosidl_generator_rs/interfaces/rust/src/lib.rs: /opt/ros/jazzy/share/action_msgs/msg/GoalInfo.idl
 rosidl_generator_rs/interfaces/rust/src/lib.rs: /opt/ros/jazzy/share/action_msgs/msg/GoalStatus.idl
 rosidl_generator_rs/interfaces/rust/src/lib.rs: /opt/ros/jazzy/share/action_msgs/msg/GoalStatusArray.idl

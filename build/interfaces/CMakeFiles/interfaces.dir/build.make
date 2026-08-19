@@ -66,7 +66,7 @@ include CMakeFiles/interfaces.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/interfaces.dir/progress.make
 
-CMakeFiles/interfaces: /home/a/Solving-Maze/src/interfaces/action/MoveX.action
+CMakeFiles/interfaces: /home/a/Solving-Maze/src/interfaces/action/Move.action
 CMakeFiles/interfaces: /opt/ros/jazzy/share/action_msgs/msg/GoalInfo.idl
 CMakeFiles/interfaces: /opt/ros/jazzy/share/action_msgs/msg/GoalStatus.idl
 CMakeFiles/interfaces: /opt/ros/jazzy/share/action_msgs/msg/GoalStatusArray.idl

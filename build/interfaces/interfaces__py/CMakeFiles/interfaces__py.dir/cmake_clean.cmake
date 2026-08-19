@@ -3,8 +3,8 @@ file(REMOVE_RECURSE
   "/home/a/Solving-Maze/build/interfaces/rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/home/a/Solving-Maze/build/interfaces/rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_introspection_c.c"
   "/home/a/Solving-Maze/build/interfaces/rosidl_generator_py/interfaces/action/__init__.py"
-  "/home/a/Solving-Maze/build/interfaces/rosidl_generator_py/interfaces/action/_move_x.py"
-  "/home/a/Solving-Maze/build/interfaces/rosidl_generator_py/interfaces/action/_move_x_s.c"
+  "/home/a/Solving-Maze/build/interfaces/rosidl_generator_py/interfaces/action/_move.py"
+  "/home/a/Solving-Maze/build/interfaces/rosidl_generator_py/interfaces/action/_move_s.c"
   "CMakeFiles/interfaces__py"
 )
 
