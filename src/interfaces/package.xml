@@ -5,6 +5,7 @@
   <version>0.0.0</version>
   <description>TODO: Package description</description>
 
+
   <maintainer email="omar3abqarino@gmail.com">a</maintainer>
 
   <license>TODO: License declaration</license>
@@ -24,7 +25,11 @@
     <build_type>ament_cmake</build_type>
   </export>
 <<<<<<< HEAD
+<<<<<<< HEAD
 </package>
 =======
 </package>
 >>>>>>> 6d37652e64e5392a2ea48398d3cc72d18eabfac0
+=======
+</package>
+>>>>>>> ffd66cd93173af4f20e02a7b7ccd75cf173d8669
