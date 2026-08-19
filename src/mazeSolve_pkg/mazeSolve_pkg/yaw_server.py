@@ -47,20 +47,34 @@ class MoveYawServer(Node):
 
         self.get_logger().info(f"Received goal: {target_yaw:.2f}")
 
-        delta_yaw = target_yaw - self.progress
 
-        while delta_yaw != 0.0:
+        while True:
+            # Calculate the difference in positions
+            delta_yaw = target_yaw - self.progress
+
+            # Check whether the change is within an acceptable range
+            if abs(delta_yaw) < 0.1:
+                break
+            
+            # Create the command to be sent to /cmd_vel
+            msg = Twist()
+            msg.linear.x = 0.0
+            
             if delta_yaw > 0:
                 angular_velocity = 10.0
 
             elif delta_yaw < 0:
                 angular_velocity = -10.0
 
-            msg = Twist()
-            msg.linear.x = 0.0
             msg.angular.z = angular_velocity
 
             self.vel_publisher.publish(msg)
+
+            # Send the feedback to the action client
+            feedback = MoveYaw.Feedback()
+            feedback.progress = self.progress
+
+            goal.publish_feedback(feedback)
 
         # Stop the robot after reaching target yaw
         stop_msg = Twist()
@@ -69,13 +83,8 @@ class MoveYawServer(Node):
 
         self.vel_publisher.publish(stop_msg)
 
-        # Send the feedback to the client
-        feedback = MoveYaw.Feedback()
-        feedback.progress = self.progress
 
-        goal.publish_feedback(feedback)
-
-        # Creating the result action
+        # Create the result action
         result = MoveYaw.Result()
         result.success = True
         result.message = "Successfully Rotated"
