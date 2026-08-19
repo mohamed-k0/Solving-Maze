@@ -1,0 +1,30 @@
+running egg_info
+creating ../../build/interfaces/interfaces.egg-info
+writing ../../build/interfaces/interfaces.egg-info/PKG-INFO
+writing dependency_links to ../../build/interfaces/interfaces.egg-info/dependency_links.txt
+writing requirements to ../../build/interfaces/interfaces.egg-info/requires.txt
+writing top-level names to ../../build/interfaces/interfaces.egg-info/top_level.txt
+writing manifest file '../../build/interfaces/interfaces.egg-info/SOURCES.txt'
+reading manifest file '../../build/interfaces/interfaces.egg-info/SOURCES.txt'
+writing manifest file '../../build/interfaces/interfaces.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/a/Solving-Maze/build/interfaces/build
+creating /home/a/Solving-Maze/build/interfaces/build/lib
+creating /home/a/Solving-Maze/build/interfaces/build/lib/interfaces
+copying interfaces/__init__.py -> /home/a/Solving-Maze/build/interfaces/build/lib/interfaces
+running install
+running install_lib
+creating /home/a/Solving-Maze/install/interfaces/lib/python3.12/site-packages/interfaces
+copying /home/a/Solving-Maze/build/interfaces/build/lib/interfaces/__init__.py -> /home/a/Solving-Maze/install/interfaces/lib/python3.12/site-packages/interfaces
+byte-compiling /home/a/Solving-Maze/install/interfaces/lib/python3.12/site-packages/interfaces/__init__.py to __init__.cpython-312.pyc
+running install_data
+creating /home/a/Solving-Maze/install/interfaces/share/ament_index
+creating /home/a/Solving-Maze/install/interfaces/share/ament_index/resource_index
+creating /home/a/Solving-Maze/install/interfaces/share/ament_index/resource_index/packages
+copying resource/interfaces -> /home/a/Solving-Maze/install/interfaces/share/ament_index/resource_index/packages
+copying package.xml -> /home/a/Solving-Maze/install/interfaces/share/interfaces
+running install_egg_info
+Copying ../../build/interfaces/interfaces.egg-info to /home/a/Solving-Maze/install/interfaces/lib/python3.12/site-packages/interfaces-0.0.0-py3.12.egg-info
+running install_scripts
+writing list of installed files to '/home/a/Solving-Maze/build/interfaces/install.log'

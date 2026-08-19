@@ -1,0 +1,16 @@
+#goal
+
+float32 target_x
+ 
+---
+
+#result
+
+bool success
+string msg
+
+---
+
+#feedback
+
+float32 progress
