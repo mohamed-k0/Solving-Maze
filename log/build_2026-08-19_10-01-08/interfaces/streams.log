@@ -1,0 +1,43 @@
+[0.009s] Invoking command in '/home/mohamed-khaled/Solving-Maze/build/interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/mohamed-khaled/Solving-Maze/build/interfaces -- -j12 -l12
+[0.031s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.126s] -- Found rosidl_default_generators: 1.6.1 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[0.129s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.163s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.195s] -- Found rosidl_adapter: 4.6.9 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[0.197s] -- Found action_msgs: 2.0.4 (/opt/ros/jazzy/share/action_msgs/cmake)
+[0.484s] -- Found ament_cmake_ros: 0.12.1 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+[0.578s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.694s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.695s] -- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)
+[0.939s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed 
+[0.980s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.986s] -- Configuring done (1.0s)
+[1.021s] -- Generating done (0.0s)
+[1.034s] -- Build files have been written to: /home/mohamed-khaled/Solving-Maze/build/interfaces
+[1.064s] [  5%] [34m[1mGenerating type hashes for ROS interfaces[0m
+[1.064s] [  5%] Built target interfaces__rs
+[1.071s] [  5%] Built target ament_cmake_python_copy_interfaces
+[1.310s] running egg_info
+[1.334s] writing interfaces.egg-info/PKG-INFO
+[1.334s] writing dependency_links to interfaces.egg-info/dependency_links.txt
+[1.335s] writing top-level names to interfaces.egg-info/top_level.txt
+[1.410s] reading manifest file 'interfaces.egg-info/SOURCES.txt'
+[1.411s] writing manifest file 'interfaces.egg-info/SOURCES.txt'
+[1.437s] [  5%] Built target ament_cmake_python_build_interfaces_egg
+[2.274s] Traceback (most recent call last):
+[2.274s]   File "/opt/ros/jazzy/lib/rosidl_generator_type_description/rosidl_generator_type_description", line 50, in <module>
+[2.275s]     sys.exit(main())
+[2.275s]              ^^^^^^
+[2.275s]   File "/opt/ros/jazzy/lib/rosidl_generator_type_description/rosidl_generator_type_description", line 46, in main
+[2.275s]     generate_type_hash(args.generator_arguments_file)
+[2.275s]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_generator_type_description/__init__.py", line 162, in generate_type_hash
+[2.275s]     with include_path.open('r') as include_file:
+[2.275s]          ^^^^^^^^^^^^^^^^^^^^^^
+[2.275s]   File "/usr/lib/python3.12/pathlib.py", line 1015, in open
+[2.275s]     return io.open(self, mode, buffering, encoding, errors, newline)
+[2.275s]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2.275s] FileNotFoundError: [Errno 2] No such file or directory: '/home/mohamed-khaled/Solving-Maze/build/interfaces/rosidl_generator_type_description/interfaces/msg/String.json'
+[2.309s] gmake[2]: *** [CMakeFiles/interfaces__rosidl_generator_type_description.dir/build.make:75: rosidl_generator_type_description/interfaces/action/MoveYaw.json] Error 1
+[2.309s] gmake[1]: *** [CMakeFiles/Makefile2:234: CMakeFiles/interfaces__rosidl_generator_type_description.dir/all] Error 2
+[2.309s] gmake: *** [Makefile:146: all] Error 2
+[2.311s] Invoked command in '/home/mohamed-khaled/Solving-Maze/build/interfaces' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/mohamed-khaled/Solving-Maze/build/interfaces -- -j12 -l12

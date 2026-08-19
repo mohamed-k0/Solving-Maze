@@ -1,0 +1,28 @@
+[0.008s] Invoking command in '/home/mohamed-khaled/Solving-Maze/build/interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/mohamed-khaled/Solving-Maze/src/interfaces -DCMAKE_INSTALL_PREFIX=/home/mohamed-khaled/Solving-Maze/install/interfaces
+[0.253s] -- The C compiler identification is GNU 13.3.0
+[0.459s] -- The CXX compiler identification is GNU 13.3.0
+[0.476s] -- Detecting C compiler ABI info
+[0.566s] -- Detecting C compiler ABI info - done
+[0.576s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.576s] -- Detecting C compile features
+[0.577s] -- Detecting C compile features - done
+[0.586s] -- Detecting CXX compiler ABI info
+[0.668s] -- Detecting CXX compiler ABI info - done
+[0.678s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.678s] -- Detecting CXX compile features
+[0.679s] -- Detecting CXX compile features - done
+[0.702s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.836s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.971s] -- Found rosidl_default_generators: 1.6.1 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[0.982s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.066s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.143s] -- Found rosidl_adapter: 4.6.9 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[1.152s] -- Found action_msgs: 2.0.4 (/opt/ros/jazzy/share/action_msgs/cmake)
+[1.244s] [31mCMake Error at /opt/ros/jazzy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:59 (message):
+[1.244s]   rosidl_generate_interfaces() called without any interface files
+[1.244s] Call Stack (most recent call first):
+[1.244s]   CMakeLists.txt:13 (rosidl_generate_interfaces)
+[1.244s] 
+[1.244s] [0m
+[1.244s] -- Configuring incomplete, errors occurred!
+[1.249s] Invoked command in '/home/mohamed-khaled/Solving-Maze/build/interfaces' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/mohamed-khaled/Solving-Maze/src/interfaces -DCMAKE_INSTALL_PREFIX=/home/mohamed-khaled/Solving-Maze/install/interfaces

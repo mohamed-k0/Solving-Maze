@@ -1,0 +1,15 @@
+[0.017s] Invoking command in '/home/mohamed-khaled/Solving-Maze/build/interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mohamed-khaled/Solving-Maze/install/maze_control:/home/mohamed-khaled/Solving-Maze/install/mazeSolve_pkg:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/mohamed-khaled/Solving-Maze/src/interfaces -DCMAKE_INSTALL_PREFIX=/home/mohamed-khaled/Solving-Maze/install/interfaces
+[0.245s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.245s] -- Found rosidl_default_generators: 1.6.1 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[0.246s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.262s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.293s] -- Found rosidl_adapter: 4.6.9 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[0.295s] -- Found action_msgs: 2.0.4 (/opt/ros/jazzy/share/action_msgs/cmake)
+[0.352s] [31mCMake Error at /opt/ros/jazzy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:59 (message):
+[0.352s]   rosidl_generate_interfaces() called without any interface files
+[0.352s] Call Stack (most recent call first):
+[0.352s]   CMakeLists.txt:13 (rosidl_generate_interfaces)
+[0.352s] 
+[0.352s] [0m
+[0.352s] -- Configuring incomplete, errors occurred!
+[0.469s] Invoked command in '/home/mohamed-khaled/Solving-Maze/build/interfaces' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mohamed-khaled/Solving-Maze/install/maze_control:/home/mohamed-khaled/Solving-Maze/install/mazeSolve_pkg:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/mohamed-khaled/Solving-Maze/src/interfaces -DCMAKE_INSTALL_PREFIX=/home/mohamed-khaled/Solving-Maze/install/interfaces
