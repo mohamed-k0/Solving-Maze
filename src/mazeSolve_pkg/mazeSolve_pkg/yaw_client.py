@@ -112,15 +112,15 @@ class WallService(Node):
         super.__init__("wall_client")
         self.client = self.create_client(SetBool,'/toggle_walls_1_2') #create service client
 
-    def send_req(self):
+    def send_request(self):
         if not self.client.wait_for_service(
             timeout_sec=5.0
         ):
             self.get_logger().error("service not available") #checks if the service is available
             return
-        req= SetBool.Request() #sends request to service
-        req.data = True
-        future = self.client.call_async(req)
+        request= SetBool.Request() #sends request to service
+        request.data = True
+        future = self.client.call_async(request)
         future.add_done_callback(
             self.service_response
         )
@@ -140,7 +140,7 @@ def main():
     move_node = MoveClient()
     move_node.send_goal()
     wall_node = WallService()
-    wall_node.send_req()
+    wall_node.send_request()
     rclpy.spin(wall_node)
 
     # Spin the nodes until both actions are completed
