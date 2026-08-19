@@ -13,6 +13,7 @@
   <depend>geometry_msgs</depend>
   <depend>nav_msgs</depend>
   <depend>action_msgs</depend>
+  <exec_depend>interfaces</exec_depend>
 
   <depend>interfaces</depend>
 
