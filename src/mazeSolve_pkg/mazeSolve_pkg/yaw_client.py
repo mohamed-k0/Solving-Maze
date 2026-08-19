@@ -85,7 +85,20 @@ class MoveClient(Node):
         self.result_future = goal_handle.get_result_async()
         self.result_future.add_done_callback(self.result_callback)
 
-    
+    def feedback(self, feedback_msg):
+
+        # Handle feedback from the action server
+        feedback = feedback_msg.feedback
+        self.get_logger().info(f"Feedback received: Current action = {feedback.current_action}, Progress = {feedback.progress}")
+
+    def result_callback(self, future):
+
+        # Handle the result from the action server
+        result = future.result()
+        if result.success:
+            self.get_logger().info(f"Action completed successfully: {result.message}")
+        else:
+            self.get_logger().error(f"Action failed: {result.message}")
 
     
 def main():
