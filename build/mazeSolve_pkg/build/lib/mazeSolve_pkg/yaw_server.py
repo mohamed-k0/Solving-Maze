@@ -5,6 +5,8 @@ from geometry_msgs.msg import Twist
 from nav_msgs.msg import Odometry
 from tf_transformations import euler_from_quaternion
 
+import math
+
 
 from interfaces.action import MoveYaw
 
@@ -36,21 +38,50 @@ class MoveYawServer(Node):
         # Create the action server
         self.action_server = ActionServer(self, MoveYaw, '/move_yaw', self.execute_callback)
 
-        self.timer = self.create_timer(
-    0.1,
-    self.rotate)
 
 
     def execute_callback(self, goal):
 
         # Goal received from the client
-        target_yaw = goal.target_yaw
+        target_yaw = goal.request.target_yaw
 
-        # feedback messages
+        self.get_logger().info(f"Received goal: {target_yaw:.2f}")
+
+        delta_yaw = target_yaw - self.progress
+
+        while delta_yaw != 0.0:
+            if delta_yaw > 0:
+                angular_velocity = 10.0
+
+            elif delta_yaw < 0:
+                angular_velocity = -10.0
+
+            msg = Twist()
+            msg.linear.x = 0.0
+            msg.angular.z = angular_velocity
+
+            self.vel_publisher.publish(msg)
+
+        # Stop the robot after reaching target yaw
+        stop_msg = Twist()
+        stop_msg.linear.x = 0.0
+        stop_msg.angular.z = 0.0
+
+        self.vel_publisher.publish(stop_msg)
+
+        # Send the feedback to the client
         feedback = MoveYaw.Feedback()
+        feedback.progress = self.progress
 
-        # result message
+        goal.publish_feedback(feedback)
+
+        # Creating the result action
         result = MoveYaw.Result()
+        result.success = True
+        result.message = "Successfully Rotated"
+
+        return result
+
 
 
     def odom_callback(self, msg):
@@ -66,17 +97,9 @@ class MoveYawServer(Node):
 
         self.progress = yaw
 
-        self.get_logger().info(f"Current Yaw: {self.progress}")
+        self.get_logger().info(f"Current Yaw: {self.progress:.2f}")
 
 
-    def rotate(self):
-
-        msg = Twist()
-
-        msg.linear.x = 0.0
-        msg.angular.z = 0.5  # Set the desired angular velocity for rotation
-
-        self.vel_publisher.publish(msg)
 
     
 

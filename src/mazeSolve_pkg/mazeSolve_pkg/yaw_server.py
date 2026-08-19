@@ -69,13 +69,18 @@ class MoveYawServer(Node):
 
         self.vel_publisher.publish(stop_msg)
 
-        # feedback messages
+        # Send the feedback to the client
         feedback = MoveYaw.Feedback()
         feedback.progress = self.progress
+
+        goal.publish_feedback(feedback)
 
         # Creating the result action
         result = MoveYaw.Result()
         result.success = True
+        result.message = "Successfully Rotated"
+
+        return result
 
 
 
