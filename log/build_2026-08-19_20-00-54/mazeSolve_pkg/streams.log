@@ -1,0 +1,40 @@
+[1.165s] Invoking command in '/home/mohamed-khaled/Solving-Maze/src/mazeSolve_pkg': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/mohamed-khaled/Solving-Maze/build/mazeSolve_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mohamed-khaled/Solving-Maze/install/mazeSolve_pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/mazeSolve_pkg build --build-base /home/mohamed-khaled/Solving-Maze/build/mazeSolve_pkg/build install --record /home/mohamed-khaled/Solving-Maze/build/mazeSolve_pkg/install.log --install-scripts $base/lib/mazeSolve_pkg --single-version-externally-managed install_data
+[1.496s] running egg_info
+[1.496s] creating ../../build/mazeSolve_pkg/mazeSolve_pkg.egg-info
+[1.521s] writing ../../build/mazeSolve_pkg/mazeSolve_pkg.egg-info/PKG-INFO
+[1.521s] writing dependency_links to ../../build/mazeSolve_pkg/mazeSolve_pkg.egg-info/dependency_links.txt
+[1.522s] writing entry points to ../../build/mazeSolve_pkg/mazeSolve_pkg.egg-info/entry_points.txt
+[1.522s] writing requirements to ../../build/mazeSolve_pkg/mazeSolve_pkg.egg-info/requires.txt
+[1.522s] writing top-level names to ../../build/mazeSolve_pkg/mazeSolve_pkg.egg-info/top_level.txt
+[1.522s] writing manifest file '../../build/mazeSolve_pkg/mazeSolve_pkg.egg-info/SOURCES.txt'
+[1.573s] reading manifest file '../../build/mazeSolve_pkg/mazeSolve_pkg.egg-info/SOURCES.txt'
+[1.574s] writing manifest file '../../build/mazeSolve_pkg/mazeSolve_pkg.egg-info/SOURCES.txt'
+[1.574s] running build
+[1.574s] running build_py
+[1.574s] creating /home/mohamed-khaled/Solving-Maze/build/mazeSolve_pkg/build
+[1.575s] creating /home/mohamed-khaled/Solving-Maze/build/mazeSolve_pkg/build/lib
+[1.575s] creating /home/mohamed-khaled/Solving-Maze/build/mazeSolve_pkg/build/lib/mazeSolve_pkg
+[1.575s] copying mazeSolve_pkg/yaw_client.py -> /home/mohamed-khaled/Solving-Maze/build/mazeSolve_pkg/build/lib/mazeSolve_pkg
+[1.575s] copying mazeSolve_pkg/__init__.py -> /home/mohamed-khaled/Solving-Maze/build/mazeSolve_pkg/build/lib/mazeSolve_pkg
+[1.575s] copying mazeSolve_pkg/yaw_server.py -> /home/mohamed-khaled/Solving-Maze/build/mazeSolve_pkg/build/lib/mazeSolve_pkg
+[1.575s] running install
+[1.581s] running install_lib
+[1.606s] creating /home/mohamed-khaled/Solving-Maze/install/mazeSolve_pkg/lib/python3.12/site-packages/mazeSolve_pkg
+[1.607s] copying /home/mohamed-khaled/Solving-Maze/build/mazeSolve_pkg/build/lib/mazeSolve_pkg/yaw_client.py -> /home/mohamed-khaled/Solving-Maze/install/mazeSolve_pkg/lib/python3.12/site-packages/mazeSolve_pkg
+[1.607s] copying /home/mohamed-khaled/Solving-Maze/build/mazeSolve_pkg/build/lib/mazeSolve_pkg/__init__.py -> /home/mohamed-khaled/Solving-Maze/install/mazeSolve_pkg/lib/python3.12/site-packages/mazeSolve_pkg
+[1.607s] copying /home/mohamed-khaled/Solving-Maze/build/mazeSolve_pkg/build/lib/mazeSolve_pkg/yaw_server.py -> /home/mohamed-khaled/Solving-Maze/install/mazeSolve_pkg/lib/python3.12/site-packages/mazeSolve_pkg
+[1.607s] byte-compiling /home/mohamed-khaled/Solving-Maze/install/mazeSolve_pkg/lib/python3.12/site-packages/mazeSolve_pkg/yaw_client.py to yaw_client.cpython-312.pyc
+[1.607s] byte-compiling /home/mohamed-khaled/Solving-Maze/install/mazeSolve_pkg/lib/python3.12/site-packages/mazeSolve_pkg/__init__.py to __init__.cpython-312.pyc
+[1.608s] byte-compiling /home/mohamed-khaled/Solving-Maze/install/mazeSolve_pkg/lib/python3.12/site-packages/mazeSolve_pkg/yaw_server.py to yaw_server.cpython-312.pyc
+[1.609s] running install_data
+[1.609s] creating /home/mohamed-khaled/Solving-Maze/install/mazeSolve_pkg/share/ament_index
+[1.609s] creating /home/mohamed-khaled/Solving-Maze/install/mazeSolve_pkg/share/ament_index/resource_index
+[1.609s] creating /home/mohamed-khaled/Solving-Maze/install/mazeSolve_pkg/share/ament_index/resource_index/packages
+[1.609s] copying resource/mazeSolve_pkg -> /home/mohamed-khaled/Solving-Maze/install/mazeSolve_pkg/share/ament_index/resource_index/packages
+[1.609s] copying package.xml -> /home/mohamed-khaled/Solving-Maze/install/mazeSolve_pkg/share/mazeSolve_pkg
+[1.609s] running install_egg_info
+[1.635s] Copying ../../build/mazeSolve_pkg/mazeSolve_pkg.egg-info to /home/mohamed-khaled/Solving-Maze/install/mazeSolve_pkg/lib/python3.12/site-packages/mazeSolve_pkg-0.0.0-py3.12.egg-info
+[1.636s] running install_scripts
+[1.788s] Installing yaw_server script to /home/mohamed-khaled/Solving-Maze/install/mazeSolve_pkg/lib/mazeSolve_pkg
+[1.788s] writing list of installed files to '/home/mohamed-khaled/Solving-Maze/build/mazeSolve_pkg/install.log'
+[1.817s] Invoked command in '/home/mohamed-khaled/Solving-Maze/src/mazeSolve_pkg' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/mohamed-khaled/Solving-Maze/build/mazeSolve_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mohamed-khaled/Solving-Maze/install/mazeSolve_pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/mazeSolve_pkg build --build-base /home/mohamed-khaled/Solving-Maze/build/mazeSolve_pkg/build install --record /home/mohamed-khaled/Solving-Maze/build/mazeSolve_pkg/install.log --install-scripts $base/lib/mazeSolve_pkg --single-version-externally-managed install_data

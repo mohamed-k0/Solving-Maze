@@ -1,9 +1,13 @@
 import rclpy
+import time
 
 from rclpy.node import Node
 from geometry_msgs.msg import Twist
 from nav_msgs.msg import Odometry
 from tf_transformations import euler_from_quaternion
+
+from rclpy.callback_groups import ReentrantCallbackGroup
+from rclpy.executors import MultiThreadedExecutor
 
 import math
 
@@ -21,7 +25,6 @@ class MoveYawServer(Node):
         # Initializing a variable to track the yaw progress
         self.progress = 0.0
 
-        self.get_logger().info('Yaw Server has been started.')
 
         # Declare parameters for velocity and odometry topics
         self.declare_parameter('cmd_vel_topic', '/cmd_vel')
@@ -33,12 +36,38 @@ class MoveYawServer(Node):
 
         # Create the /cmd_vel publisher and the /odom subscriber
         self.vel_publisher = self.create_publisher(Twist, cmd_vel_topic, 10)
-        self.odom_subscriber = self.create_subscription(Odometry, odom_topic, self.odom_callback, 10)
+
+        # Initializing the callback group
+        self.callback_gp = ReentrantCallbackGroup()    # allows callbacks to run concurrently
+
+        self.odom_subscriber = self.create_subscription(Odometry, odom_topic, self.odom_callback, 10, callback_group = self.callback_gp)
 
         # Create the action server
-        self.action_server = ActionServer(self, MoveYaw, '/move_yaw', self.execute_callback)
+        self.action_server = ActionServer(self, MoveYaw, '/move_yaw', self.execute_callback, callback_group = self.callback_gp)
+
+        self.get_logger().info('Yaw Server has started.')
 
 
+    def stop_bot(self):
+        stop_msg = Twist()
+        stop_msg.linear.x = 0.0
+        stop_msg.linear.y = 0.0
+        stop_msg.angular.z = 0.0        
+        self.vel_publisher.publish(stop_msg)
+
+    def calculate_delta(self, target_yaw):
+
+        # Calculate the difference in positions
+        delta = target_yaw - self.progress
+
+        # Keep incrementing or decrementing from the delta value till it is normalized
+        while delta > math.pi :
+            delta -= 2 * math.pi
+
+        while delta < math.pi:
+            delta += 2 * math.pi
+
+        return delta
 
     def execute_callback(self, goal):
 
@@ -49,23 +78,25 @@ class MoveYawServer(Node):
 
 
         while True:
-            # Calculate the difference in positions
-            delta_yaw = target_yaw - self.progress
 
-            # Check whether the change is within an acceptable range
-            if abs(delta_yaw) < 0.1:
+            delta_yaw = self.calculate_delta(target_yaw)
+
+            # Check whether the change is within an acceptable range (It won't be perfectly aligned to zero value)
+            if abs(delta_yaw) <= 0.05:
                 break
+
+            if delta_yaw > 0:
+                angular_velocity = 1.0
+
+            elif delta_yaw < 0:
+                angular_velocity = -1.0
 
             # Create the command to be sent to /cmd_vel
             msg = Twist()
+            # Putting linear speeds to zero to prevent any sort of movement during rotation
             msg.linear.x = 0.0
-            
-            if delta_yaw > 0:
-                angular_velocity = 10.0
-
-            elif delta_yaw < 0:
-                angular_velocity = -10.0
-
+            msg.linear.y = 0.0
+            # assigning the angular velocity value to the angular velocity of the message
             msg.angular.z = angular_velocity
 
             self.vel_publisher.publish(msg)
@@ -76,15 +107,13 @@ class MoveYawServer(Node):
 
             goal.publish_feedback(feedback)
 
-        # Stop the robot after reaching target yaw
-        stop_msg = Twist()
-        stop_msg.linear.x = 0.0
-        stop_msg.angular.z = 0.0
+            time.sleep(0.1)
 
-        self.vel_publisher.publish(stop_msg)
+        # Stop the robot after reaching target yaw
+        self.stop_bot()
+        
 
         goal.succeed()
-
 
         # Create the result action
         result = MoveYaw.Result()
@@ -127,8 +156,15 @@ class MoveYawServer(Node):
 def main():
     rclpy.init()
     yaw_server = MoveYawServer()
-    rclpy.spin(yaw_server)
 
+
+    # Define Multi-Threaded Executor
+    executor = MultiThreadedExecutor(num_threads  = 2)
+    executor.add_node(yaw_server)
+
+    executor.spin()
+
+    yaw_server.stop_bot()
     yaw_server.destroy_node()
     rclpy.shutdown()
 
