@@ -1,8 +1,8 @@
-#Maze Escape Solution
+# Maze Escape Solution
 This is our form of solving the maze as the task was for a turtle to escape a maze using either the normal long way or a shortcut by calling a hidden service that
 controls walls
 
-#Solution consists of
+# Solution consists of
 ##A ros2 package which consists of
   - ### Movement-x Client & Movement-x Server : which are responsible for the movement of the turtle
   - ### Yaw-movement Client & Server : which are responsible for the rotation of the turtle
