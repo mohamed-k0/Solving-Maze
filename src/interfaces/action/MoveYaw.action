@@ -1,4 +1,4 @@
-## goal 
+## goal
 
 float32 target_yaw
 
@@ -7,11 +7,10 @@ float32 target_yaw
 ## result
 
 bool success
-string message
+String message
 
-
---- 
+---
 
 ## feedback
 
-float32 current_yaw
+float32 progress

@@ -1,8 +1,11 @@
 import rclpy
 
 from rclpy.node import Node
+from geometry_msgs.msg import Twist
+from nav_msgs.msg import Odometry
 
-from robot_interfaces.yaw_action import Move_yaw
+
+from interfaces.action import MoveYaw
 
 
 from rclpy.action import ActionServer 
@@ -12,12 +15,54 @@ class MoveYawServer(Node):
     def __init__(self):
         super().__init__('yaw_server')
 
+        # Declare parameters for velocity and odometry topics
+        self.declare_parameter('cmd_vel_topic', '/cmd_vel')
+        self.declare_parameter('odom_topic', '/odom')
 
-        self.action_server = ActionServer(self, Move_yaw, '/move_yaw', self.execute_callback)
+        # Store value of parameters in variables
+        cmd_vel_topic = self.get_parameter('cmd_vel_topic').value
+        odom_topic = self.get_parameter('odom_topic').value
+
+        # Create the /cmd_vel publisher and the /odom subscriber
+        self.vel_publisher = self.create_publisher(Twist, cmd_vel_topic, 10)
+        self.odom_subscriber = self.create_subscription(Odometry, odom_topic, self.odom_callback, 10)
+
+        # Create the action server
+        self.action_server = ActionServer(self, MoveYaw, '/move_yaw', self.execute_callback)
 
 
     def execute_callback(self, goal):
 
+        # Goal received from the client
         target_yaw = goal.target_yaw
 
-        
+        # feedback messages
+        feedback = MoveYaw.Feedback()
+
+        # result message
+        result = MoveYaw.Result()
+
+
+    def odom_callback(self, msg):
+
+        ...
+
+
+
+
+
+
+
+
+
+def main():
+    rclpy.init()
+    yaw_server = MoveYawServer()
+    rclpy.spin(yaw_server)
+
+    yaw_server.destroy_node()
+    rclpy.shutdown()
+
+
+if __name__ == '__main__':
+    main()
