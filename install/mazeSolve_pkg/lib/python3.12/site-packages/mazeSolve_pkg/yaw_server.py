@@ -14,6 +14,10 @@ from rclpy.action import ActionServer
 class MoveYawServer(Node):
     def __init__(self):
         super().__init__('yaw_server')
+
+        # Initializing a variable to track the yaw progress
+        self.progress = 0.0
+
         self.get_logger().info('Yaw Server has been started.')
 
         # Declare parameters for velocity and odometry topics
@@ -46,7 +50,7 @@ class MoveYawServer(Node):
 
     def odom_callback(self, msg):
 
-        ...
+        self.get_logger().info('Odometry message received.')
 
 
 
