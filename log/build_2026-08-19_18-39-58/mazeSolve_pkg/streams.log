@@ -1,0 +1,24 @@
+[1.704s] Invoking command in '/home/a/Solving-Maze/build/mazeSolve_pkg': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/a/Solving-Maze/build/mazeSolve_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/a/Solving-Maze/install/mazeSolve_pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/a/Solving-Maze/build/mazeSolve_pkg/build --no-deps symlink_data
+[2.040s] running develop
+[2.284s] running egg_info
+[2.284s] creating mazeSolve_pkg.egg-info
+[2.313s] writing mazeSolve_pkg.egg-info/PKG-INFO
+[2.313s] writing dependency_links to mazeSolve_pkg.egg-info/dependency_links.txt
+[2.313s] writing entry points to mazeSolve_pkg.egg-info/entry_points.txt
+[2.313s] writing requirements to mazeSolve_pkg.egg-info/requires.txt
+[2.313s] writing top-level names to mazeSolve_pkg.egg-info/top_level.txt
+[2.313s] writing manifest file 'mazeSolve_pkg.egg-info/SOURCES.txt'
+[2.373s] reading manifest file 'mazeSolve_pkg.egg-info/SOURCES.txt'
+[2.373s] writing manifest file 'mazeSolve_pkg.egg-info/SOURCES.txt'
+[2.399s] running build_ext
+[2.399s] Creating /home/a/Solving-Maze/install/mazeSolve_pkg/lib/python3.12/site-packages/mazeSolve-pkg.egg-link (link to .)
+[2.400s] Installing action_x_server script to /home/a/Solving-Maze/install/mazeSolve_pkg/lib/mazeSolve_pkg
+[2.400s] 
+[2.400s] Installed /home/a/Solving-Maze/build/mazeSolve_pkg
+[2.400s] running symlink_data
+[2.400s] creating /home/a/Solving-Maze/install/mazeSolve_pkg/share/ament_index
+[2.401s] creating /home/a/Solving-Maze/install/mazeSolve_pkg/share/ament_index/resource_index
+[2.401s] creating /home/a/Solving-Maze/install/mazeSolve_pkg/share/ament_index/resource_index/packages
+[2.401s] symbolically linking /home/a/Solving-Maze/build/mazeSolve_pkg/resource/mazeSolve_pkg -> /home/a/Solving-Maze/install/mazeSolve_pkg/share/ament_index/resource_index/packages
+[2.401s] symbolically linking /home/a/Solving-Maze/build/mazeSolve_pkg/package.xml -> /home/a/Solving-Maze/install/mazeSolve_pkg/share/mazeSolve_pkg
+[2.444s] Invoked command in '/home/a/Solving-Maze/build/mazeSolve_pkg' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/a/Solving-Maze/build/mazeSolve_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/a/Solving-Maze/install/mazeSolve_pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/a/Solving-Maze/build/mazeSolve_pkg/build --no-deps symlink_data

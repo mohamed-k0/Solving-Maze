@@ -1,0 +1,245 @@
+[0.011s] Invoking command in '/home/a/Solving-Maze/build/interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/a/Solving-Maze/install/mazeSolve_pkg:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/a/Solving-Maze/src/interfaces -DCMAKE_INSTALL_PREFIX=/home/a/Solving-Maze/install/interfaces
+[0.109s] -- The C compiler identification is GNU 13.3.0
+[0.178s] -- The CXX compiler identification is GNU 13.3.0
+[0.195s] -- Detecting C compiler ABI info
+[0.270s] -- Detecting C compiler ABI info - done
+[0.277s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.277s] -- Detecting C compile features
+[0.278s] -- Detecting C compile features - done
+[0.286s] -- Detecting CXX compiler ABI info
+[0.362s] -- Detecting CXX compiler ABI info - done
+[0.370s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.370s] -- Detecting CXX compile features
+[0.371s] -- Detecting CXX compile features - done
+[0.382s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.522s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.655s] -- Found rosidl_default_generators: 1.6.1 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[0.665s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.760s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.855s] -- Found rosidl_adapter: 4.6.9 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[0.860s] -- Found action_msgs: 2.0.4 (/opt/ros/jazzy/share/action_msgs/cmake)
+[1.499s] -- Found ament_cmake_ros: 0.12.1 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+[1.886s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.393s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.404s] -- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)
+[2.523s] -- Found PythonExtra: /usr/bin/python3  
+[2.905s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed 
+[2.971s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[2.981s] -- Configuring done (2.9s)
+[3.011s] -- Generating done (0.0s)
+[3.020s] -- Build files have been written to: /home/a/Solving-Maze/build/interfaces
+[3.029s] Invoked command in '/home/a/Solving-Maze/build/interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/a/Solving-Maze/install/mazeSolve_pkg:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/a/Solving-Maze/src/interfaces -DCMAKE_INSTALL_PREFIX=/home/a/Solving-Maze/install/interfaces
+[3.030s] Invoking command in '/home/a/Solving-Maze/build/interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/a/Solving-Maze/install/mazeSolve_pkg:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/a/Solving-Maze/build/interfaces -- -j8 -l8
+[3.071s] [  2%] [34m[1mGenerating Rust code for ROS interfaces[0m
+[3.072s] [  5%] [34m[1mGenerating type hashes for ROS interfaces[0m
+[3.080s] [  5%] Built target ament_cmake_python_copy_interfaces
+[3.311s] [  5%] Built target interfaces__rosidl_generator_type_description
+[3.324s] [  8%] [34m[1mGenerating C code for ROS interfaces[0m
+[3.325s] running egg_info
+[3.326s] creating interfaces.egg-info
+[3.335s] [ 11%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[3.353s] writing interfaces.egg-info/PKG-INFO
+[3.353s] writing dependency_links to interfaces.egg-info/dependency_links.txt
+[3.353s] writing top-level names to interfaces.egg-info/top_level.txt
+[3.353s] writing manifest file 'interfaces.egg-info/SOURCES.txt'
+[3.390s] [ 11%] Built target interfaces__rs
+[3.428s] reading manifest file 'interfaces.egg-info/SOURCES.txt'
+[3.428s] writing manifest file 'interfaces.egg-info/SOURCES.txt'
+[3.456s] [ 11%] Built target ament_cmake_python_build_interfaces_egg
+[3.769s] [ 11%] Built target interfaces__cpp
+[3.799s] [ 17%] [32mBuilding C object CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/action/detail/move_x__type_support.c.o[0m
+[3.799s] [ 17%] [32mBuilding C object CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/action/detail/move_x__functions.c.o[0m
+[3.799s] [ 20%] [32mBuilding C object CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/action/detail/move_x__description.c.o[0m
+[3.947s] [ 22%] [32m[1mLinking C shared library libinterfaces__rosidl_generator_c.so[0m
+[3.978s] [ 22%] Built target interfaces__rosidl_generator_c
+[3.991s] [ 25%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[3.991s] [ 28%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[3.991s] [ 34%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[3.991s] [ 34%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[3.991s] [ 37%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[3.992s] [ 40%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[4.439s] [ 42%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/action/move_x__type_support.cpp.o[0m
+[4.536s] [ 45%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/interfaces/action/move_x__type_support.cpp.o[0m
+[4.596s] [ 48%] [32mBuilding C object CMakeFiles/interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/interfaces/action/detail/move_x__type_support.c.o[0m
+[4.624s] [ 51%] [32m[1mLinking CXX shared library libinterfaces__rosidl_typesupport_c.so[0m
+[4.641s] [ 54%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/interfaces/action/detail/move_x__type_support.cpp.o[0m
+[4.688s] [ 54%] Built target interfaces__rosidl_typesupport_c
+[4.704s] [ 57%] [32m[1mLinking C shared library libinterfaces__rosidl_typesupport_introspection_c.so[0m
+[4.755s] [ 57%] Built target interfaces__rosidl_typesupport_introspection_c
+[4.762s] [ 60%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/interfaces/action/detail/move_x__type_support_c.cpp.o[0m
+[4.792s] [ 62%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/interfaces/action/detail/dds_fastrtps/move_x__type_support.cpp.o[0m
+[5.482s] [ 65%] [32m[1mLinking CXX shared library libinterfaces__rosidl_typesupport_fastrtps_c.so[0m
+[5.500s] [ 68%] [32m[1mLinking CXX shared library libinterfaces__rosidl_typesupport_cpp.so[0m
+[5.588s] [ 68%] Built target interfaces__rosidl_typesupport_fastrtps_c
+[5.628s] [ 68%] Built target interfaces__rosidl_typesupport_cpp
+[5.727s] [ 71%] [32m[1mLinking CXX shared library libinterfaces__rosidl_typesupport_introspection_cpp.so[0m
+[5.828s] [ 71%] Built target interfaces__rosidl_typesupport_introspection_cpp
+[5.943s] [ 74%] [32m[1mLinking CXX shared library libinterfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[6.030s] [ 74%] Built target interfaces__rosidl_typesupport_fastrtps_cpp
+[6.049s] [ 74%] Built target interfaces
+[6.067s] [ 77%] [34m[1mGenerating Python code for ROS interfaces[0m
+[6.835s] [ 77%] Built target interfaces__py
+[6.854s] [ 80%] [32mBuilding C object CMakeFiles/interfaces__rosidl_generator_py.dir/rosidl_generator_py/interfaces/action/_move_x_s.c.o[0m
+[7.080s] [ 82%] [32m[1mLinking C shared library libinterfaces__rosidl_generator_py.so[0m
+[7.123s] [ 82%] Built target interfaces__rosidl_generator_py
+[7.142s] [ 88%] [32mBuilding C object CMakeFiles/interfaces_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[7.143s] [ 88%] [32mBuilding C object CMakeFiles/interfaces_s__rosidl_typesupport_c.dir/rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[7.143s] [ 91%] [32mBuilding C object CMakeFiles/interfaces_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[7.283s] [ 94%] [32m[1mLinking C shared module rosidl_generator_py/interfaces/interfaces_s__rosidl_typesupport_introspection_c.so[0m
+[7.289s] [ 97%] [32m[1mLinking C shared module rosidl_generator_py/interfaces/interfaces_s__rosidl_typesupport_c.so[0m
+[7.299s] [100%] [32m[1mLinking C shared module rosidl_generator_py/interfaces/interfaces_s__rosidl_typesupport_fastrtps_c.so[0m
+[7.319s] [100%] Built target interfaces_s__rosidl_typesupport_introspection_c
+[7.326s] [100%] Built target interfaces_s__rosidl_typesupport_c
+[7.335s] [100%] Built target interfaces_s__rosidl_typesupport_fastrtps_c
+[7.347s] Invoked command in '/home/a/Solving-Maze/build/interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/a/Solving-Maze/install/mazeSolve_pkg:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/a/Solving-Maze/build/interfaces -- -j8 -l8
+[7.358s] Invoking command in '/home/a/Solving-Maze/build/interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/a/Solving-Maze/install/mazeSolve_pkg:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/a/Solving-Maze/build/interfaces
+[7.366s] -- Install configuration: ""
+[7.367s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/ament_index/resource_index/rosidl_interfaces/interfaces
+[7.367s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/interfaces/action/MoveX.json
+[7.367s] -- Installing: /home/a/Solving-Maze/install/interfaces/include/interfaces/interfaces
+[7.367s] -- Installing: /home/a/Solving-Maze/install/interfaces/include/interfaces/interfaces/msg
+[7.367s] -- Installing: /home/a/Solving-Maze/install/interfaces/include/interfaces/interfaces/msg/rosidl_generator_c__visibility_control.h
+[7.367s] -- Installing: /home/a/Solving-Maze/install/interfaces/include/interfaces/interfaces/action
+[7.367s] -- Installing: /home/a/Solving-Maze/install/interfaces/include/interfaces/interfaces/action/move_x.h
+[7.368s] -- Installing: /home/a/Solving-Maze/install/interfaces/include/interfaces/interfaces/action/detail
+[7.368s] -- Installing: /home/a/Solving-Maze/install/interfaces/include/interfaces/interfaces/action/detail/move_x__functions.h
+[7.368s] -- Installing: /home/a/Solving-Maze/install/interfaces/include/interfaces/interfaces/action/detail/move_x__description.c
+[7.368s] -- Installing: /home/a/Solving-Maze/install/interfaces/include/interfaces/interfaces/action/detail/move_x__type_support.h
+[7.368s] -- Installing: /home/a/Solving-Maze/install/interfaces/include/interfaces/interfaces/action/detail/move_x__functions.c
+[7.368s] -- Installing: /home/a/Solving-Maze/install/interfaces/include/interfaces/interfaces/action/detail/move_x__type_support.c
+[7.368s] -- Installing: /home/a/Solving-Maze/install/interfaces/include/interfaces/interfaces/action/detail/move_x__struct.h
+[7.369s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/interfaces/environment/library_path.sh
+[7.369s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/interfaces/environment/library_path.dsv
+[7.369s] -- Installing: /home/a/Solving-Maze/install/interfaces/lib/libinterfaces__rosidl_generator_c.so
+[7.369s] -- Set non-toolchain portion of runtime path of "/home/a/Solving-Maze/install/interfaces/lib/libinterfaces__rosidl_generator_c.so" to ""
+[7.369s] -- Up-to-date: /home/a/Solving-Maze/install/interfaces/include/interfaces/interfaces
+[7.369s] -- Up-to-date: /home/a/Solving-Maze/install/interfaces/include/interfaces/interfaces/msg
+[7.369s] -- Installing: /home/a/Solving-Maze/install/interfaces/include/interfaces/interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[7.370s] -- Up-to-date: /home/a/Solving-Maze/install/interfaces/include/interfaces/interfaces/action
+[7.370s] -- Up-to-date: /home/a/Solving-Maze/install/interfaces/include/interfaces/interfaces/action/detail
+[7.370s] -- Installing: /home/a/Solving-Maze/install/interfaces/include/interfaces/interfaces/action/detail/move_x__rosidl_typesupport_fastrtps_c.h
+[7.370s] -- Installing: /home/a/Solving-Maze/install/interfaces/lib/libinterfaces__rosidl_typesupport_fastrtps_c.so
+[7.370s] -- Set non-toolchain portion of runtime path of "/home/a/Solving-Maze/install/interfaces/lib/libinterfaces__rosidl_typesupport_fastrtps_c.so" to ""
+[7.370s] -- Up-to-date: /home/a/Solving-Maze/install/interfaces/include/interfaces/interfaces
+[7.370s] -- Up-to-date: /home/a/Solving-Maze/install/interfaces/include/interfaces/interfaces/msg
+[7.371s] -- Installing: /home/a/Solving-Maze/install/interfaces/include/interfaces/interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[7.371s] -- Up-to-date: /home/a/Solving-Maze/install/interfaces/include/interfaces/interfaces/action
+[7.371s] -- Up-to-date: /home/a/Solving-Maze/install/interfaces/include/interfaces/interfaces/action/detail
+[7.371s] -- Installing: /home/a/Solving-Maze/install/interfaces/include/interfaces/interfaces/action/detail/move_x__rosidl_typesupport_introspection_c.h
+[7.371s] -- Installing: /home/a/Solving-Maze/install/interfaces/include/interfaces/interfaces/action/detail/move_x__type_support.c
+[7.371s] -- Installing: /home/a/Solving-Maze/install/interfaces/lib/libinterfaces__rosidl_typesupport_introspection_c.so
+[7.371s] -- Set non-toolchain portion of runtime path of "/home/a/Solving-Maze/install/interfaces/lib/libinterfaces__rosidl_typesupport_introspection_c.so" to ""
+[7.371s] -- Installing: /home/a/Solving-Maze/install/interfaces/lib/libinterfaces__rosidl_typesupport_c.so
+[7.371s] -- Set non-toolchain portion of runtime path of "/home/a/Solving-Maze/install/interfaces/lib/libinterfaces__rosidl_typesupport_c.so" to ""
+[7.372s] -- Up-to-date: /home/a/Solving-Maze/install/interfaces/include/interfaces/interfaces
+[7.372s] -- Up-to-date: /home/a/Solving-Maze/install/interfaces/include/interfaces/interfaces/msg
+[7.372s] -- Installing: /home/a/Solving-Maze/install/interfaces/include/interfaces/interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+[7.372s] -- Up-to-date: /home/a/Solving-Maze/install/interfaces/include/interfaces/interfaces/action
+[7.372s] -- Installing: /home/a/Solving-Maze/install/interfaces/include/interfaces/interfaces/action/move_x.hpp
+[7.372s] -- Up-to-date: /home/a/Solving-Maze/install/interfaces/include/interfaces/interfaces/action/detail
+[7.372s] -- Installing: /home/a/Solving-Maze/install/interfaces/include/interfaces/interfaces/action/detail/move_x__builder.hpp
+[7.372s] -- Installing: /home/a/Solving-Maze/install/interfaces/include/interfaces/interfaces/action/detail/move_x__type_support.hpp
+[7.372s] -- Installing: /home/a/Solving-Maze/install/interfaces/include/interfaces/interfaces/action/detail/move_x__traits.hpp
+[7.372s] -- Installing: /home/a/Solving-Maze/install/interfaces/include/interfaces/interfaces/action/detail/move_x__struct.hpp
+[7.372s] -- Up-to-date: /home/a/Solving-Maze/install/interfaces/include/interfaces/interfaces
+[7.372s] -- Up-to-date: /home/a/Solving-Maze/install/interfaces/include/interfaces/interfaces/msg
+[7.372s] -- Installing: /home/a/Solving-Maze/install/interfaces/include/interfaces/interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[7.373s] -- Up-to-date: /home/a/Solving-Maze/install/interfaces/include/interfaces/interfaces/action
+[7.373s] -- Up-to-date: /home/a/Solving-Maze/install/interfaces/include/interfaces/interfaces/action/detail
+[7.373s] -- Installing: /home/a/Solving-Maze/install/interfaces/include/interfaces/interfaces/action/detail/move_x__rosidl_typesupport_fastrtps_cpp.hpp
+[7.373s] -- Installing: /home/a/Solving-Maze/install/interfaces/include/interfaces/interfaces/action/detail/dds_fastrtps
+[7.373s] -- Installing: /home/a/Solving-Maze/install/interfaces/lib/libinterfaces__rosidl_typesupport_fastrtps_cpp.so
+[7.373s] -- Set non-toolchain portion of runtime path of "/home/a/Solving-Maze/install/interfaces/lib/libinterfaces__rosidl_typesupport_fastrtps_cpp.so" to ""
+[7.373s] -- Up-to-date: /home/a/Solving-Maze/install/interfaces/include/interfaces/interfaces
+[7.373s] -- Up-to-date: /home/a/Solving-Maze/install/interfaces/include/interfaces/interfaces/action
+[7.373s] -- Up-to-date: /home/a/Solving-Maze/install/interfaces/include/interfaces/interfaces/action/detail
+[7.373s] -- Installing: /home/a/Solving-Maze/install/interfaces/include/interfaces/interfaces/action/detail/move_x__rosidl_typesupport_introspection_cpp.hpp
+[7.374s] -- Installing: /home/a/Solving-Maze/install/interfaces/include/interfaces/interfaces/action/detail/move_x__type_support.cpp
+[7.374s] -- Installing: /home/a/Solving-Maze/install/interfaces/lib/libinterfaces__rosidl_typesupport_introspection_cpp.so
+[7.374s] -- Set non-toolchain portion of runtime path of "/home/a/Solving-Maze/install/interfaces/lib/libinterfaces__rosidl_typesupport_introspection_cpp.so" to ""
+[7.374s] -- Installing: /home/a/Solving-Maze/install/interfaces/lib/libinterfaces__rosidl_typesupport_cpp.so
+[7.374s] -- Set non-toolchain portion of runtime path of "/home/a/Solving-Maze/install/interfaces/lib/libinterfaces__rosidl_typesupport_cpp.so" to ""
+[7.374s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/interfaces/environment/pythonpath.sh
+[7.374s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/interfaces/environment/pythonpath.dsv
+[7.374s] -- Installing: /home/a/Solving-Maze/install/interfaces/lib/python3.12/site-packages/interfaces-0.0.0-py3.12.egg-info
+[7.374s] -- Installing: /home/a/Solving-Maze/install/interfaces/lib/python3.12/site-packages/interfaces-0.0.0-py3.12.egg-info/top_level.txt
+[7.374s] -- Installing: /home/a/Solving-Maze/install/interfaces/lib/python3.12/site-packages/interfaces-0.0.0-py3.12.egg-info/PKG-INFO
+[7.374s] -- Installing: /home/a/Solving-Maze/install/interfaces/lib/python3.12/site-packages/interfaces-0.0.0-py3.12.egg-info/dependency_links.txt
+[7.375s] -- Installing: /home/a/Solving-Maze/install/interfaces/lib/python3.12/site-packages/interfaces-0.0.0-py3.12.egg-info/SOURCES.txt
+[7.375s] -- Installing: /home/a/Solving-Maze/install/interfaces/lib/python3.12/site-packages/interfaces
+[7.375s] -- Installing: /home/a/Solving-Maze/install/interfaces/lib/python3.12/site-packages/interfaces/interfaces_s__rosidl_typesupport_c.so
+[7.375s] -- Installing: /home/a/Solving-Maze/install/interfaces/lib/python3.12/site-packages/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[7.375s] -- Installing: /home/a/Solving-Maze/install/interfaces/lib/python3.12/site-packages/interfaces/interfaces_s__rosidl_typesupport_fastrtps_c.so
+[7.375s] -- Installing: /home/a/Solving-Maze/install/interfaces/lib/python3.12/site-packages/interfaces/_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[7.375s] -- Installing: /home/a/Solving-Maze/install/interfaces/lib/python3.12/site-packages/interfaces/__init__.py
+[7.375s] -- Installing: /home/a/Solving-Maze/install/interfaces/lib/python3.12/site-packages/interfaces/interfaces_s__rosidl_typesupport_introspection_c.so
+[7.375s] -- Installing: /home/a/Solving-Maze/install/interfaces/lib/python3.12/site-packages/interfaces/_interfaces_s.ep.rosidl_typesupport_c.c
+[7.375s] -- Installing: /home/a/Solving-Maze/install/interfaces/lib/python3.12/site-packages/interfaces/action
+[7.375s] -- Installing: /home/a/Solving-Maze/install/interfaces/lib/python3.12/site-packages/interfaces/action/_move_x_s.c
+[7.375s] -- Installing: /home/a/Solving-Maze/install/interfaces/lib/python3.12/site-packages/interfaces/action/_move_x.py
+[7.376s] -- Installing: /home/a/Solving-Maze/install/interfaces/lib/python3.12/site-packages/interfaces/action/__init__.py
+[7.426s] Listing '/home/a/Solving-Maze/install/interfaces/lib/python3.12/site-packages/interfaces'...
+[7.426s] Compiling '/home/a/Solving-Maze/install/interfaces/lib/python3.12/site-packages/interfaces/__init__.py'...
+[7.427s] Listing '/home/a/Solving-Maze/install/interfaces/lib/python3.12/site-packages/interfaces/action'...
+[7.427s] Compiling '/home/a/Solving-Maze/install/interfaces/lib/python3.12/site-packages/interfaces/action/__init__.py'...
+[7.427s] Compiling '/home/a/Solving-Maze/install/interfaces/lib/python3.12/site-packages/interfaces/action/_move_x.py'...
+[7.433s] -- Installing: /home/a/Solving-Maze/install/interfaces/lib/python3.12/site-packages/interfaces/interfaces_s__rosidl_typesupport_fastrtps_c.so
+[7.433s] -- Set non-toolchain portion of runtime path of "/home/a/Solving-Maze/install/interfaces/lib/python3.12/site-packages/interfaces/interfaces_s__rosidl_typesupport_fastrtps_c.so" to ""
+[7.433s] -- Installing: /home/a/Solving-Maze/install/interfaces/lib/python3.12/site-packages/interfaces/interfaces_s__rosidl_typesupport_introspection_c.so
+[7.433s] -- Set non-toolchain portion of runtime path of "/home/a/Solving-Maze/install/interfaces/lib/python3.12/site-packages/interfaces/interfaces_s__rosidl_typesupport_introspection_c.so" to ""
+[7.433s] -- Installing: /home/a/Solving-Maze/install/interfaces/lib/python3.12/site-packages/interfaces/interfaces_s__rosidl_typesupport_c.so
+[7.434s] -- Set non-toolchain portion of runtime path of "/home/a/Solving-Maze/install/interfaces/lib/python3.12/site-packages/interfaces/interfaces_s__rosidl_typesupport_c.so" to ""
+[7.434s] -- Installing: /home/a/Solving-Maze/install/interfaces/lib/libinterfaces__rosidl_generator_py.so
+[7.434s] -- Set non-toolchain portion of runtime path of "/home/a/Solving-Maze/install/interfaces/lib/libinterfaces__rosidl_generator_py.so" to ""
+[7.434s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/ament_index/resource_index/rust_packages/interfaces
+[7.434s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/interfaces/rust
+[7.434s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/interfaces/rust/src
+[7.435s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/interfaces/rust/src/action.rs
+[7.435s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/interfaces/rust/src/lib.rs
+[7.435s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/interfaces/rust/src/action
+[7.435s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/interfaces/rust/src/action/rmw.rs
+[7.435s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/interfaces/rust/Cargo.toml
+[7.435s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/interfaces/rust/build.rs
+[7.435s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/interfaces/action/MoveX.idl
+[7.435s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/interfaces/action/MoveX.action
+[7.436s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/ament_index/resource_index/package_run_dependencies/interfaces
+[7.436s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/ament_index/resource_index/parent_prefix_path/interfaces
+[7.436s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/interfaces/environment/ament_prefix_path.sh
+[7.436s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/interfaces/environment/ament_prefix_path.dsv
+[7.436s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/interfaces/environment/path.sh
+[7.436s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/interfaces/environment/path.dsv
+[7.436s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/interfaces/local_setup.bash
+[7.437s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/interfaces/local_setup.sh
+[7.437s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/interfaces/local_setup.zsh
+[7.437s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/interfaces/local_setup.dsv
+[7.437s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/interfaces/package.dsv
+[7.437s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/ament_index/resource_index/packages/interfaces
+[7.437s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_generator_cExport.cmake
+[7.437s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_generator_cExport-noconfig.cmake
+[7.438s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[7.438s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[7.438s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_introspection_cExport.cmake
+[7.438s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[7.438s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_cExport.cmake
+[7.438s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[7.438s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_generator_cppExport.cmake
+[7.438s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[7.438s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[7.438s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[7.439s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[7.439s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_cppExport.cmake
+[7.439s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[7.439s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_generator_pyExport.cmake
+[7.439s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[7.439s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/interfaces/cmake/rosidl_cmake-extras.cmake
+[7.439s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[7.439s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[7.440s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[7.440s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[7.440s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[7.440s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[7.440s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/interfaces/cmake/rosidl_cmake_aggregate_target-extras.cmake
+[7.440s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/interfaces/cmake/interfacesConfig.cmake
+[7.440s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/interfaces/cmake/interfacesConfig-version.cmake
+[7.440s] -- Installing: /home/a/Solving-Maze/install/interfaces/share/interfaces/package.xml
+[7.441s] Invoked command in '/home/a/Solving-Maze/build/interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/a/Solving-Maze/install/mazeSolve_pkg:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/a/Solving-Maze/build/interfaces

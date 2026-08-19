@@ -1,0 +1,35 @@
+running develop
+Removing /home/a/Solving-Maze/install/mazeSolve_pkg/lib/python3.12/site-packages/mazeSolve-pkg.egg-link (link to .)
+running egg_info
+writing ../../build/mazeSolve_pkg/mazeSolve_pkg.egg-info/PKG-INFO
+writing dependency_links to ../../build/mazeSolve_pkg/mazeSolve_pkg.egg-info/dependency_links.txt
+writing entry points to ../../build/mazeSolve_pkg/mazeSolve_pkg.egg-info/entry_points.txt
+writing requirements to ../../build/mazeSolve_pkg/mazeSolve_pkg.egg-info/requires.txt
+writing top-level names to ../../build/mazeSolve_pkg/mazeSolve_pkg.egg-info/top_level.txt
+reading manifest file '../../build/mazeSolve_pkg/mazeSolve_pkg.egg-info/SOURCES.txt'
+writing manifest file '../../build/mazeSolve_pkg/mazeSolve_pkg.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/a/Solving-Maze/build/mazeSolve_pkg/build
+creating /home/a/Solving-Maze/build/mazeSolve_pkg/build/lib
+creating /home/a/Solving-Maze/build/mazeSolve_pkg/build/lib/mazeSolve_pkg
+copying mazeSolve_pkg/move_x_server.py -> /home/a/Solving-Maze/build/mazeSolve_pkg/build/lib/mazeSolve_pkg
+copying mazeSolve_pkg/yaw_client.py -> /home/a/Solving-Maze/build/mazeSolve_pkg/build/lib/mazeSolve_pkg
+copying mazeSolve_pkg/__init__.py -> /home/a/Solving-Maze/build/mazeSolve_pkg/build/lib/mazeSolve_pkg
+running install
+running install_lib
+creating /home/a/Solving-Maze/install/mazeSolve_pkg/lib/python3.12/site-packages/mazeSolve_pkg
+copying /home/a/Solving-Maze/build/mazeSolve_pkg/build/lib/mazeSolve_pkg/move_x_server.py -> /home/a/Solving-Maze/install/mazeSolve_pkg/lib/python3.12/site-packages/mazeSolve_pkg
+copying /home/a/Solving-Maze/build/mazeSolve_pkg/build/lib/mazeSolve_pkg/yaw_client.py -> /home/a/Solving-Maze/install/mazeSolve_pkg/lib/python3.12/site-packages/mazeSolve_pkg
+copying /home/a/Solving-Maze/build/mazeSolve_pkg/build/lib/mazeSolve_pkg/__init__.py -> /home/a/Solving-Maze/install/mazeSolve_pkg/lib/python3.12/site-packages/mazeSolve_pkg
+byte-compiling /home/a/Solving-Maze/install/mazeSolve_pkg/lib/python3.12/site-packages/mazeSolve_pkg/move_x_server.py to move_x_server.cpython-312.pyc
+byte-compiling /home/a/Solving-Maze/install/mazeSolve_pkg/lib/python3.12/site-packages/mazeSolve_pkg/yaw_client.py to yaw_client.cpython-312.pyc
+byte-compiling /home/a/Solving-Maze/install/mazeSolve_pkg/lib/python3.12/site-packages/mazeSolve_pkg/__init__.py to __init__.cpython-312.pyc
+running install_data
+copying resource/mazeSolve_pkg -> /home/a/Solving-Maze/install/mazeSolve_pkg/share/ament_index/resource_index/packages
+copying package.xml -> /home/a/Solving-Maze/install/mazeSolve_pkg/share/mazeSolve_pkg
+running install_egg_info
+Copying ../../build/mazeSolve_pkg/mazeSolve_pkg.egg-info to /home/a/Solving-Maze/install/mazeSolve_pkg/lib/python3.12/site-packages/mazeSolve_pkg-0.0.0-py3.12.egg-info
+running install_scripts
+Installing action_x_server script to /home/a/Solving-Maze/install/mazeSolve_pkg/lib/mazeSolve_pkg
+writing list of installed files to '/home/a/Solving-Maze/build/mazeSolve_pkg/install.log'
