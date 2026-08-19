@@ -18,16 +18,17 @@ class Action_Node(Node):
         self.move_client = ActionClient(self, Move, "move")
         self.wall_client = self.create_client(SetBool,'/toggle_walls_1_2') #create service client
 
+
     def solve_maze(self):
 
-        self.yaw_client(90)
-        self.wall_client(True)
-        self.move_client()
-        self.wall_client(False)
-        self.move_client()
-        self.yaw_client(-90)
+        self.send_yaw_goal(90)
+        self.send_request()
+        self.send_move_goal()
+        self.send_request()
+        self.send_move_goal()
+        self.send_yaw_goal(-90)
         for _ in range(4):
-            self.move_client()
+            self.send_move_goal()
         
 
 
