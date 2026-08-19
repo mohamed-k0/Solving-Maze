@@ -24,6 +24,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
+            'yaw_server = mazeSolve_pkg.yaw_server:main',
         ],
     },
 )
