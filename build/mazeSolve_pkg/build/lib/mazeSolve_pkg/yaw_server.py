@@ -3,6 +3,7 @@ import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import Twist
 from nav_msgs.msg import Odometry
+from tf_transformations import euler_from_quaternion
 
 
 from interfaces.action import MoveYaw
@@ -35,6 +36,10 @@ class MoveYawServer(Node):
         # Create the action server
         self.action_server = ActionServer(self, MoveYaw, '/move_yaw', self.execute_callback)
 
+        self.timer = self.create_timer(
+    0.1,
+    self.rotate)
+
 
     def execute_callback(self, goal):
 
@@ -50,7 +55,32 @@ class MoveYawServer(Node):
 
     def odom_callback(self, msg):
 
-        self.get_logger().info('Odometry message received.')
+        # Getting the orientation from the odometry message
+        orientation = msg.pose.pose.orientation
+
+        # storing the 4 rotational representation in a tuple (immutable)
+        quaternion = (orientation.x, orientation.y, orientation.z, orientation.w)
+
+        # Converting the quaternion to Euler angles
+        roll, pitch, yaw = euler_from_quaternion(quaternion) # We only need the yaw angle
+
+        self.progress = yaw
+
+        self.get_logger().info(f"Current Yaw: {self.progress}")
+
+
+    def rotate(self):
+
+        msg = Twist()
+
+        msg.linear.x = 0.0
+        msg.angular.z = 0.5  # Set the desired angular velocity for rotation
+
+        self.vel_publisher.publish(msg)
+
+    
+
+
 
 
 
