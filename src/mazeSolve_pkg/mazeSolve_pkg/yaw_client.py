@@ -32,8 +32,8 @@ class YawClient(Node):
         self.get_logger().info(f'feedback = current action = {f.current_action}  progress = {f.progress}')
     def goal_callback(self ,future):
         # got result 
-        goal = future.result()
-        if not goal.accepted:
+        goal_handle = future.result()
+        if not goal_handle.accepted:
             # server didnt accept
             self.get_logger().info("not accepted")
             return
