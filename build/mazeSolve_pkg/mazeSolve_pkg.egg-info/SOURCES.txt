@@ -5,11 +5,13 @@ setup.py
 ../../build/mazeSolve_pkg/mazeSolve_pkg.egg-info/PKG-INFO
 ../../build/mazeSolve_pkg/mazeSolve_pkg.egg-info/SOURCES.txt
 ../../build/mazeSolve_pkg/mazeSolve_pkg.egg-info/dependency_links.txt
+../../build/mazeSolve_pkg/mazeSolve_pkg.egg-info/entry_points.txt
 ../../build/mazeSolve_pkg/mazeSolve_pkg.egg-info/requires.txt
 ../../build/mazeSolve_pkg/mazeSolve_pkg.egg-info/top_level.txt
 ../../build/mazeSolve_pkg/mazeSolve_pkg.egg-info/zip-safe
 mazeSolve_pkg/__init__.py
 mazeSolve_pkg/yaw_client.py
+mazeSolve_pkg/yaw_server.py
 resource/mazeSolve_pkg
 test/test_copyright.py
 test/test_flake8.py

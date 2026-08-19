@@ -1,0 +1,37 @@
+[1.320s] Invoking command in '/home/mohamed-khaled/Solving-Maze/src/MIA26_phase2_ros_contest/maze_control': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/mohamed-khaled/Solving-Maze/build/maze_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mohamed-khaled/Solving-Maze/install/maze_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/maze_control build --build-base /home/mohamed-khaled/Solving-Maze/build/maze_control/build install --record /home/mohamed-khaled/Solving-Maze/build/maze_control/install.log --install-scripts $base/lib/maze_control --single-version-externally-managed install_data
+[1.448s] /usr/lib/python3/dist-packages/setuptools/dist.py:744: SetuptoolsDeprecationWarning: Invalid dash-separated options
+[1.448s] !!
+[1.449s] 
+[1.449s]         ********************************************************************************
+[1.449s]         Usage of dash-separated 'script-dir' will not be supported in future
+[1.449s]         versions. Please use the underscore name 'script_dir' instead.
+[1.449s] 
+[1.449s]         This deprecation is overdue, please update your project and remove deprecated
+[1.449s]         calls to avoid build errors in the future.
+[1.449s] 
+[1.449s]         See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.
+[1.449s]         ********************************************************************************
+[1.449s] 
+[1.450s] !!
+[1.450s]   opt = self.warn_dash_deprecation(opt, section)
+[1.616s] running egg_info
+[1.640s] writing ../../../build/maze_control/maze_control.egg-info/PKG-INFO
+[1.640s] writing dependency_links to ../../../build/maze_control/maze_control.egg-info/dependency_links.txt
+[1.640s] writing entry points to ../../../build/maze_control/maze_control.egg-info/entry_points.txt
+[1.640s] writing requirements to ../../../build/maze_control/maze_control.egg-info/requires.txt
+[1.640s] writing top-level names to ../../../build/maze_control/maze_control.egg-info/top_level.txt
+[1.688s] reading manifest file '../../../build/maze_control/maze_control.egg-info/SOURCES.txt'
+[1.688s] writing manifest file '../../../build/maze_control/maze_control.egg-info/SOURCES.txt'
+[1.688s] running build
+[1.689s] running build_py
+[1.689s] running install
+[1.695s] running install_lib
+[1.719s] running install_data
+[1.720s] running install_egg_info
+[1.744s] removing '/home/mohamed-khaled/Solving-Maze/install/maze_control/lib/python3.12/site-packages/maze_control-0.1.0-py3.12.egg-info' (and everything under it)
+[1.744s] Copying ../../../build/maze_control/maze_control.egg-info to /home/mohamed-khaled/Solving-Maze/install/maze_control/lib/python3.12/site-packages/maze_control-0.1.0-py3.12.egg-info
+[1.745s] running install_scripts
+[1.895s] Installing maze_timer_node script to /home/mohamed-khaled/Solving-Maze/install/maze_control/lib/maze_control
+[1.895s] Installing wall_retraction_service script to /home/mohamed-khaled/Solving-Maze/install/maze_control/lib/maze_control
+[1.895s] writing list of installed files to '/home/mohamed-khaled/Solving-Maze/build/maze_control/install.log'
+[1.924s] Invoked command in '/home/mohamed-khaled/Solving-Maze/src/MIA26_phase2_ros_contest/maze_control' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/mohamed-khaled/Solving-Maze/build/maze_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mohamed-khaled/Solving-Maze/install/maze_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/maze_control build --build-base /home/mohamed-khaled/Solving-Maze/build/maze_control/build install --record /home/mohamed-khaled/Solving-Maze/build/maze_control/install.log --install-scripts $base/lib/maze_control --single-version-externally-managed install_data
