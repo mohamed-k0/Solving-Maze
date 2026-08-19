@@ -3,7 +3,7 @@ This is our form of solving the maze as the task was for a turtle to escape a ma
 controls walls
 
 # Solution consists of
-##A ros2 package which consists of
+## A ros2 package which consists of
   - ### Movement-x Client & Movement-x Server : which are responsible for the movement of the turtle
   - ### Yaw-movement Client & Server : which are responsible for the rotation of the turtle
   - ### Action Client Node : This node houses 3 clients and a method `solve_maze` that initiates them to solve the maze:
