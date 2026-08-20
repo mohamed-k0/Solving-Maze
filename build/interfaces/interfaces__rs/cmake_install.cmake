@@ -1,8 +1,8 @@
-# Install script for directory: /home/a/Solving-Maze/build/interfaces/interfaces__rs
+# Install script for directory: /root/training_ws_merge2/build/interfaces/interfaces__rs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/a/Solving-Maze/install/interfaces")
+  set(CMAKE_INSTALL_PREFIX "/root/training_ws_merge2/install/interfaces")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

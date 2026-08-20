@@ -17,25 +17,32 @@ class Action_Node(Node):
         self.yaw_client = ActionClient(self,Move,'/move_yaw')
         self.move_client = ActionClient(self, Move, 'move_robot_x')
         self.wall_client = self.create_client(SetBool,'/toggle_walls_1_2') #create service client
-        self.solve_maze()
+        
 
     def solve_maze(self):
+        
+        time.sleep(1)
+        self.send_yaw_goal(80)
+        time.sleep(6)
+        self.send_request(True)
+        time.sleep(6)
+        self.send_move_goal(1.0)
+        time.sleep(6)
+        self.send_move_goal(1.0)
+        time.sleep(6)
+        self.send_request(False)
+        time.sleep(6)
+        self.send_move_goal(0.8)
+        time.sleep(6)
+        self.send_yaw_goal(-30)
+        time.sleep(6)
 
-        self.send_yaw_goal(90)
-        time.sleep(2)
-        self.send_request()
-        time.sleep(2)
-        self.send_move_goal()
-        time.sleep(2)
-        self.send_request()
-        time.sleep(2)
-        self.send_move_goal()
-        time.sleep(2)
-        self.send_yaw_goal(-90)
-        time.sleep(2)
-        for _ in range(4):
-            self.send_move_goal()
-            time.sleep(2)
+        
+       
+       
+        for _ in range(7):
+            self.send_move_goal(1.0)
+            time.sleep(6)
         
 
 
@@ -78,7 +85,7 @@ class Action_Node(Node):
 
 
 
-    def send_move_goal(self):
+    def send_move_goal(self,move):
 
         # Wait for the action server to be available
         self.get_logger().info("Waiting for movement server......")
@@ -87,7 +94,7 @@ class Action_Node(Node):
         # Create a goal message
         goal_msg = Move.Goal()
         goal_msg.target_yaw = 0.0
-        goal_msg.target_x = 1.0 
+        goal_msg.target_x = move 
         
         # Send the goal to the action server
         self.send_goal_future = self.move_client.send_goal_async(goal_msg, feedback_callback=self.move_feedback)
@@ -128,14 +135,14 @@ class Action_Node(Node):
 
 
 
-    def send_request(self):
+    def send_request(self,var):
         if not self.wall_client.wait_for_service(
             timeout_sec=5.0
         ):
             self.get_logger().error("service not available") #checks if the service is available
             return
         request= SetBool.Request() #sends request to service
-        request.data = True
+        request.data = var
         future = self.wall_client.call_async(request)
         future.add_done_callback(
             self.service_response
@@ -152,6 +159,7 @@ class Action_Node(Node):
 def main():
     rclpy.init()
     node = Action_Node()
+    node.solve_maze()
     rclpy.spin(node)
     node.destroy_node()
     rclpy.shutdown()

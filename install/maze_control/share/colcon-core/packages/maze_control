@@ -1,1 +1,1 @@
-setuptools
+geometry_msgs:interfaces:nav_msgs:rclpy:ros_gz_bridge:ros_gz_sim:std_msgs:std_srvs

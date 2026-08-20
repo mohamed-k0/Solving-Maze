@@ -1,10 +1,10 @@
 file(REMOVE_RECURSE
-  "/home/a/Solving-Maze/build/interfaces/rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_c.c"
-  "/home/a/Solving-Maze/build/interfaces/rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c"
-  "/home/a/Solving-Maze/build/interfaces/rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_introspection_c.c"
-  "/home/a/Solving-Maze/build/interfaces/rosidl_generator_py/interfaces/action/__init__.py"
-  "/home/a/Solving-Maze/build/interfaces/rosidl_generator_py/interfaces/action/_move.py"
-  "/home/a/Solving-Maze/build/interfaces/rosidl_generator_py/interfaces/action/_move_s.c"
+  "/root/training_ws_merge2/build/interfaces/rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_c.c"
+  "/root/training_ws_merge2/build/interfaces/rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c"
+  "/root/training_ws_merge2/build/interfaces/rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_introspection_c.c"
+  "/root/training_ws_merge2/build/interfaces/rosidl_generator_py/interfaces/action/__init__.py"
+  "/root/training_ws_merge2/build/interfaces/rosidl_generator_py/interfaces/action/_move.py"
+  "/root/training_ws_merge2/build/interfaces/rosidl_generator_py/interfaces/action/_move_s.c"
   "CMakeFiles/interfaces__py"
 )
 

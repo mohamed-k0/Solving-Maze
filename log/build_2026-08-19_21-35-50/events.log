@@ -1,0 +1,553 @@
+[0.000000] (-) TimerEvent: {}
+[0.000764] (interfaces) JobQueued: {'identifier': 'interfaces', 'dependencies': OrderedDict()}
+[0.001213] (mazeSolve_pkg) JobQueued: {'identifier': 'mazeSolve_pkg', 'dependencies': OrderedDict({'interfaces': '/root/training_ws_merge2/install/interfaces'})}
+[0.001262] (maze_control) JobQueued: {'identifier': 'maze_control', 'dependencies': OrderedDict({'interfaces': '/root/training_ws_merge2/install/interfaces'})}
+[0.001299] (interfaces) JobStarted: {'identifier': 'interfaces'}
+[0.021347] (interfaces) JobProgress: {'identifier': 'interfaces', 'progress': 'cmake'}
+[0.022233] (interfaces) Command: {'cmd': ['/usr/bin/cmake', '/root/training_ws_merge2/src/interfaces', '-DCMAKE_INSTALL_PREFIX=/root/training_ws_merge2/install/interfaces'], 'cwd': '/root/training_ws_merge2/build/interfaces', 'env': OrderedDict({'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'HOSTNAME': 'machine', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/root', 'OLDPWD': '/root', 'ROS_PYTHON_VERSION': '3', 'COLCON_PREFIX_PATH': '/root/training_ws_merge2/install', 'ROS_DISTRO': 'jazzy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'XDG_RUNTIME_DIR': '/tmp/runtime-root', 'DISPLAY': ':0.0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/root/training_ws_merge2/build/interfaces', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.063412] (interfaces) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[0.099489] (-) TimerEvent: {}
+[0.199826] (-) TimerEvent: {}
+[0.300166] (-) TimerEvent: {}
+[0.400532] (-) TimerEvent: {}
+[0.405221] (interfaces) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[0.500640] (-) TimerEvent: {}
+[0.600942] (-) TimerEvent: {}
+[0.701257] (-) TimerEvent: {}
+[0.742897] (interfaces) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.6.1 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)\n'}
+[0.769914] (interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.801388] (-) TimerEvent: {}
+[0.901810] (-) TimerEvent: {}
+[0.985541] (interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.001918] (-) TimerEvent: {}
+[1.102237] (-) TimerEvent: {}
+[1.176331] (interfaces) StdoutLine: {'line': b'-- Found rosidl_adapter: 4.6.9 (/opt/ros/jazzy/share/rosidl_adapter/cmake)\n'}
+[1.194320] (interfaces) StdoutLine: {'line': b'-- Found action_msgs: 2.0.4 (/opt/ros/jazzy/share/action_msgs/cmake)\n'}
+[1.202346] (-) TimerEvent: {}
+[1.302669] (-) TimerEvent: {}
+[1.402993] (-) TimerEvent: {}
+[1.503317] (-) TimerEvent: {}
+[1.603668] (-) TimerEvent: {}
+[1.704053] (-) TimerEvent: {}
+[1.804396] (-) TimerEvent: {}
+[1.905160] (-) TimerEvent: {}
+[2.006702] (-) TimerEvent: {}
+[2.107327] (-) TimerEvent: {}
+[2.207778] (-) TimerEvent: {}
+[2.308556] (-) TimerEvent: {}
+[2.409021] (-) TimerEvent: {}
+[2.509436] (-) TimerEvent: {}
+[2.610917] (-) TimerEvent: {}
+[2.711482] (-) TimerEvent: {}
+[2.811975] (-) TimerEvent: {}
+[2.912403] (-) TimerEvent: {}
+[2.981338] (interfaces) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.12.1 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)\n'}
+[3.012520] (-) TimerEvent: {}
+[3.112839] (-) TimerEvent: {}
+[3.213150] (-) TimerEvent: {}
+[3.313512] (-) TimerEvent: {}
+[3.413804] (-) TimerEvent: {}
+[3.514141] (-) TimerEvent: {}
+[3.614428] (-) TimerEvent: {}
+[3.714757] (-) TimerEvent: {}
+[3.815105] (-) TimerEvent: {}
+[3.869373] (interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[3.915200] (-) TimerEvent: {}
+[4.015514] (-) TimerEvent: {}
+[4.115881] (-) TimerEvent: {}
+[4.216323] (-) TimerEvent: {}
+[4.316754] (-) TimerEvent: {}
+[4.417712] (-) TimerEvent: {}
+[4.518091] (-) TimerEvent: {}
+[4.618407] (-) TimerEvent: {}
+[4.718765] (-) TimerEvent: {}
+[4.819181] (-) TimerEvent: {}
+[4.919547] (-) TimerEvent: {}
+[5.019949] (-) TimerEvent: {}
+[5.048794] (interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[5.063059] (interfaces) StdoutLine: {'line': b'-- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)\n'}
+[5.120062] (-) TimerEvent: {}
+[5.220400] (-) TimerEvent: {}
+[5.320776] (-) TimerEvent: {}
+[5.330055] (interfaces) StdoutLine: {'line': b'-- Found PythonExtra: /usr/bin/python3  \n'}
+[5.420908] (-) TimerEvent: {}
+[5.521305] (-) TimerEvent: {}
+[5.621697] (-) TimerEvent: {}
+[5.722164] (-) TimerEvent: {}
+[5.822627] (-) TimerEvent: {}
+[5.923011] (-) TimerEvent: {}
+[6.023429] (-) TimerEvent: {}
+[6.123752] (-) TimerEvent: {}
+[6.224068] (-) TimerEvent: {}
+[6.247655] (interfaces) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed \n'}
+[6.324173] (-) TimerEvent: {}
+[6.382742] (interfaces) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[6.407529] (interfaces) StdoutLine: {'line': b'-- Configuring done (6.4s)\n'}
+[6.424317] (-) TimerEvent: {}
+[6.500407] (interfaces) StdoutLine: {'line': b'-- Generating done (0.1s)\n'}
+[6.524428] (-) TimerEvent: {}
+[6.528768] (interfaces) StdoutLine: {'line': b'-- Build files have been written to: /root/training_ws_merge2/build/interfaces\n'}
+[6.543629] (interfaces) CommandEnded: {'returncode': 0}
+[6.544342] (interfaces) JobProgress: {'identifier': 'interfaces', 'progress': 'build'}
+[6.545651] (interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/root/training_ws_merge2/build/interfaces', '--', '-j8', '-l8'], 'cwd': '/root/training_ws_merge2/build/interfaces', 'env': OrderedDict({'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'HOSTNAME': 'machine', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/root', 'OLDPWD': '/root', 'ROS_PYTHON_VERSION': '3', 'COLCON_PREFIX_PATH': '/root/training_ws_merge2/install', 'ROS_DISTRO': 'jazzy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'XDG_RUNTIME_DIR': '/tmp/runtime-root', 'DISPLAY': ':0.0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/root/training_ws_merge2/build/interfaces', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[6.624544] (-) TimerEvent: {}
+[6.652154] (interfaces) StdoutLine: {'line': b'[  5%] \x1b[34m\x1b[1mGenerating Rust code for ROS interfaces\x1b[0m\n'}
+[6.652455] (interfaces) StdoutLine: {'line': b'[  5%] \x1b[34m\x1b[1mGenerating type hashes for ROS interfaces\x1b[0m\n'}
+[6.674596] (interfaces) StdoutLine: {'line': b'[  5%] Built target ament_cmake_python_copy_interfaces\n'}
+[6.724664] (-) TimerEvent: {}
+[6.825665] (-) TimerEvent: {}
+[6.927221] (-) TimerEvent: {}
+[7.027724] (-) TimerEvent: {}
+[7.130680] (-) TimerEvent: {}
+[7.231026] (-) TimerEvent: {}
+[7.258569] (interfaces) StdoutLine: {'line': b'running egg_info\n'}
+[7.260429] (interfaces) StdoutLine: {'line': b'creating interfaces.egg-info\n'}
+[7.279505] (interfaces) StdoutLine: {'line': b'[  5%] Built target interfaces__rosidl_generator_type_description\n'}
+[7.313832] (interfaces) StdoutLine: {'line': b'[  8%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[7.329998] (interfaces) StdoutLine: {'line': b'writing interfaces.egg-info/PKG-INFO\n'}
+[7.330345] (interfaces) StdoutLine: {'line': b'writing dependency_links to interfaces.egg-info/dependency_links.txt\n'}
+[7.330545] (interfaces) StdoutLine: {'line': b'writing top-level names to interfaces.egg-info/top_level.txt\n'}
+[7.330820] (interfaces) StdoutLine: {'line': b"writing manifest file 'interfaces.egg-info/SOURCES.txt'\n"}
+[7.331052] (-) TimerEvent: {}
+[7.397850] (interfaces) StdoutLine: {'line': b'[ 11%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[7.431201] (-) TimerEvent: {}
+[7.486813] (interfaces) StdoutLine: {'line': b'[ 11%] Built target interfaces__rs\n'}
+[7.531300] (-) TimerEvent: {}
+[7.538830] (interfaces) StdoutLine: {'line': b"reading manifest file 'interfaces.egg-info/SOURCES.txt'\n"}
+[7.539910] (interfaces) StdoutLine: {'line': b"writing manifest file 'interfaces.egg-info/SOURCES.txt'\n"}
+[7.622856] (interfaces) StdoutLine: {'line': b'[ 11%] Built target ament_cmake_python_build_interfaces_egg\n'}
+[7.631407] (-) TimerEvent: {}
+[7.731784] (-) TimerEvent: {}
+[7.832463] (-) TimerEvent: {}
+[7.933086] (-) TimerEvent: {}
+[8.033380] (-) TimerEvent: {}
+[8.133696] (-) TimerEvent: {}
+[8.233989] (-) TimerEvent: {}
+[8.334315] (-) TimerEvent: {}
+[8.339366] (interfaces) StdoutLine: {'line': b'[ 11%] Built target interfaces__cpp\n'}
+[8.434432] (-) TimerEvent: {}
+[8.446585] (interfaces) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/action/detail/move__functions.c.o\x1b[0m\n'}
+[8.446933] (interfaces) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/action/detail/move__type_support.c.o\x1b[0m\n'}
+[8.451851] (interfaces) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/action/detail/move__description.c.o\x1b[0m\n'}
+[8.534566] (-) TimerEvent: {}
+[8.635009] (-) TimerEvent: {}
+[8.735346] (-) TimerEvent: {}
+[8.772678] (interfaces) StdoutLine: {'line': b'[ 22%] \x1b[32m\x1b[1mLinking C shared library libinterfaces__rosidl_generator_c.so\x1b[0m\n'}
+[8.835485] (-) TimerEvent: {}
+[8.879188] (interfaces) StdoutLine: {'line': b'[ 22%] Built target interfaces__rosidl_generator_c\n'}
+[8.926005] (interfaces) StdoutLine: {'line': b'[ 25%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[8.926475] (interfaces) StdoutLine: {'line': b'[ 28%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[8.927421] (interfaces) StdoutLine: {'line': b'[ 31%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[8.927824] (interfaces) StdoutLine: {'line': b'[ 34%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[8.935684] (-) TimerEvent: {}
+[8.944680] (interfaces) StdoutLine: {'line': b'[ 37%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[8.960084] (interfaces) StdoutLine: {'line': b'[ 40%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[9.035792] (-) TimerEvent: {}
+[9.137214] (-) TimerEvent: {}
+[9.240040] (-) TimerEvent: {}
+[9.340454] (-) TimerEvent: {}
+[9.440818] (-) TimerEvent: {}
+[9.541178] (-) TimerEvent: {}
+[9.641540] (-) TimerEvent: {}
+[9.742009] (-) TimerEvent: {}
+[9.842390] (-) TimerEvent: {}
+[9.860768] (interfaces) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/interfaces/action/move__type_support.cpp.o\x1b[0m\n'}
+[9.951193] (-) TimerEvent: {}
+[10.000675] (interfaces) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/action/move__type_support.cpp.o\x1b[0m\n'}
+[10.051658] (-) TimerEvent: {}
+[10.069130] (interfaces) StdoutLine: {'line': b'[ 48%] \x1b[32m\x1b[1mLinking CXX shared library libinterfaces__rosidl_typesupport_c.so\x1b[0m\n'}
+[10.109690] (interfaces) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/interfaces/action/detail/move__type_support.cpp.o\x1b[0m\n'}
+[10.151941] (-) TimerEvent: {}
+[10.218793] (interfaces) StdoutLine: {'line': b'[ 51%] Built target interfaces__rosidl_typesupport_c\n'}
+[10.253150] (-) TimerEvent: {}
+[10.301738] (interfaces) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/interfaces/action/detail/move__type_support.c.o\x1b[0m\n'}
+[10.353260] (-) TimerEvent: {}
+[10.454197] (-) TimerEvent: {}
+[10.557200] (-) TimerEvent: {}
+[10.598285] (interfaces) StdoutLine: {'line': b'[ 57%] \x1b[32m\x1b[1mLinking C shared library libinterfaces__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[10.657439] (-) TimerEvent: {}
+[10.691740] (interfaces) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/interfaces/action/detail/dds_fastrtps/move__type_support.cpp.o\x1b[0m\n'}
+[10.714679] (interfaces) StdoutLine: {'line': b'[ 60%] Built target interfaces__rosidl_typesupport_introspection_c\n'}
+[10.719632] (interfaces) StdoutLine: {'line': b'[ 62%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/interfaces/action/detail/move__type_support_c.cpp.o\x1b[0m\n'}
+[10.757564] (-) TimerEvent: {}
+[10.857973] (-) TimerEvent: {}
+[10.960065] (-) TimerEvent: {}
+[11.060457] (-) TimerEvent: {}
+[11.161023] (-) TimerEvent: {}
+[11.261981] (-) TimerEvent: {}
+[11.362756] (-) TimerEvent: {}
+[11.463489] (-) TimerEvent: {}
+[11.564429] (-) TimerEvent: {}
+[11.665659] (-) TimerEvent: {}
+[11.766048] (-) TimerEvent: {}
+[11.836527] (interfaces) StdoutLine: {'line': b'[ 65%] \x1b[32m\x1b[1mLinking CXX shared library libinterfaces__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[11.866176] (-) TimerEvent: {}
+[11.966684] (-) TimerEvent: {}
+[12.067134] (-) TimerEvent: {}
+[12.107806] (interfaces) StdoutLine: {'line': b'[ 65%] Built target interfaces__rosidl_typesupport_cpp\n'}
+[12.139449] (interfaces) StdoutLine: {'line': b'[ 68%] \x1b[32m\x1b[1mLinking CXX shared library libinterfaces__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[12.167280] (-) TimerEvent: {}
+[12.267701] (-) TimerEvent: {}
+[12.303749] (interfaces) StdoutLine: {'line': b'[ 71%] \x1b[32m\x1b[1mLinking CXX shared library libinterfaces__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[12.364855] (interfaces) StdoutLine: {'line': b'[ 71%] Built target interfaces__rosidl_typesupport_introspection_cpp\n'}
+[12.367859] (-) TimerEvent: {}
+[12.468690] (-) TimerEvent: {}
+[12.538367] (interfaces) StdoutLine: {'line': b'[ 71%] Built target interfaces__rosidl_typesupport_fastrtps_c\n'}
+[12.568854] (-) TimerEvent: {}
+[12.669301] (-) TimerEvent: {}
+[12.769772] (-) TimerEvent: {}
+[12.870132] (-) TimerEvent: {}
+[12.970466] (-) TimerEvent: {}
+[13.023271] (interfaces) StdoutLine: {'line': b'[ 74%] \x1b[32m\x1b[1mLinking CXX shared library libinterfaces__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[13.070626] (-) TimerEvent: {}
+[13.170981] (-) TimerEvent: {}
+[13.211800] (interfaces) StdoutLine: {'line': b'[ 74%] Built target interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[13.256410] (interfaces) StdoutLine: {'line': b'[ 74%] Built target interfaces\n'}
+[13.271103] (-) TimerEvent: {}
+[13.303210] (interfaces) StdoutLine: {'line': b'[ 77%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[13.371196] (-) TimerEvent: {}
+[13.471504] (-) TimerEvent: {}
+[13.571849] (-) TimerEvent: {}
+[13.672177] (-) TimerEvent: {}
+[13.772559] (-) TimerEvent: {}
+[13.872903] (-) TimerEvent: {}
+[13.973202] (-) TimerEvent: {}
+[14.073514] (-) TimerEvent: {}
+[14.173947] (-) TimerEvent: {}
+[14.274265] (-) TimerEvent: {}
+[14.374625] (-) TimerEvent: {}
+[14.474924] (-) TimerEvent: {}
+[14.575262] (-) TimerEvent: {}
+[14.631980] (interfaces) StdoutLine: {'line': b'[ 77%] Built target interfaces__py\n'}
+[14.675379] (-) TimerEvent: {}
+[14.676036] (interfaces) StdoutLine: {'line': b'[ 80%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_generator_py.dir/rosidl_generator_py/interfaces/action/_move_s.c.o\x1b[0m\n'}
+[14.775491] (-) TimerEvent: {}
+[14.875872] (-) TimerEvent: {}
+[14.976235] (-) TimerEvent: {}
+[15.076676] (-) TimerEvent: {}
+[15.087831] (interfaces) StdoutLine: {'line': b'[ 82%] \x1b[32m\x1b[1mLinking C shared library libinterfaces__rosidl_generator_py.so\x1b[0m\n'}
+[15.176797] (-) TimerEvent: {}
+[15.185419] (interfaces) StdoutLine: {'line': b'[ 82%] Built target interfaces__rosidl_generator_py\n'}
+[15.228533] (interfaces) StdoutLine: {'line': b'[ 88%] \x1b[32mBuilding C object CMakeFiles/interfaces_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[15.228889] (interfaces) StdoutLine: {'line': b'[ 88%] \x1b[32mBuilding C object CMakeFiles/interfaces_s__rosidl_typesupport_c.dir/rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[15.232977] (interfaces) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding C object CMakeFiles/interfaces_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[15.276947] (-) TimerEvent: {}
+[15.377396] (-) TimerEvent: {}
+[15.477752] (-) TimerEvent: {}
+[15.482241] (interfaces) StdoutLine: {'line': b'[ 94%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/interfaces/interfaces_s__rosidl_typesupport_c.so\x1b[0m\n'}
+[15.486642] (interfaces) StdoutLine: {'line': b'[ 97%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/interfaces/interfaces_s__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[15.493681] (interfaces) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/interfaces/interfaces_s__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[15.555006] (interfaces) StdoutLine: {'line': b'[100%] Built target interfaces_s__rosidl_typesupport_c\n'}
+[15.563620] (interfaces) StdoutLine: {'line': b'[100%] Built target interfaces_s__rosidl_typesupport_introspection_c\n'}
+[15.566946] (interfaces) StdoutLine: {'line': b'[100%] Built target interfaces_s__rosidl_typesupport_fastrtps_c\n'}
+[15.577864] (-) TimerEvent: {}
+[15.591713] (interfaces) CommandEnded: {'returncode': 0}
+[15.593000] (interfaces) JobProgress: {'identifier': 'interfaces', 'progress': 'install'}
+[15.610472] (interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/root/training_ws_merge2/build/interfaces'], 'cwd': '/root/training_ws_merge2/build/interfaces', 'env': OrderedDict({'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'HOSTNAME': 'machine', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/root', 'OLDPWD': '/root', 'ROS_PYTHON_VERSION': '3', 'COLCON_PREFIX_PATH': '/root/training_ws_merge2/install', 'ROS_DISTRO': 'jazzy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'XDG_RUNTIME_DIR': '/tmp/runtime-root', 'DISPLAY': ':0.0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/root/training_ws_merge2/build/interfaces', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[15.629872] (interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[15.630303] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/ament_index/resource_index/rosidl_interfaces/interfaces\n'}
+[15.630753] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/action/Move.json\n'}
+[15.631108] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces\n'}
+[15.631376] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action\n'}
+[15.631630] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action/move.h\n'}
+[15.631832] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action/detail\n'}
+[15.632002] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action/detail/move__functions.c\n'}
+[15.632240] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action/detail/move__type_support.h\n'}
+[15.632479] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action/detail/move__type_support.c\n'}
+[15.632786] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action/detail/move__struct.h\n'}
+[15.633098] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action/detail/move__functions.h\n'}
+[15.633470] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action/detail/move__description.c\n'}
+[15.633825] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/msg\n'}
+[15.634049] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[15.634484] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/environment/library_path.sh\n'}
+[15.634852] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/environment/library_path.dsv\n'}
+[15.635246] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/lib/libinterfaces__rosidl_generator_c.so\n'}
+[15.636154] (interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/root/training_ws_merge2/install/interfaces/lib/libinterfaces__rosidl_generator_c.so" to ""\n'}
+[15.636435] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces\n'}
+[15.636609] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action\n'}
+[15.636762] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action/detail\n'}
+[15.636951] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action/detail/move__rosidl_typesupport_fastrtps_c.h\n'}
+[15.637133] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/msg\n'}
+[15.637281] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[15.637511] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/lib/libinterfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[15.638332] (interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/root/training_ws_merge2/install/interfaces/lib/libinterfaces__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[15.638716] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces\n'}
+[15.638897] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action\n'}
+[15.639033] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action/detail\n'}
+[15.639174] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action/detail/move__type_support.c\n'}
+[15.639389] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action/detail/move__rosidl_typesupport_introspection_c.h\n'}
+[15.639626] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/msg\n'}
+[15.639844] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[15.640271] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/lib/libinterfaces__rosidl_typesupport_introspection_c.so\n'}
+[15.641081] (interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/root/training_ws_merge2/install/interfaces/lib/libinterfaces__rosidl_typesupport_introspection_c.so" to ""\n'}
+[15.641373] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/lib/libinterfaces__rosidl_typesupport_c.so\n'}
+[15.642030] (interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/root/training_ws_merge2/install/interfaces/lib/libinterfaces__rosidl_typesupport_c.so" to ""\n'}
+[15.642339] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces\n'}
+[15.642498] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action\n'}
+[15.642651] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action/move.hpp\n'}
+[15.642961] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action/detail\n'}
+[15.643174] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action/detail/move__traits.hpp\n'}
+[15.643378] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action/detail/move__builder.hpp\n'}
+[15.643676] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action/detail/move__type_support.hpp\n'}
+[15.643956] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action/detail/move__struct.hpp\n'}
+[15.644419] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/msg\n'}
+[15.644748] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[15.645000] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces\n'}
+[15.645264] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action\n'}
+[15.645439] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action/detail\n'}
+[15.645565] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action/detail/dds_fastrtps\n'}
+[15.645715] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action/detail/move__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[15.645913] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/msg\n'}
+[15.646133] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[15.646353] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/lib/libinterfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[15.647416] (interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/root/training_ws_merge2/install/interfaces/lib/libinterfaces__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[15.647747] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces\n'}
+[15.647886] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action\n'}
+[15.647990] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action/detail\n'}
+[15.648176] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action/detail/move__type_support.cpp\n'}
+[15.648312] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action/detail/move__rosidl_typesupport_introspection_cpp.hpp\n'}
+[15.648483] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/lib/libinterfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[15.649456] (interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/root/training_ws_merge2/install/interfaces/lib/libinterfaces__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[15.649818] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/lib/libinterfaces__rosidl_typesupport_cpp.so\n'}
+[15.650385] (interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/root/training_ws_merge2/install/interfaces/lib/libinterfaces__rosidl_typesupport_cpp.so" to ""\n'}
+[15.650748] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/environment/pythonpath.sh\n'}
+[15.651147] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/environment/pythonpath.dsv\n'}
+[15.651429] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages/interfaces-0.0.0-py3.12.egg-info\n'}
+[15.651660] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages/interfaces-0.0.0-py3.12.egg-info/dependency_links.txt\n'}
+[15.651848] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages/interfaces-0.0.0-py3.12.egg-info/top_level.txt\n'}
+[15.652097] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages/interfaces-0.0.0-py3.12.egg-info/SOURCES.txt\n'}
+[15.652403] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages/interfaces-0.0.0-py3.12.egg-info/PKG-INFO\n'}
+[15.652662] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages/interfaces\n'}
+[15.652823] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages/interfaces/interfaces_s__rosidl_typesupport_c.so\n'}
+[15.653071] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages/interfaces/action\n'}
+[15.653225] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages/interfaces/action/_move_s.c\n'}
+[15.653493] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages/interfaces/action/__init__.py\n'}
+[15.653776] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages/interfaces/action/_move.py\n'}
+[15.654111] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages/interfaces/_interfaces_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[15.654380] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages/interfaces/_interfaces_s.ep.rosidl_typesupport_c.c\n'}
+[15.654686] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[15.655012] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages/interfaces/interfaces_s__rosidl_typesupport_introspection_c.so\n'}
+[15.655296] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages/interfaces/interfaces_s__rosidl_typesupport_fastrtps_c.so\n'}
+[15.655569] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages/interfaces/__init__.py\n'}
+[15.677958] (-) TimerEvent: {}
+[15.746809] (interfaces) StdoutLine: {'line': b"Listing '/root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages/interfaces'...\n"}
+[15.747207] (interfaces) StdoutLine: {'line': b"Compiling '/root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages/interfaces/__init__.py'...\n"}
+[15.747397] (interfaces) StdoutLine: {'line': b"Listing '/root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages/interfaces/action'...\n"}
+[15.747568] (interfaces) StdoutLine: {'line': b"Compiling '/root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages/interfaces/action/__init__.py'...\n"}
+[15.748092] (interfaces) StdoutLine: {'line': b"Compiling '/root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages/interfaces/action/_move.py'...\n"}
+[15.761637] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages/interfaces/interfaces_s__rosidl_typesupport_fastrtps_c.so\n'}
+[15.762868] (interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages/interfaces/interfaces_s__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[15.763269] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages/interfaces/interfaces_s__rosidl_typesupport_introspection_c.so\n'}
+[15.764059] (interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages/interfaces/interfaces_s__rosidl_typesupport_introspection_c.so" to ""\n'}
+[15.764409] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages/interfaces/interfaces_s__rosidl_typesupport_c.so\n'}
+[15.765189] (interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages/interfaces/interfaces_s__rosidl_typesupport_c.so" to ""\n'}
+[15.765677] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/lib/libinterfaces__rosidl_generator_py.so\n'}
+[15.766055] (interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/root/training_ws_merge2/install/interfaces/lib/libinterfaces__rosidl_generator_py.so" to ""\n'}
+[15.766316] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/ament_index/resource_index/rust_packages/interfaces\n'}
+[15.766575] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/rust\n'}
+[15.766864] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/rust/src\n'}
+[15.767090] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/rust/src/lib.rs\n'}
+[15.767334] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/rust/src/action\n'}
+[15.767496] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/rust/src/action/rmw.rs\n'}
+[15.767868] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/rust/src/action.rs\n'}
+[15.768431] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/rust/build.rs\n'}
+[15.768819] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/rust/Cargo.toml\n'}
+[15.769132] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/action/Move.idl\n'}
+[15.769421] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/action/Move.action\n'}
+[15.769899] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/ament_index/resource_index/package_run_dependencies/interfaces\n'}
+[15.770299] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/ament_index/resource_index/parent_prefix_path/interfaces\n'}
+[15.770642] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/environment/ament_prefix_path.sh\n'}
+[15.770941] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/environment/ament_prefix_path.dsv\n'}
+[15.771210] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/environment/path.sh\n'}
+[15.771479] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/environment/path.dsv\n'}
+[15.771820] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/local_setup.bash\n'}
+[15.772146] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/local_setup.sh\n'}
+[15.772380] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/local_setup.zsh\n'}
+[15.772654] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/local_setup.dsv\n'}
+[15.772971] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/package.dsv\n'}
+[15.773332] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/ament_index/resource_index/packages/interfaces\n'}
+[15.773710] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_generator_cExport.cmake\n'}
+[15.773993] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[15.774340] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[15.774841] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[15.775228] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[15.775503] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[15.775900] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_cExport.cmake\n'}
+[15.776231] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[15.776493] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_generator_cppExport.cmake\n'}
+[15.776850] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[15.777195] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[15.777652] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[15.777951] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[15.778149] (-) TimerEvent: {}
+[15.778352] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[15.778978] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[15.779584] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_generator_pyExport.cmake\n'}
+[15.780181] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_generator_pyExport-noconfig.cmake\n'}
+[15.780700] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[15.780936] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[15.781176] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[15.781540] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[15.781960] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[15.782330] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[15.782641] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[15.782958] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/cmake/rosidl_cmake_aggregate_target-extras.cmake\n'}
+[15.783254] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/cmake/interfacesConfig.cmake\n'}
+[15.783544] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/cmake/interfacesConfig-version.cmake\n'}
+[15.784145] (interfaces) StdoutLine: {'line': b'-- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/package.xml\n'}
+[15.788373] (interfaces) CommandEnded: {'returncode': 0}
+[15.834963] (interfaces) JobEnded: {'identifier': 'interfaces', 'rc': 0}
+[15.836644] (mazeSolve_pkg) JobStarted: {'identifier': 'mazeSolve_pkg'}
+[15.847340] (maze_control) JobStarted: {'identifier': 'maze_control'}
+[15.878311] (-) TimerEvent: {}
+[15.978786] (-) TimerEvent: {}
+[16.079170] (-) TimerEvent: {}
+[16.179522] (-) TimerEvent: {}
+[16.279972] (-) TimerEvent: {}
+[16.380430] (-) TimerEvent: {}
+[16.480823] (-) TimerEvent: {}
+[16.583131] (-) TimerEvent: {}
+[16.685118] (-) TimerEvent: {}
+[16.785530] (-) TimerEvent: {}
+[16.885894] (-) TimerEvent: {}
+[16.986672] (-) TimerEvent: {}
+[17.087004] (-) TimerEvent: {}
+[17.187353] (-) TimerEvent: {}
+[17.287681] (-) TimerEvent: {}
+[17.388073] (-) TimerEvent: {}
+[17.488441] (-) TimerEvent: {}
+[17.588794] (-) TimerEvent: {}
+[17.689118] (-) TimerEvent: {}
+[17.790675] (-) TimerEvent: {}
+[17.891218] (-) TimerEvent: {}
+[17.991579] (-) TimerEvent: {}
+[18.093654] (-) TimerEvent: {}
+[18.194225] (-) TimerEvent: {}
+[18.294782] (-) TimerEvent: {}
+[18.303378] (mazeSolve_pkg) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/mazeSolve_pkg', 'build', '--build-base', '/root/training_ws_merge2/build/mazeSolve_pkg/build', 'install', '--record', '/root/training_ws_merge2/build/mazeSolve_pkg/install.log', '--install-scripts', '$base/lib/mazeSolve_pkg', '--single-version-externally-managed', 'install_data'], 'cwd': '/root/training_ws_merge2/src/mazeSolve_pkg', 'env': {'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'HOSTNAME': 'machine', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/root/training_ws_merge2/install/interfaces/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/root', 'OLDPWD': '/root', 'ROS_PYTHON_VERSION': '3', 'COLCON_PREFIX_PATH': '/root/training_ws_merge2/install', 'ROS_DISTRO': 'jazzy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'XDG_RUNTIME_DIR': '/tmp/runtime-root', 'DISPLAY': ':0.0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/root/training_ws_merge2/install/interfaces:/opt/ros/jazzy', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/root/training_ws_merge2/build/mazeSolve_pkg', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/root/training_ws_merge2/build/mazeSolve_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/root/training_ws_merge2/install/mazeSolve_pkg/lib/python3.12/site-packages:/root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/root/training_ws_merge2/install/interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[18.308510] (maze_control) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../../build/maze_control', 'build', '--build-base', '/root/training_ws_merge2/build/maze_control/build', 'install', '--record', '/root/training_ws_merge2/build/maze_control/install.log', '--install-scripts', '$base/lib/maze_control', '--single-version-externally-managed', 'install_data'], 'cwd': '/root/training_ws_merge2/src/MIA26_phase2_ros_contest/maze_control', 'env': {'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'HOSTNAME': 'machine', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/root/training_ws_merge2/install/interfaces/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/root', 'OLDPWD': '/root', 'ROS_PYTHON_VERSION': '3', 'COLCON_PREFIX_PATH': '/root/training_ws_merge2/install', 'ROS_DISTRO': 'jazzy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'XDG_RUNTIME_DIR': '/tmp/runtime-root', 'DISPLAY': ':0.0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/root/training_ws_merge2/install/interfaces:/opt/ros/jazzy', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/root/training_ws_merge2/build/maze_control', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/root/training_ws_merge2/build/maze_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/root/training_ws_merge2/install/maze_control/lib/python3.12/site-packages:/root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/root/training_ws_merge2/install/interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[18.394862] (-) TimerEvent: {}
+[18.496744] (-) TimerEvent: {}
+[18.597163] (-) TimerEvent: {}
+[18.628727] (maze_control) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/dist.py:744: SetuptoolsDeprecationWarning: Invalid dash-separated options\n'}
+[18.629119] (maze_control) StderrLine: {'line': b'!!\n'}
+[18.629295] (maze_control) StderrLine: {'line': b'\n'}
+[18.629438] (maze_control) StderrLine: {'line': b'        ********************************************************************************\n'}
+[18.629664] (maze_control) StderrLine: {'line': b"        Usage of dash-separated 'script-dir' will not be supported in future\n"}
+[18.629846] (maze_control) StderrLine: {'line': b"        versions. Please use the underscore name 'script_dir' instead.\n"}
+[18.630022] (maze_control) StderrLine: {'line': b'\n'}
+[18.630166] (maze_control) StderrLine: {'line': b'        This deprecation is overdue, please update your project and remove deprecated\n'}
+[18.630349] (maze_control) StderrLine: {'line': b'        calls to avoid build errors in the future.\n'}
+[18.630504] (maze_control) StderrLine: {'line': b'\n'}
+[18.630689] (maze_control) StderrLine: {'line': b'        See https://setuptools.pypa.io/en/latest/userguide/declarative_config.html for details.\n'}
+[18.630903] (maze_control) StderrLine: {'line': b'        ********************************************************************************\n'}
+[18.631059] (maze_control) StderrLine: {'line': b'\n'}
+[18.631195] (maze_control) StderrLine: {'line': b'!!\n'}
+[18.631316] (maze_control) StderrLine: {'line': b'  opt = self.warn_dash_deprecation(opt, section)\n'}
+[18.697973] (-) TimerEvent: {}
+[18.798329] (-) TimerEvent: {}
+[18.898768] (-) TimerEvent: {}
+[18.925918] (maze_control) StdoutLine: {'line': b'running egg_info\n'}
+[18.927465] (maze_control) StdoutLine: {'line': b'creating ../../../build/maze_control/maze_control.egg-info\n'}
+[18.944309] (mazeSolve_pkg) StdoutLine: {'line': b'running egg_info\n'}
+[18.946754] (mazeSolve_pkg) StdoutLine: {'line': b'creating ../../build/mazeSolve_pkg/mazeSolve_pkg.egg-info\n'}
+[18.982171] (maze_control) StdoutLine: {'line': b'writing ../../../build/maze_control/maze_control.egg-info/PKG-INFO\n'}
+[18.983176] (maze_control) StdoutLine: {'line': b'writing dependency_links to ../../../build/maze_control/maze_control.egg-info/dependency_links.txt\n'}
+[18.983932] (maze_control) StdoutLine: {'line': b'writing entry points to ../../../build/maze_control/maze_control.egg-info/entry_points.txt\n'}
+[18.984728] (maze_control) StdoutLine: {'line': b'writing requirements to ../../../build/maze_control/maze_control.egg-info/requires.txt\n'}
+[18.985532] (maze_control) StdoutLine: {'line': b'writing top-level names to ../../../build/maze_control/maze_control.egg-info/top_level.txt\n'}
+[18.986123] (maze_control) StdoutLine: {'line': b"writing manifest file '../../../build/maze_control/maze_control.egg-info/SOURCES.txt'\n"}
+[18.999126] (-) TimerEvent: {}
+[19.005800] (mazeSolve_pkg) StdoutLine: {'line': b'writing ../../build/mazeSolve_pkg/mazeSolve_pkg.egg-info/PKG-INFO\n'}
+[19.006197] (mazeSolve_pkg) StdoutLine: {'line': b'writing dependency_links to ../../build/mazeSolve_pkg/mazeSolve_pkg.egg-info/dependency_links.txt\n'}
+[19.006606] (mazeSolve_pkg) StdoutLine: {'line': b'writing entry points to ../../build/mazeSolve_pkg/mazeSolve_pkg.egg-info/entry_points.txt\n'}
+[19.007908] (mazeSolve_pkg) StdoutLine: {'line': b'writing requirements to ../../build/mazeSolve_pkg/mazeSolve_pkg.egg-info/requires.txt\n'}
+[19.008633] (mazeSolve_pkg) StdoutLine: {'line': b'writing top-level names to ../../build/mazeSolve_pkg/mazeSolve_pkg.egg-info/top_level.txt\n'}
+[19.009541] (mazeSolve_pkg) StdoutLine: {'line': b"writing manifest file '../../build/mazeSolve_pkg/mazeSolve_pkg.egg-info/SOURCES.txt'\n"}
+[19.099689] (-) TimerEvent: {}
+[19.133611] (maze_control) StdoutLine: {'line': b"reading manifest file '../../../build/maze_control/maze_control.egg-info/SOURCES.txt'\n"}
+[19.134664] (maze_control) StdoutLine: {'line': b"writing manifest file '../../../build/maze_control/maze_control.egg-info/SOURCES.txt'\n"}
+[19.135219] (maze_control) StdoutLine: {'line': b'running build\n'}
+[19.135435] (maze_control) StdoutLine: {'line': b'running build_py\n'}
+[19.136107] (maze_control) StdoutLine: {'line': b'creating /root/training_ws_merge2/build/maze_control/build\n'}
+[19.136344] (maze_control) StdoutLine: {'line': b'creating /root/training_ws_merge2/build/maze_control/build/lib\n'}
+[19.136468] (maze_control) StdoutLine: {'line': b'creating /root/training_ws_merge2/build/maze_control/build/lib/maze_control\n'}
+[19.136616] (maze_control) StdoutLine: {'line': b'copying maze_control/maze_timer_node.py -> /root/training_ws_merge2/build/maze_control/build/lib/maze_control\n'}
+[19.137253] (maze_control) StdoutLine: {'line': b'copying maze_control/wall_retraction_service.py -> /root/training_ws_merge2/build/maze_control/build/lib/maze_control\n'}
+[19.137860] (maze_control) StdoutLine: {'line': b'copying maze_control/__init__.py -> /root/training_ws_merge2/build/maze_control/build/lib/maze_control\n'}
+[19.138651] (maze_control) StdoutLine: {'line': b'running install\n'}
+[19.141565] (mazeSolve_pkg) StdoutLine: {'line': b"reading manifest file '../../build/mazeSolve_pkg/mazeSolve_pkg.egg-info/SOURCES.txt'\n"}
+[19.143366] (mazeSolve_pkg) StdoutLine: {'line': b"writing manifest file '../../build/mazeSolve_pkg/mazeSolve_pkg.egg-info/SOURCES.txt'\n"}
+[19.143805] (mazeSolve_pkg) StdoutLine: {'line': b'running build\n'}
+[19.144108] (mazeSolve_pkg) StdoutLine: {'line': b'running build_py\n'}
+[19.144414] (mazeSolve_pkg) StdoutLine: {'line': b'creating /root/training_ws_merge2/build/mazeSolve_pkg/build\n'}
+[19.145211] (mazeSolve_pkg) StdoutLine: {'line': b'creating /root/training_ws_merge2/build/mazeSolve_pkg/build/lib\n'}
+[19.145674] (mazeSolve_pkg) StdoutLine: {'line': b'creating /root/training_ws_merge2/build/mazeSolve_pkg/build/lib/mazeSolve_pkg\n'}
+[19.145881] (mazeSolve_pkg) StdoutLine: {'line': b'copying mazeSolve_pkg/move_x_server.py -> /root/training_ws_merge2/build/mazeSolve_pkg/build/lib/mazeSolve_pkg\n'}
+[19.146346] (mazeSolve_pkg) StdoutLine: {'line': b'copying mazeSolve_pkg/yawserver.py -> /root/training_ws_merge2/build/mazeSolve_pkg/build/lib/mazeSolve_pkg\n'}
+[19.146988] (mazeSolve_pkg) StdoutLine: {'line': b'copying mazeSolve_pkg/__init__.py -> /root/training_ws_merge2/build/mazeSolve_pkg/build/lib/mazeSolve_pkg\n'}
+[19.147628] (mazeSolve_pkg) StdoutLine: {'line': b'copying mazeSolve_pkg/yaw_client.py -> /root/training_ws_merge2/build/mazeSolve_pkg/build/lib/mazeSolve_pkg\n'}
+[19.149456] (mazeSolve_pkg) StdoutLine: {'line': b'running install\n'}
+[19.154781] (maze_control) StdoutLine: {'line': b'running install_lib\n'}
+[19.164168] (mazeSolve_pkg) StdoutLine: {'line': b'running install_lib\n'}
+[19.197696] (maze_control) StdoutLine: {'line': b'creating /root/training_ws_merge2/install/maze_control/lib/python3.12/site-packages/maze_control\n'}
+[19.198037] (maze_control) StdoutLine: {'line': b'copying /root/training_ws_merge2/build/maze_control/build/lib/maze_control/maze_timer_node.py -> /root/training_ws_merge2/install/maze_control/lib/python3.12/site-packages/maze_control\n'}
+[19.198938] (maze_control) StdoutLine: {'line': b'copying /root/training_ws_merge2/build/maze_control/build/lib/maze_control/wall_retraction_service.py -> /root/training_ws_merge2/install/maze_control/lib/python3.12/site-packages/maze_control\n'}
+[19.199159] (maze_control) StdoutLine: {'line': b'copying /root/training_ws_merge2/build/maze_control/build/lib/maze_control/__init__.py -> /root/training_ws_merge2/install/maze_control/lib/python3.12/site-packages/maze_control\n'}
+[19.199759] (maze_control) StdoutLine: {'line': b'byte-compiling /root/training_ws_merge2/install/maze_control/lib/python3.12/site-packages/maze_control/maze_timer_node.py to maze_timer_node.cpython-312.pyc\n'}
+[19.200007] (-) TimerEvent: {}
+[19.201940] (maze_control) StdoutLine: {'line': b'byte-compiling /root/training_ws_merge2/install/maze_control/lib/python3.12/site-packages/maze_control/wall_retraction_service.py to wall_retraction_service.cpython-312.pyc\n'}
+[19.204735] (maze_control) StdoutLine: {'line': b'byte-compiling /root/training_ws_merge2/install/maze_control/lib/python3.12/site-packages/maze_control/__init__.py to __init__.cpython-312.pyc\n'}
+[19.205052] (maze_control) StdoutLine: {'line': b'running install_data\n'}
+[19.205272] (maze_control) StdoutLine: {'line': b'creating /root/training_ws_merge2/install/maze_control/share/ament_index\n'}
+[19.206520] (maze_control) StdoutLine: {'line': b'creating /root/training_ws_merge2/install/maze_control/share/ament_index/resource_index\n'}
+[19.206876] (maze_control) StdoutLine: {'line': b'creating /root/training_ws_merge2/install/maze_control/share/ament_index/resource_index/packages\n'}
+[19.207056] (maze_control) StdoutLine: {'line': b'copying resource/maze_control -> /root/training_ws_merge2/install/maze_control/share/ament_index/resource_index/packages\n'}
+[19.207225] (maze_control) StdoutLine: {'line': b'copying package.xml -> /root/training_ws_merge2/install/maze_control/share/maze_control\n'}
+[19.207383] (maze_control) StdoutLine: {'line': b'creating /root/training_ws_merge2/install/maze_control/share/maze_control/launch\n'}
+[19.207540] (maze_control) StdoutLine: {'line': b'copying launch/maze_simulation_tb3.launch.py -> /root/training_ws_merge2/install/maze_control/share/maze_control/launch\n'}
+[19.208461] (maze_control) StdoutLine: {'line': b'creating /root/training_ws_merge2/install/maze_control/share/maze_control/worlds\n'}
+[19.208743] (maze_control) StdoutLine: {'line': b'copying worlds/maze_world.sdf -> /root/training_ws_merge2/install/maze_control/share/maze_control/worlds\n'}
+[19.209107] (maze_control) StdoutLine: {'line': b'creating /root/training_ws_merge2/install/maze_control/share/maze_control/config\n'}
+[19.209468] (maze_control) StdoutLine: {'line': b'copying config/bridge_config.yaml -> /root/training_ws_merge2/install/maze_control/share/maze_control/config\n'}
+[19.209803] (mazeSolve_pkg) StdoutLine: {'line': b'creating /root/training_ws_merge2/install/mazeSolve_pkg/lib/python3.12/site-packages/mazeSolve_pkg\n'}
+[19.210093] (mazeSolve_pkg) StdoutLine: {'line': b'copying /root/training_ws_merge2/build/mazeSolve_pkg/build/lib/mazeSolve_pkg/move_x_server.py -> /root/training_ws_merge2/install/mazeSolve_pkg/lib/python3.12/site-packages/mazeSolve_pkg\n'}
+[19.210347] (maze_control) StdoutLine: {'line': b'copying config/gui.config -> /root/training_ws_merge2/install/maze_control/share/maze_control/config\n'}
+[19.210634] (mazeSolve_pkg) StdoutLine: {'line': b'copying /root/training_ws_merge2/build/mazeSolve_pkg/build/lib/mazeSolve_pkg/yawserver.py -> /root/training_ws_merge2/install/mazeSolve_pkg/lib/python3.12/site-packages/mazeSolve_pkg\n'}
+[19.210850] (mazeSolve_pkg) StdoutLine: {'line': b'copying /root/training_ws_merge2/build/mazeSolve_pkg/build/lib/mazeSolve_pkg/__init__.py -> /root/training_ws_merge2/install/mazeSolve_pkg/lib/python3.12/site-packages/mazeSolve_pkg\n'}
+[19.211132] (mazeSolve_pkg) StdoutLine: {'line': b'copying /root/training_ws_merge2/build/mazeSolve_pkg/build/lib/mazeSolve_pkg/yaw_client.py -> /root/training_ws_merge2/install/mazeSolve_pkg/lib/python3.12/site-packages/mazeSolve_pkg\n'}
+[19.211365] (maze_control) StdoutLine: {'line': b'creating /root/training_ws_merge2/install/maze_control/share/maze_control/models\n'}
+[19.211577] (maze_control) StdoutLine: {'line': b'creating /root/training_ws_merge2/install/maze_control/share/maze_control/models/simple_robot\n'}
+[19.211771] (maze_control) StdoutLine: {'line': b'running install_egg_info\n'}
+[19.212444] (mazeSolve_pkg) StdoutLine: {'line': b'byte-compiling /root/training_ws_merge2/install/mazeSolve_pkg/lib/python3.12/site-packages/mazeSolve_pkg/move_x_server.py to move_x_server.cpython-312.pyc\n'}
+[19.214760] (mazeSolve_pkg) StdoutLine: {'line': b'byte-compiling /root/training_ws_merge2/install/mazeSolve_pkg/lib/python3.12/site-packages/mazeSolve_pkg/yawserver.py to yawserver.cpython-312.pyc\n'}
+[19.217263] (mazeSolve_pkg) StdoutLine: {'line': b'byte-compiling /root/training_ws_merge2/install/mazeSolve_pkg/lib/python3.12/site-packages/mazeSolve_pkg/__init__.py to __init__.cpython-312.pyc\n'}
+[19.217704] (mazeSolve_pkg) StdoutLine: {'line': b'byte-compiling /root/training_ws_merge2/install/mazeSolve_pkg/lib/python3.12/site-packages/mazeSolve_pkg/yaw_client.py to yaw_client.cpython-312.pyc\n'}
+[19.220274] (mazeSolve_pkg) StdoutLine: {'line': b'running install_data\n'}
+[19.220641] (mazeSolve_pkg) StdoutLine: {'line': b'creating /root/training_ws_merge2/install/mazeSolve_pkg/share/ament_index\n'}
+[19.220906] (mazeSolve_pkg) StdoutLine: {'line': b'creating /root/training_ws_merge2/install/mazeSolve_pkg/share/ament_index/resource_index\n'}
+[19.221168] (mazeSolve_pkg) StdoutLine: {'line': b'creating /root/training_ws_merge2/install/mazeSolve_pkg/share/ament_index/resource_index/packages\n'}
+[19.221427] (mazeSolve_pkg) StdoutLine: {'line': b'copying resource/mazeSolve_pkg -> /root/training_ws_merge2/install/mazeSolve_pkg/share/ament_index/resource_index/packages\n'}
+[19.221630] (mazeSolve_pkg) StdoutLine: {'line': b'copying package.xml -> /root/training_ws_merge2/install/mazeSolve_pkg/share/mazeSolve_pkg\n'}
+[19.221835] (mazeSolve_pkg) StdoutLine: {'line': b'running install_egg_info\n'}
+[19.264499] (mazeSolve_pkg) StdoutLine: {'line': b'Copying ../../build/mazeSolve_pkg/mazeSolve_pkg.egg-info to /root/training_ws_merge2/install/mazeSolve_pkg/lib/python3.12/site-packages/mazeSolve_pkg-0.0.0-py3.12.egg-info\n'}
+[19.265048] (maze_control) StdoutLine: {'line': b'Copying ../../../build/maze_control/maze_control.egg-info to /root/training_ws_merge2/install/maze_control/lib/python3.12/site-packages/maze_control-0.1.0-py3.12.egg-info\n'}
+[19.266722] (mazeSolve_pkg) StdoutLine: {'line': b'running install_scripts\n'}
+[19.267896] (maze_control) StdoutLine: {'line': b'running install_scripts\n'}
+[19.300210] (-) TimerEvent: {}
+[19.401276] (-) TimerEvent: {}
+[19.501774] (-) TimerEvent: {}
+[19.556977] (mazeSolve_pkg) StdoutLine: {'line': b'Installing action_x_server script to /root/training_ws_merge2/install/mazeSolve_pkg/lib/mazeSolve_pkg\n'}
+[19.557472] (mazeSolve_pkg) StdoutLine: {'line': b'Installing yaw_client script to /root/training_ws_merge2/install/mazeSolve_pkg/lib/mazeSolve_pkg\n'}
+[19.558583] (mazeSolve_pkg) StdoutLine: {'line': b'Installing yawserver script to /root/training_ws_merge2/install/mazeSolve_pkg/lib/mazeSolve_pkg\n'}
+[19.559183] (mazeSolve_pkg) StdoutLine: {'line': b"writing list of installed files to '/root/training_ws_merge2/build/mazeSolve_pkg/install.log'\n"}
+[19.601901] (-) TimerEvent: {}
+[19.619851] (maze_control) StdoutLine: {'line': b'Installing maze_timer_node script to /root/training_ws_merge2/install/maze_control/lib/maze_control\n'}
+[19.620245] (maze_control) StdoutLine: {'line': b'Installing wall_retraction_service script to /root/training_ws_merge2/install/maze_control/lib/maze_control\n'}
+[19.620429] (maze_control) StdoutLine: {'line': b"writing list of installed files to '/root/training_ws_merge2/build/maze_control/install.log'\n"}
+[19.659754] (mazeSolve_pkg) CommandEnded: {'returncode': 0}
+[19.676181] (mazeSolve_pkg) JobEnded: {'identifier': 'mazeSolve_pkg', 'rc': 0}
+[19.702017] (-) TimerEvent: {}
+[19.711812] (maze_control) CommandEnded: {'returncode': 0}
+[19.729369] (maze_control) JobEnded: {'identifier': 'maze_control', 'rc': 0}
+[19.730959] (-) EventReactorShutdown: {}

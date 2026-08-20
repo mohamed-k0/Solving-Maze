@@ -1,0 +1,233 @@
+[0.025s] Invoking command in '/root/training_ws_merge2/build/interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /root/training_ws_merge2/src/interfaces -DCMAKE_INSTALL_PREFIX=/root/training_ws_merge2/install/interfaces
+[0.062s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.404s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.742s] -- Found rosidl_default_generators: 1.6.1 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[0.769s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.984s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.175s] -- Found rosidl_adapter: 4.6.9 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[1.193s] -- Found action_msgs: 2.0.4 (/opt/ros/jazzy/share/action_msgs/cmake)
+[2.980s] -- Found ament_cmake_ros: 0.12.1 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+[3.868s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[5.048s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[5.062s] -- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)
+[5.329s] -- Found PythonExtra: /usr/bin/python3  
+[6.247s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed 
+[6.382s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[6.406s] -- Configuring done (6.4s)
+[6.499s] -- Generating done (0.1s)
+[6.528s] -- Build files have been written to: /root/training_ws_merge2/build/interfaces
+[6.543s] Invoked command in '/root/training_ws_merge2/build/interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /root/training_ws_merge2/src/interfaces -DCMAKE_INSTALL_PREFIX=/root/training_ws_merge2/install/interfaces
+[6.545s] Invoking command in '/root/training_ws_merge2/build/interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /root/training_ws_merge2/build/interfaces -- -j8 -l8
+[6.651s] [  5%] [34m[1mGenerating Rust code for ROS interfaces[0m
+[6.651s] [  5%] [34m[1mGenerating type hashes for ROS interfaces[0m
+[6.674s] [  5%] Built target ament_cmake_python_copy_interfaces
+[7.258s] running egg_info
+[7.259s] creating interfaces.egg-info
+[7.278s] [  5%] Built target interfaces__rosidl_generator_type_description
+[7.313s] [  8%] [34m[1mGenerating C code for ROS interfaces[0m
+[7.329s] writing interfaces.egg-info/PKG-INFO
+[7.329s] writing dependency_links to interfaces.egg-info/dependency_links.txt
+[7.329s] writing top-level names to interfaces.egg-info/top_level.txt
+[7.330s] writing manifest file 'interfaces.egg-info/SOURCES.txt'
+[7.397s] [ 11%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[7.486s] [ 11%] Built target interfaces__rs
+[7.538s] reading manifest file 'interfaces.egg-info/SOURCES.txt'
+[7.539s] writing manifest file 'interfaces.egg-info/SOURCES.txt'
+[7.622s] [ 11%] Built target ament_cmake_python_build_interfaces_egg
+[8.338s] [ 11%] Built target interfaces__cpp
+[8.446s] [ 17%] [32mBuilding C object CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/action/detail/move__functions.c.o[0m
+[8.446s] [ 17%] [32mBuilding C object CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/action/detail/move__type_support.c.o[0m
+[8.451s] [ 20%] [32mBuilding C object CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/action/detail/move__description.c.o[0m
+[8.772s] [ 22%] [32m[1mLinking C shared library libinterfaces__rosidl_generator_c.so[0m
+[8.878s] [ 22%] Built target interfaces__rosidl_generator_c
+[8.925s] [ 25%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[8.926s] [ 28%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[8.926s] [ 31%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[8.927s] [ 34%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[8.944s] [ 37%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[8.959s] [ 40%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[9.860s] [ 42%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/interfaces/action/move__type_support.cpp.o[0m
+[10.000s] [ 45%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/action/move__type_support.cpp.o[0m
+[10.068s] [ 48%] [32m[1mLinking CXX shared library libinterfaces__rosidl_typesupport_c.so[0m
+[10.109s] [ 51%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/interfaces/action/detail/move__type_support.cpp.o[0m
+[10.218s] [ 51%] Built target interfaces__rosidl_typesupport_c
+[10.302s] [ 54%] [32mBuilding C object CMakeFiles/interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/interfaces/action/detail/move__type_support.c.o[0m
+[10.597s] [ 57%] [32m[1mLinking C shared library libinterfaces__rosidl_typesupport_introspection_c.so[0m
+[10.691s] [ 60%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/interfaces/action/detail/dds_fastrtps/move__type_support.cpp.o[0m
+[10.714s] [ 60%] Built target interfaces__rosidl_typesupport_introspection_c
+[10.719s] [ 62%] [32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/interfaces/action/detail/move__type_support_c.cpp.o[0m
+[11.835s] [ 65%] [32m[1mLinking CXX shared library libinterfaces__rosidl_typesupport_cpp.so[0m
+[12.107s] [ 65%] Built target interfaces__rosidl_typesupport_cpp
+[12.138s] [ 68%] [32m[1mLinking CXX shared library libinterfaces__rosidl_typesupport_introspection_cpp.so[0m
+[12.303s] [ 71%] [32m[1mLinking CXX shared library libinterfaces__rosidl_typesupport_fastrtps_c.so[0m
+[12.364s] [ 71%] Built target interfaces__rosidl_typesupport_introspection_cpp
+[12.537s] [ 71%] Built target interfaces__rosidl_typesupport_fastrtps_c
+[13.022s] [ 74%] [32m[1mLinking CXX shared library libinterfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[13.211s] [ 74%] Built target interfaces__rosidl_typesupport_fastrtps_cpp
+[13.255s] [ 74%] Built target interfaces
+[13.302s] [ 77%] [34m[1mGenerating Python code for ROS interfaces[0m
+[14.631s] [ 77%] Built target interfaces__py
+[14.675s] [ 80%] [32mBuilding C object CMakeFiles/interfaces__rosidl_generator_py.dir/rosidl_generator_py/interfaces/action/_move_s.c.o[0m
+[15.087s] [ 82%] [32m[1mLinking C shared library libinterfaces__rosidl_generator_py.so[0m
+[15.184s] [ 82%] Built target interfaces__rosidl_generator_py
+[15.227s] [ 88%] [32mBuilding C object CMakeFiles/interfaces_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[15.228s] [ 88%] [32mBuilding C object CMakeFiles/interfaces_s__rosidl_typesupport_c.dir/rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[15.232s] [ 91%] [32mBuilding C object CMakeFiles/interfaces_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[15.481s] [ 94%] [32m[1mLinking C shared module rosidl_generator_py/interfaces/interfaces_s__rosidl_typesupport_c.so[0m
+[15.486s] [ 97%] [32m[1mLinking C shared module rosidl_generator_py/interfaces/interfaces_s__rosidl_typesupport_introspection_c.so[0m
+[15.493s] [100%] [32m[1mLinking C shared module rosidl_generator_py/interfaces/interfaces_s__rosidl_typesupport_fastrtps_c.so[0m
+[15.554s] [100%] Built target interfaces_s__rosidl_typesupport_c
+[15.563s] [100%] Built target interfaces_s__rosidl_typesupport_introspection_c
+[15.566s] [100%] Built target interfaces_s__rosidl_typesupport_fastrtps_c
+[15.591s] Invoked command in '/root/training_ws_merge2/build/interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /root/training_ws_merge2/build/interfaces -- -j8 -l8
+[15.610s] Invoking command in '/root/training_ws_merge2/build/interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /root/training_ws_merge2/build/interfaces
+[15.629s] -- Install configuration: ""
+[15.629s] -- Installing: /root/training_ws_merge2/install/interfaces/share/ament_index/resource_index/rosidl_interfaces/interfaces
+[15.630s] -- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/action/Move.json
+[15.630s] -- Installing: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces
+[15.630s] -- Installing: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action
+[15.630s] -- Installing: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action/move.h
+[15.631s] -- Installing: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action/detail
+[15.631s] -- Installing: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action/detail/move__functions.c
+[15.631s] -- Installing: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action/detail/move__type_support.h
+[15.631s] -- Installing: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action/detail/move__type_support.c
+[15.632s] -- Installing: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action/detail/move__struct.h
+[15.632s] -- Installing: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action/detail/move__functions.h
+[15.632s] -- Installing: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action/detail/move__description.c
+[15.633s] -- Installing: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/msg
+[15.633s] -- Installing: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/msg/rosidl_generator_c__visibility_control.h
+[15.633s] -- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/environment/library_path.sh
+[15.634s] -- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/environment/library_path.dsv
+[15.634s] -- Installing: /root/training_ws_merge2/install/interfaces/lib/libinterfaces__rosidl_generator_c.so
+[15.635s] -- Set non-toolchain portion of runtime path of "/root/training_ws_merge2/install/interfaces/lib/libinterfaces__rosidl_generator_c.so" to ""
+[15.635s] -- Up-to-date: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces
+[15.635s] -- Up-to-date: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action
+[15.636s] -- Up-to-date: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action/detail
+[15.636s] -- Installing: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action/detail/move__rosidl_typesupport_fastrtps_c.h
+[15.636s] -- Up-to-date: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/msg
+[15.636s] -- Installing: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[15.636s] -- Installing: /root/training_ws_merge2/install/interfaces/lib/libinterfaces__rosidl_typesupport_fastrtps_c.so
+[15.637s] -- Set non-toolchain portion of runtime path of "/root/training_ws_merge2/install/interfaces/lib/libinterfaces__rosidl_typesupport_fastrtps_c.so" to ""
+[15.638s] -- Up-to-date: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces
+[15.638s] -- Up-to-date: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action
+[15.638s] -- Up-to-date: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action/detail
+[15.638s] -- Installing: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action/detail/move__type_support.c
+[15.638s] -- Installing: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action/detail/move__rosidl_typesupport_introspection_c.h
+[15.638s] -- Up-to-date: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/msg
+[15.639s] -- Installing: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[15.639s] -- Installing: /root/training_ws_merge2/install/interfaces/lib/libinterfaces__rosidl_typesupport_introspection_c.so
+[15.640s] -- Set non-toolchain portion of runtime path of "/root/training_ws_merge2/install/interfaces/lib/libinterfaces__rosidl_typesupport_introspection_c.so" to ""
+[15.640s] -- Installing: /root/training_ws_merge2/install/interfaces/lib/libinterfaces__rosidl_typesupport_c.so
+[15.641s] -- Set non-toolchain portion of runtime path of "/root/training_ws_merge2/install/interfaces/lib/libinterfaces__rosidl_typesupport_c.so" to ""
+[15.641s] -- Up-to-date: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces
+[15.641s] -- Up-to-date: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action
+[15.641s] -- Installing: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action/move.hpp
+[15.642s] -- Up-to-date: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action/detail
+[15.642s] -- Installing: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action/detail/move__traits.hpp
+[15.642s] -- Installing: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action/detail/move__builder.hpp
+[15.643s] -- Installing: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action/detail/move__type_support.hpp
+[15.643s] -- Installing: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action/detail/move__struct.hpp
+[15.643s] -- Up-to-date: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/msg
+[15.644s] -- Installing: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+[15.644s] -- Up-to-date: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces
+[15.644s] -- Up-to-date: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action
+[15.644s] -- Up-to-date: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action/detail
+[15.644s] -- Installing: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action/detail/dds_fastrtps
+[15.645s] -- Installing: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action/detail/move__rosidl_typesupport_fastrtps_cpp.hpp
+[15.645s] -- Up-to-date: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/msg
+[15.645s] -- Installing: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[15.645s] -- Installing: /root/training_ws_merge2/install/interfaces/lib/libinterfaces__rosidl_typesupport_fastrtps_cpp.so
+[15.646s] -- Set non-toolchain portion of runtime path of "/root/training_ws_merge2/install/interfaces/lib/libinterfaces__rosidl_typesupport_fastrtps_cpp.so" to ""
+[15.647s] -- Up-to-date: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces
+[15.647s] -- Up-to-date: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action
+[15.647s] -- Up-to-date: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action/detail
+[15.647s] -- Installing: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action/detail/move__type_support.cpp
+[15.647s] -- Installing: /root/training_ws_merge2/install/interfaces/include/interfaces/interfaces/action/detail/move__rosidl_typesupport_introspection_cpp.hpp
+[15.647s] -- Installing: /root/training_ws_merge2/install/interfaces/lib/libinterfaces__rosidl_typesupport_introspection_cpp.so
+[15.648s] -- Set non-toolchain portion of runtime path of "/root/training_ws_merge2/install/interfaces/lib/libinterfaces__rosidl_typesupport_introspection_cpp.so" to ""
+[15.649s] -- Installing: /root/training_ws_merge2/install/interfaces/lib/libinterfaces__rosidl_typesupport_cpp.so
+[15.649s] -- Set non-toolchain portion of runtime path of "/root/training_ws_merge2/install/interfaces/lib/libinterfaces__rosidl_typesupport_cpp.so" to ""
+[15.650s] -- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/environment/pythonpath.sh
+[15.650s] -- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/environment/pythonpath.dsv
+[15.650s] -- Installing: /root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages/interfaces-0.0.0-py3.12.egg-info
+[15.650s] -- Installing: /root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages/interfaces-0.0.0-py3.12.egg-info/dependency_links.txt
+[15.651s] -- Installing: /root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages/interfaces-0.0.0-py3.12.egg-info/top_level.txt
+[15.651s] -- Installing: /root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages/interfaces-0.0.0-py3.12.egg-info/SOURCES.txt
+[15.651s] -- Installing: /root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages/interfaces-0.0.0-py3.12.egg-info/PKG-INFO
+[15.651s] -- Installing: /root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages/interfaces
+[15.652s] -- Installing: /root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages/interfaces/interfaces_s__rosidl_typesupport_c.so
+[15.652s] -- Installing: /root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages/interfaces/action
+[15.652s] -- Installing: /root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages/interfaces/action/_move_s.c
+[15.652s] -- Installing: /root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages/interfaces/action/__init__.py
+[15.653s] -- Installing: /root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages/interfaces/action/_move.py
+[15.653s] -- Installing: /root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages/interfaces/_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[15.653s] -- Installing: /root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages/interfaces/_interfaces_s.ep.rosidl_typesupport_c.c
+[15.653s] -- Installing: /root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[15.654s] -- Installing: /root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages/interfaces/interfaces_s__rosidl_typesupport_introspection_c.so
+[15.654s] -- Installing: /root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages/interfaces/interfaces_s__rosidl_typesupport_fastrtps_c.so
+[15.654s] -- Installing: /root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages/interfaces/__init__.py
+[15.746s] Listing '/root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages/interfaces'...
+[15.746s] Compiling '/root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages/interfaces/__init__.py'...
+[15.746s] Listing '/root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages/interfaces/action'...
+[15.747s] Compiling '/root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages/interfaces/action/__init__.py'...
+[15.747s] Compiling '/root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages/interfaces/action/_move.py'...
+[15.761s] -- Installing: /root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages/interfaces/interfaces_s__rosidl_typesupport_fastrtps_c.so
+[15.762s] -- Set non-toolchain portion of runtime path of "/root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages/interfaces/interfaces_s__rosidl_typesupport_fastrtps_c.so" to ""
+[15.762s] -- Installing: /root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages/interfaces/interfaces_s__rosidl_typesupport_introspection_c.so
+[15.763s] -- Set non-toolchain portion of runtime path of "/root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages/interfaces/interfaces_s__rosidl_typesupport_introspection_c.so" to ""
+[15.763s] -- Installing: /root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages/interfaces/interfaces_s__rosidl_typesupport_c.so
+[15.764s] -- Set non-toolchain portion of runtime path of "/root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages/interfaces/interfaces_s__rosidl_typesupport_c.so" to ""
+[15.765s] -- Installing: /root/training_ws_merge2/install/interfaces/lib/libinterfaces__rosidl_generator_py.so
+[15.765s] -- Set non-toolchain portion of runtime path of "/root/training_ws_merge2/install/interfaces/lib/libinterfaces__rosidl_generator_py.so" to ""
+[15.765s] -- Installing: /root/training_ws_merge2/install/interfaces/share/ament_index/resource_index/rust_packages/interfaces
+[15.765s] -- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/rust
+[15.766s] -- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/rust/src
+[15.766s] -- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/rust/src/lib.rs
+[15.766s] -- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/rust/src/action
+[15.766s] -- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/rust/src/action/rmw.rs
+[15.767s] -- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/rust/src/action.rs
+[15.767s] -- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/rust/build.rs
+[15.768s] -- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/rust/Cargo.toml
+[15.768s] -- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/action/Move.idl
+[15.768s] -- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/action/Move.action
+[15.769s] -- Installing: /root/training_ws_merge2/install/interfaces/share/ament_index/resource_index/package_run_dependencies/interfaces
+[15.769s] -- Installing: /root/training_ws_merge2/install/interfaces/share/ament_index/resource_index/parent_prefix_path/interfaces
+[15.769s] -- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/environment/ament_prefix_path.sh
+[15.770s] -- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/environment/ament_prefix_path.dsv
+[15.770s] -- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/environment/path.sh
+[15.770s] -- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/environment/path.dsv
+[15.771s] -- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/local_setup.bash
+[15.771s] -- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/local_setup.sh
+[15.771s] -- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/local_setup.zsh
+[15.771s] -- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/local_setup.dsv
+[15.772s] -- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/package.dsv
+[15.772s] -- Installing: /root/training_ws_merge2/install/interfaces/share/ament_index/resource_index/packages/interfaces
+[15.773s] -- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_generator_cExport.cmake
+[15.773s] -- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_generator_cExport-noconfig.cmake
+[15.773s] -- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[15.774s] -- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[15.774s] -- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_introspection_cExport.cmake
+[15.774s] -- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[15.775s] -- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_cExport.cmake
+[15.775s] -- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[15.775s] -- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_generator_cppExport.cmake
+[15.776s] -- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[15.776s] -- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[15.777s] -- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[15.777s] -- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[15.777s] -- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_cppExport.cmake
+[15.778s] -- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[15.779s] -- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_generator_pyExport.cmake
+[15.779s] -- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[15.780s] -- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/cmake/rosidl_cmake-extras.cmake
+[15.780s] -- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[15.780s] -- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[15.780s] -- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[15.781s] -- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[15.781s] -- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[15.781s] -- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[15.782s] -- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/cmake/rosidl_cmake_aggregate_target-extras.cmake
+[15.782s] -- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/cmake/interfacesConfig.cmake
+[15.782s] -- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/cmake/interfacesConfig-version.cmake
+[15.783s] -- Installing: /root/training_ws_merge2/install/interfaces/share/interfaces/package.xml
+[15.788s] Invoked command in '/root/training_ws_merge2/build/interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /root/training_ws_merge2/build/interfaces

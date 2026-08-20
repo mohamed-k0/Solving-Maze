@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/a/Solving-Maze/src/interfaces
+CMAKE_SOURCE_DIR = /root/training_ws_merge2/src/interfaces
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/a/Solving-Maze/build/interfaces
+CMAKE_BINARY_DIR = /root/training_ws_merge2/build/interfaces
 
 # Utility rule file for interfaces.
 
@@ -66,7 +66,7 @@ include CMakeFiles/interfaces.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/interfaces.dir/progress.make
 
-CMakeFiles/interfaces: /home/a/Solving-Maze/src/interfaces/action/Move.action
+CMakeFiles/interfaces: /root/training_ws_merge2/src/interfaces/action/Move.action
 CMakeFiles/interfaces: /opt/ros/jazzy/share/action_msgs/msg/GoalInfo.idl
 CMakeFiles/interfaces: /opt/ros/jazzy/share/action_msgs/msg/GoalStatus.idl
 CMakeFiles/interfaces: /opt/ros/jazzy/share/action_msgs/msg/GoalStatusArray.idl
@@ -86,6 +86,6 @@ CMakeFiles/interfaces.dir/clean:
 .PHONY : CMakeFiles/interfaces.dir/clean
 
 CMakeFiles/interfaces.dir/depend:
-	cd /home/a/Solving-Maze/build/interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/a/Solving-Maze/src/interfaces /home/a/Solving-Maze/src/interfaces /home/a/Solving-Maze/build/interfaces /home/a/Solving-Maze/build/interfaces /home/a/Solving-Maze/build/interfaces/CMakeFiles/interfaces.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /root/training_ws_merge2/build/interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/training_ws_merge2/src/interfaces /root/training_ws_merge2/src/interfaces /root/training_ws_merge2/build/interfaces /root/training_ws_merge2/build/interfaces /root/training_ws_merge2/build/interfaces/CMakeFiles/interfaces.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/interfaces.dir/depend
 

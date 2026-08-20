@@ -1,4 +1,4 @@
 import sys
 if sys.prefix == '/usr':
     sys.real_prefix = sys.prefix
-    sys.prefix = sys.exec_prefix = '/home/a/Solving-Maze/install/mazeSolve_pkg'
+    sys.prefix = sys.exec_prefix = '/root/training_ws_merge2/install/mazeSolve_pkg'

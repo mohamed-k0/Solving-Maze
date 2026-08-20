@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/a/Solving-Maze/src/interfaces
+CMAKE_SOURCE_DIR = /root/training_ws_merge2/src/interfaces
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/a/Solving-Maze/build/interfaces
+CMAKE_BINARY_DIR = /root/training_ws_merge2/build/interfaces
 
 # Utility rule file for uninstall.
 
@@ -78,6 +78,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /home/a/Solving-Maze/build/interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/a/Solving-Maze/src/interfaces /home/a/Solving-Maze/src/interfaces /home/a/Solving-Maze/build/interfaces /home/a/Solving-Maze/build/interfaces /home/a/Solving-Maze/build/interfaces/CMakeFiles/uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /root/training_ws_merge2/build/interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/training_ws_merge2/src/interfaces /root/training_ws_merge2/src/interfaces /root/training_ws_merge2/build/interfaces /root/training_ws_merge2/build/interfaces /root/training_ws_merge2/build/interfaces/CMakeFiles/uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/uninstall.dir/depend
 

@@ -1,9 +1,9 @@
 {
   "package_name": "interfaces",
-  "output_dir": "/home/a/Solving-Maze/build/interfaces/rosidl_generator_cpp/interfaces",
+  "output_dir": "/root/training_ws_merge2/build/interfaces/rosidl_generator_cpp/interfaces",
   "template_dir": "/opt/ros/jazzy/share/rosidl_generator_cpp/cmake/../resource",
   "idl_tuples": [
-    "/home/a/Solving-Maze/build/interfaces/rosidl_adapter/interfaces:action/Move.idl"
+    "/root/training_ws_merge2/build/interfaces/rosidl_adapter/interfaces:action/Move.idl"
   ],
   "ros_interface_dependencies": [
     "action_msgs:/opt/ros/jazzy/share/action_msgs/msg/GoalInfo.idl",
@@ -35,7 +35,7 @@
     "/opt/ros/jazzy/share/rosidl_generator_cpp/cmake/../resource/srv__struct.hpp.em",
     "/opt/ros/jazzy/share/rosidl_generator_cpp/cmake/../resource/srv__traits.hpp.em",
     "/opt/ros/jazzy/share/rosidl_generator_cpp/cmake/../resource/srv__type_support.hpp.em",
-    "/home/a/Solving-Maze/build/interfaces/rosidl_adapter/interfaces/action/Move.idl",
+    "/root/training_ws_merge2/build/interfaces/rosidl_adapter/interfaces/action/Move.idl",
     "/opt/ros/jazzy/share/action_msgs/msg/GoalInfo.idl",
     "/opt/ros/jazzy/share/action_msgs/msg/GoalStatus.idl",
     "/opt/ros/jazzy/share/action_msgs/msg/GoalStatusArray.idl",
@@ -46,6 +46,6 @@
     "/opt/ros/jazzy/share/service_msgs/msg/ServiceEventInfo.idl"
   ],
   "type_description_tuples": [
-    "action/Move.idl:/home/a/Solving-Maze/build/interfaces/rosidl_generator_type_description/interfaces/action/Move.json"
+    "action/Move.idl:/root/training_ws_merge2/build/interfaces/rosidl_generator_type_description/interfaces/action/Move.json"
   ]
 }

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/a/Solving-Maze/src/interfaces
+CMAKE_SOURCE_DIR = /root/training_ws_merge2/src/interfaces
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/a/Solving-Maze/build/interfaces
+CMAKE_BINARY_DIR = /root/training_ws_merge2/build/interfaces
 
 # Utility rule file for interfaces_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/interfaces_uninstall.dir/compiler_depend.make
 include CMakeFiles/interfaces_uninstall.dir/progress.make
 
 CMakeFiles/interfaces_uninstall:
-	/usr/bin/cmake -P /home/a/Solving-Maze/build/interfaces/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /root/training_ws_merge2/build/interfaces/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 interfaces_uninstall: CMakeFiles/interfaces_uninstall
 interfaces_uninstall: CMakeFiles/interfaces_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/interfaces_uninstall.dir/clean:
 .PHONY : CMakeFiles/interfaces_uninstall.dir/clean
 
 CMakeFiles/interfaces_uninstall.dir/depend:
-	cd /home/a/Solving-Maze/build/interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/a/Solving-Maze/src/interfaces /home/a/Solving-Maze/src/interfaces /home/a/Solving-Maze/build/interfaces /home/a/Solving-Maze/build/interfaces /home/a/Solving-Maze/build/interfaces/CMakeFiles/interfaces_uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /root/training_ws_merge2/build/interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/training_ws_merge2/src/interfaces /root/training_ws_merge2/src/interfaces /root/training_ws_merge2/build/interfaces /root/training_ws_merge2/build/interfaces /root/training_ws_merge2/build/interfaces/CMakeFiles/interfaces_uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/interfaces_uninstall.dir/depend
 

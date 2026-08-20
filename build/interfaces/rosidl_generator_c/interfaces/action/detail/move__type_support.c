@@ -5,9 +5,9 @@
 #include <string.h>
 
 #include "interfaces/action/detail/move__functions.h"
-#include "interfaces/action/detail/move__struct.h"
-#include "interfaces/action/detail/move__type_support.h"
 #include "rosidl_typesupport_interface/macros.h"
+#include "interfaces/action/detail/move__type_support.h"
+#include "interfaces/action/detail/move__struct.h"
 
 #ifdef __cplusplus
 extern "C"

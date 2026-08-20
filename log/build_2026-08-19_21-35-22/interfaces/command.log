@@ -1,0 +1,2 @@
+Invoking command in '/root/training_ws_merge2/build/interfaces': /usr/bin/cmake /root/training_ws_merge2/src/interfaces -DCMAKE_INSTALL_PREFIX=/root/training_ws_merge2/install/interfaces
+Invoked command in '/root/training_ws_merge2/build/interfaces' returned '1': /usr/bin/cmake /root/training_ws_merge2/src/interfaces -DCMAKE_INSTALL_PREFIX=/root/training_ws_merge2/install/interfaces
