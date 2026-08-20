@@ -1,0 +1,6 @@
+Invoking command in '/root/training_ws_merge2/build/interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /root/training_ws_merge2/src/interfaces -DCMAKE_INSTALL_PREFIX=/root/training_ws_merge2/install/interfaces
+Invoked command in '/root/training_ws_merge2/build/interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /root/training_ws_merge2/src/interfaces -DCMAKE_INSTALL_PREFIX=/root/training_ws_merge2/install/interfaces
+Invoking command in '/root/training_ws_merge2/build/interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /root/training_ws_merge2/build/interfaces -- -j8 -l8
+Invoked command in '/root/training_ws_merge2/build/interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /root/training_ws_merge2/build/interfaces -- -j8 -l8
+Invoking command in '/root/training_ws_merge2/build/interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /root/training_ws_merge2/build/interfaces
+Invoked command in '/root/training_ws_merge2/build/interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /root/training_ws_merge2/build/interfaces
