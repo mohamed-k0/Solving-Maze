@@ -28,14 +28,14 @@ class MoveX_Server(Node):
         self.declare_parameter("odom_topic", "/odom")
 
         # Linear Gain parameters to allow live tuning
-        self.declare_parameter("linear_kp", 1)
+        self.declare_parameter("linear_kp", 1.0)
         self.declare_parameter("linear_ki", 0.1)
         self.declare_parameter("linear_kd", 0.3)
 
         # TODO: Heading Correction parameters
 
         # Output limits
-        self.declare_parameter("max_lin_vel", 1)
+        self.declare_parameter("max_lin_vel", 1.0)
 
         # TODO: Maximum angular velocity for "Heading Correction"
 
@@ -44,13 +44,14 @@ class MoveX_Server(Node):
 
         # TODO: Heading Correction deadzone
 
-        self.declare_parameter("lin_integral_limit", 1)
+        self.declare_parameter("lin_integral_limit", 1.0)
 
         # TODO: Heading Correction Integral limit
 
         # Completion and timeout parameters
         self.declare_parameter("tolerance", 0.02)
-        self.declare_parameter("odom_timeout", 5)
+        self.declare_parameter("action_timeout", 15.0)
+        self.declare_parameter("odom_timeout", 5.0)
 
         # Get the Topic names
         cmd_vel_topic = self.get_parameter("cmd_vel_topic").value
@@ -127,7 +128,7 @@ class MoveX_Server(Node):
                 # TODO: Heading PID Parameters
 
 
-        return rclpy.parameter.SetParameterResult(successful = True)
+        return rclpy.parameter.SetParametersResult(successful = True)
 
 
     # Odometry Callback
@@ -142,7 +143,7 @@ class MoveX_Server(Node):
             self.last_odom_time = self.get_clock().now()
 
         except Exception as e:
-            self.get_logger.warning(f"Processing Odometry Failed! {e}")
+            self.get_logger().warning(f"Processing Odometry Failed! {e}")
 
     # Stop Robot method
     def stop_robot(self):
@@ -155,49 +156,144 @@ class MoveX_Server(Node):
         msg.angular.y = 0.0
         msg.angular.z = 0.0
         self.publisher.publish(msg)
-    
+
+    # Helping function to change the Time class to seconds (can be operated on)
+    @staticmethod
+    def seconds(duration):
+        return duration.nanoseconds / 1e9
+
     # Executing Callback
     def execute_callback(self, goal):
+        try:
+            # Verify that a goal is being executed
+            self.is_goal = True
 
-        # Verify that a goal is being executed
-        self.is_goal = True
+            result = Move.Result()
+            feedback = Move.Feedback()
 
-        result = Move.Result()
-        feedback = Move.Feedback()
+            target = goal.request.target_x
 
-        target = goal.request.target_x
+            start_time = self.get_clock().now()
 
-        start_time = self.get_clock().now()
+            tolerance = self.get_parameter("tolerance").value
+            action_timeout = self.get_parameter("action_timeout").value
+            odom_timeout = self.get_parameter("odom_timeout").value
 
-        # Odometry Data Missing (Edge Case 1)
-        while self.position is None or self.yaw is None:
-            if self.get_clock().now() - start_time > 5.0:
-                goal.abort()
-                result.success = False
-                result.message = "Odometry missing."
+            # Odometry Data Missing (Edge Case 1)
+            while self.position is None or self.yaw is None:
+                if self.seconds(self.get_clock().now() - start_time) > odom_timeout:
+                    goal.abort()
+                    result.success = False
+                    result.message = "Odometry missing."
 
-                return result
-            # Cancel request is sent
-            if goal.is_cancel_requested:
-                goal.canceled()
-                result.succes = False
-                result.message = "Goal Canceled While Waiting"
+                    return result
+                # Cancel request is sent
+                if goal.is_cancel_requested:
+                    goal.canceled()
+                    result.success = False
+                    result.message = "Goal Canceled While Waiting"
 
-                return result
-            time.sleep(0.1)
+                    return result
+                time.sleep(0.1)
 
-        # Initialize the Position and orientation received from odometry
-        initial_x = self.position.x
-        initial_y = self.position.y
-        initial_yaw = self.yaw
+            # Initialize the Position and orientation received from odometry
+            initial_x = self.position.x
+            initial_y = self.position.y
+            initial_yaw = self.yaw
 
-        # Make sure conditions are resetted
-        self.linear_pid.reset()
-        # TODO: Reset conditions for Heading correction
+            # Make sure conditions are resetted
+            self.linear_pid.reset()
+            # TODO: Reset conditions for Heading correction
 
-        # Set the Targets
-        self.linear_pid.set_target(target)
-        # TODO: Set Target for Heading Correction
+            # Set the Targets
+            self.linear_pid.set_target(target)
+            # TODO: Set Target for Heading Correction
+
+
+            previous_time = self.get_clock().now()
+            motion_start_time = self.get_clock().now()
+
+            while rclpy.ok():
+
+                current_time = self.get_clock().now()
+
+                # Cancel Check while executing goal
+                if goal.is_cancel_requested:
+                    goal.canceled()
+                    result.success = False
+                    result.message = "Goal canceled"
+                    self.is_goal = False
+                    self.stop_robot()
+                    return result
+
+                # Timeout (Edge Case 2)
+                if self.seconds(current_time - motion_start_time) > action_timeout:
+                    self.stop_robot()
+                    goal.abort()
+                    result.success = False
+                    result.message = "Timeout"
+            
+                    return result
+
+
+                # Odometry Watchdog
+                if self.last_odom_time == 0 or self.seconds(current_time - self.last_odom_time) > odom_timeout:
+                    self.get_logger().error("Odometry Watchdog is called")
+                    goal.abort()
+                    result.success = False
+                    result.message = "Odometry_timeout"
+                
+                    return result
+
+                # Calculate < dt > for simulation time
+                dt = self.seconds(current_time - previous_time)
+                previous_time = current_time
+
+                # Avoid Zero Error
+                if dt <= 0:
+                    dt = 0.001
+
+                dx = self.position.x - initial_x
+                dy = self.position.y - initial_y
+
+                # Calculate distance travelled (Signed)
+                dist_done = (dx * math.cos(initial_yaw) + dy * math.sin(initial_yaw))
+
+                # Linear PID control
+                lin_velocity = self.linear_pid.control(dist_done, dt)
+
+                # TODO: Heading Correction PID
+
+                # Distance within tolerance
+                error = target - dist_done
+                if abs(error) <= tolerance:
+                    goal.succeed()
+                    result.success = True
+                    result.message = "Target Reached"
+                    
+                    return result
+
+                # Publish Velocity commands
+                msg = Twist()
+                msg.linear.x = float(lin_velocity)
+                msg.linear.y= 0.0
+                msg.linear.z = 0.0
+                # TODO: adjust Heading correction messages
+                msg.angular.z = 0.0
+
+                self.publisher.publish(msg)
+
+                # Feedback
+                feedback.progress = float((abs(dist_done) / abs(target))* 100)
+                goal.publish_feedback(feedback)
+
+
+                time.sleep(0.05)
+        finally:
+            
+            self.is_goal = False
+            self.stop_robot()
+
 
 def main():
 
