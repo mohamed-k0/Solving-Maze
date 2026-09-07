@@ -1,5 +1,6 @@
-import numpy as np
-import time as tm
+import math
+import time 
+
 
 class PID:
 
@@ -30,6 +31,35 @@ class PID:
         # A variable to indicate that angles are being controlled (to allow reusability)
         self.angles = angles
 
+    # Set the target and check whether it is angle or not
+    def set_target(self, target):
+        # If dealing with angles, normalize first
+        if self.angles:
+            target = self.normalize(target)
+        
+        self.target = target
+
+    # Update the feedback given to the controller
+    def update_feedback(self, feedback):
+        # If dealing with angles, normalize first
+        if self.angles:
+            feedback = self.normalize(feedback)
+
+        self.feedback = feedback
+
+    # Define helping function to normalize angle (used inside the class only)
+    @staticmethod
+    def normalize(angle):
+
+        while angle > math.pi :
+            angle -= 2 * math.pi
+        
+        while angle < -math.pi:
+            angle += 2 * math.pi
+        
+        return angle
+        
+        
     def reset(self):
         self.kp = 0
         self.ki = 0
