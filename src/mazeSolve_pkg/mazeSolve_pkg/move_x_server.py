@@ -105,8 +105,99 @@ class MoveX_Server(Node):
     def cancel_callback(self, cancel_request):
         return CancelResponse.ACCEPT
 
-    
+    # Parameter Callback
+    def param_callback(self, parameters):
+        for param in parameters:
+            match param.name:
+                case "linear_kp":
+                    self.linear_pid.kp = param.value
+                case "linear_ki":
+                    self.linear_pid.ki = param.value
+                case "linear_kd":
+                    self.linear_pid.kd = param.value
+                case "lin_deadzone":
+                    self.linear_pid.deadzone = param.value
+                case "lin_integral_limit":
+                    self.linear_pid.integral_max = param.value
+                    self.linear_pid.integral_min = -param.value
+                case "max_lin_vel":
+                    self.linear_pid.out_max = param.value
+                    self.linear_pid.out_min = -param.value
 
+                # TODO: Heading PID Parameters
+
+
+        return rclpy.parameter.SetParameterResult(successful = True)
+
+
+    # Odometry Callback
+    def odom_callback(self, msg):
+        # Catch errors while getting Odometry message
+        try:
+            self.position = msg.pose.pose.position
+
+            # TODO: Get Orientation from message 
+
+            # Get the time using ROS clock for accuracy
+            self.last_odom_time = self.get_clock().now()
+
+        except Exception as e:
+            self.get_logger.warning(f"Processing Odometry Failed! {e}")
+
+    # Stop Robot method
+    def stop_robot(self):
+        msg = Twist()
+        # Reset all values to ensure avoiding noise
+        msg.linear.x = 0.0
+        msg.linear.y= 0.0
+        msg.linear.z = 0.0
+        msg.angular.x = 0.0
+        msg.angular.y = 0.0
+        msg.angular.z = 0.0
+        self.publisher.publish(msg)
+    
+    # Executing Callback
+    def execute_callback(self, goal):
+
+        # Verify that a goal is being executed
+        self.is_goal = True
+
+        result = Move.Result()
+        feedback = Move.Feedback()
+
+        target = goal.request.target_x
+
+        start_time = self.get_clock().now()
+
+        # Odometry Data Missing (Edge Case 1)
+        while self.position is None or self.yaw is None:
+            if self.get_clock().now() - start_time > 5.0:
+                goal.abort()
+                result.success = False
+                result.message = "Odometry missing."
+
+                return result
+            # Cancel request is sent
+            if goal.is_cancel_requested:
+                goal.canceled()
+                result.succes = False
+                result.message = "Goal Canceled While Waiting"
+
+                return result
+            time.sleep(0.1)
+
+        # Initialize the Position and orientation received from odometry
+        initial_x = self.position.x
+        initial_y = self.position.y
+        initial_yaw = self.yaw
+
+        # Make sure conditions are resetted
+        self.linear_pid.reset()
+        # TODO: Reset conditions for Heading correction
+
+        # Set the Targets
+        self.linear_pid.set_target(target)
+        # TODO: Set Target for Heading Correction
 
 def main():
 
@@ -115,7 +206,7 @@ def main():
     node = MoveX_Server()
 
     executor = MultiThreadedExecutor(
-        num_threads=2
+        num_threads=4
     )
 
     executor.add_node(node)
