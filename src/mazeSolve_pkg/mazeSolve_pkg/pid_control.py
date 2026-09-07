@@ -5,7 +5,7 @@ import time
 class PID:
 
     # Define the Constructor
-    def __init__(self, kp=0, ki=0, kd=0, out_max=0, out_min=0, integral_max=0, integral_min=0, deadzone=0, angles=False):
+    def __init__(self, kp=0, ki=0, kd=0, out_max=None, out_min=None, integral_max=None, integral_min=None, deadzone=0, angles=False):
         # PID Control gains
         self.kp = kp
         self.ki = ki
@@ -59,7 +59,21 @@ class PID:
         
         return angle
         
-        
+    # Define helping function to cap the output and integral (used inside class only)
+    @staticmethod
+    def clamp_value(value, minimum, maximum):
+
+        # Check if there are min and max values > "Clamp" the value
+        if minimum is not None:
+            # Restrict the value to be more than minimum
+            value = max(value, minimum)
+
+        if maximum is not None:
+            # Restrict the value to be less than maximum
+            value = min(value, maximum)
+
+
+
     def reset(self):
         self.kp = 0
         self.ki = 0
