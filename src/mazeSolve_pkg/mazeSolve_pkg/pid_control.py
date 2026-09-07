@@ -47,7 +47,7 @@ class PID:
 
         self.feedback = feedback
 
-    # Define helping function to normalize angle (used inside the class only)
+    # Define helping function to normalize angle
     @staticmethod
     def normalize(angle):
 
@@ -59,7 +59,7 @@ class PID:
         
         return angle
         
-    # Define helping function to cap the output and integral (used inside class only)
+    # Define helping function to cap the output and integral 
     @staticmethod
     def clamp_value(value, minimum, maximum):
 
@@ -72,17 +72,17 @@ class PID:
             # Restrict the value to be less than maximum
             value = min(value, maximum)
 
+        return value
 
 
+    # Reset the values
     def reset(self):
-        self.kp = 0
-        self.ki = 0
-        self.kd = 0
+        
         self.integral = 0
         self.derivative = 0
         self.error = 0
         self.prev_error = 0
-        self.last_time = tm.time()
+        self.last_time = None
 
     def tune(self, KP, KI, KD, Deadzone):
         self.kp = KP
@@ -90,35 +90,74 @@ class PID:
         self.kd = KD
         self.deadzone = Deadzone
 
-    def control(self, ref,  input):
+    def control(self, feedback=None, dt=None):
+
+        # Update the feedback (if exists)
+        if feedback is not None:
+            self.update_feedback(feedback)
+
         # Calculate error
-        self.error = ref - input
-        dt = tm.time - self.last_time
-        
-        # Prevent Division by zero
-        if dt != 0:
-            self.derivative = (self.error - self.prev_error) / dt
-        else:
-            return 0
-        
-        # For next time
-        self.last_time = tm.time
-        self.prev_error = self.error
+        self.error = self.target - self.feedback
 
-        # Conditional Integration
-        if self.error == 0:
+        # Initialize current time to be only moving forward
+        current_time = time.monotonic()
+
+        # Check whether the error is in the deadzone (to ignore it)
+        if abs(self.error) <= self.deadzone:
+            # Reset only the integrals and derivatives
             self.integral = 0
-        else:
-            self.integral += self.error * dt
+            self.derivative = 0
+            # Track the error
+            self.prev_error = self.error
+            # Update the time
+            self.last_time = current_time
 
-        # Target Deadzone
-        if abs(self.error) < self.deadzone:
             return 0
 
-        output = self.kp * self.error + self.ki * self.integral + self.kd * self.derivative
-        # TODO: Watchdog Timer
-        # TODO: Control Output Clamping
-        # TODO: Integral Anti-Windup
-        # TODO: Angle Normalization
 
-        return output
+        # Calculate < dt > if not given by action server
+        if dt is None:
+            # First iteration
+            if self.last_time is None:
+                dt = 0
+            # Calculate how much time since previous iteration
+            else:
+                dt = current_time - self.last_time
+        # Store the current time
+        self.last_time = current_time
+        
+        # Prevent Division by zero or negative time interval (Edge case)
+        if dt <= 0:
+            # Update the error
+            self.prev_error = self.error
+            # Output without integral and derivative to save calculation
+            output = self.kp * self.error
+            # Return Clamped output
+            return self.clamp_value(output, self.out_min, self.out_max)
+        
+        # Conditional Integration
+        # Check if error and previous error have same sign
+        if self.prev_error == 0 or self.error * self.prev_error > 0:
+            # Calculate the Integral
+            self.integral += self.error * dt
+        else:
+            # Zero cross reset
+            self.integral = 0     
+
+        # Integral Anti-windup (clamping)
+        self.integral = self.clamp_value(self.integral, self.integral_min, self.integral_max)
+
+        # Derivative      
+        error_change = self.error - self.prev_error     
+        if self.angles:
+            # Normalize the change in angle error
+            error_change = self.normalize(error_change)
+        self.derivative = (error_change) / dt
+
+        # Store the last error
+        self.prev_error = self.error
+        # Calculate output (P + I + D)
+        output = (self.kp * self.error) + (self.ki * self.integral) + (self.kd * self.derivative) 
+        
+        # Return Clamped output
+        return self.clamp_value(output, self.out_min, self.out_max)
