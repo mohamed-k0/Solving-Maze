@@ -24,7 +24,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            "action_x_server = mazeSolve_pkg.move_x_server:main",
+            'action_x_server = mazeSolve_pkg.move_x_server:main',
             'yaw_client = mazeSolve_pkg.yaw_client:main',
             'yawserver = mazeSolve_pkg.yawserver:main',
 
