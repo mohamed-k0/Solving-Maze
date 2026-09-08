@@ -30,6 +30,22 @@ class MoveYawServer(Node):
         # Declare parameters for velocity and odometry topics
         self.declare_parameter('cmd_vel_topic', '/cmd_vel')
         self.declare_parameter('odom_topic', '/odom')
+        # PID
+        # proportional gain
+        self.declare_parameter('Kp',1.0)
+        #integral gain
+        self.declare_parameter('Ki',0.0)
+        # derivative gain
+        self.declare_parameter('Kd',0.0)
+        #dedzone target
+        self.declare_parameter('deadzone_rad',0.05)
+        
+        self.declare_parameter('max_angular_vel',0.05)
+        #integral windup 
+        self.declare_parameter('integral_clamp',0.05)
+        # timer 
+        self.declare_parameter('action_timeout',0.05)
+        self.declare_parameter('odom_timeout',0.05)
 
         # Store value of parameters in variables
         cmd_vel_topic = self.get_parameter('cmd_vel_topic').value
@@ -45,8 +61,10 @@ class MoveYawServer(Node):
 
         # Create the action server
         self.action_server = ActionServer(self, Move, '/move_yaw', self.execute_callback, callback_group = self.callback_gp)
-
+        # pick up params live
+        self.add_on_set_parameters_callback(self.on_params_changed)
         self.get_logger().info('Yaw Server has started.')
+        
 
 
     def stop_bot(self):
