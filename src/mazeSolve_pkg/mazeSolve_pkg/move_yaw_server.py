@@ -11,7 +11,7 @@ from rclpy.executors import MultiThreadedExecutor
 
 import math
 
-
+from rcl_interfaces.msg import SetParametersResult
 from interfaces.action import Move
 
 
@@ -65,7 +65,8 @@ class MoveYawServer(Node):
         self.add_on_set_parameters_callback(self.on_params_changed)
         self.get_logger().info('Yaw Server has started.')
         
-
+    def on_params_changed(self,params):
+        return SetParametersResult(successful=True)
 
     def stop_bot(self):
         stop_msg = Twist()
@@ -73,6 +74,13 @@ class MoveYawServer(Node):
         stop_msg.linear.y = 0.0
         stop_msg.angular.z = 0.0        
         self.vel_publisher.publish(stop_msg)
+    def normalize_angle(self,angle):
+        while angle>math.pi:
+            angle -=2*math.pi
+        while angle< -math.pi:
+            angle+=2*math.pi
+        return angle
+    
 
     def calculate_delta(self, target_yaw):
 
@@ -80,11 +88,7 @@ class MoveYawServer(Node):
         delta = target_yaw - self.progress
 
         # Keep incrementing or decrementing from the delta value till it is normalized
-        while delta > math.pi :
-            delta -= 2 * math.pi
-
-        while delta < -math.pi:
-            delta += 2 * math.pi
+        delta = self.normalize_angle(delta)
 
         return delta
 
@@ -105,15 +109,28 @@ class MoveYawServer(Node):
                 result.message = "Aborted: no odometry data"
                 return result
             time.sleep(0.05)
-
+        kp = self.get_parameter('Kp').value
+        ki = self.get_parameter('Ki').value
+        kd = self.get_parameter('Kd').value
+        deadzone = self.get_parameter('deadzone_rad').value
+        max_angular_vel = self.get_parameter('max_angular_vel').value
+        integral_clamp = self.get_parameter('integral_clamp').value
+        odom_timeout = self.get_parameter('odom_timeout').value
+        action_timeout = self.get_parameter('action_timeout').value
+        integral = 0.0
+        prevError = self.calculate_delta(target_yaw)
+        prevTime = time.time()
+        
+        
         # --- Edge case 2: timeout ---
         action_start_time = time.time()
-        max_duration = 15.0
+        max_duration = max(float(action_timeout), 0.1)
 
         while True:
-            if time.time() - action_start_time > max_duration:
+            now = time.time()
+            if now - action_start_time > max_duration:
                 self.stop_bot()
-                self.get_logger().error('move_yaw timed out -- robot not responding')
+                self.get_logger().error('Error')
                 goal.abort()
                 result = Move.Result()
                 result.success = False
@@ -123,14 +140,16 @@ class MoveYawServer(Node):
             delta_yaw = self.calculate_delta(target_yaw)
 
             # Check whether the change is within an acceptable range (It won't be perfectly aligned to zero value)
-            if abs(delta_yaw) <= 0.05:
+            if abs(delta_yaw) <= deadzone:
                 break
-
-            if delta_yaw > 0:
-                angular_velocity = 1.0
-
-            elif delta_yaw < 0:
-                angular_velocity = -1.0
+            dt = max(now-prevTime,1e-3)
+            if (delta_yaw>0 and prevError < 0) or (delta_yaw< 0 and prevError > 0):
+                integral = 0.0
+            integral+=delta_yaw*dt
+            integral=max(min(integral,integral_clamp),-integral_clamp)
+            derivative = (delta_yaw-prevError)/dt
+            angular_velocity=(kp*delta_yaw)+(ki*integral)+(kd*derivative)
+            angular_velocity = max(min(angular_velocity,max_angular_vel),-max_angular_vel)
 
             # Create the command to be sent to /cmd_vel
             msg = Twist()
@@ -147,8 +166,10 @@ class MoveYawServer(Node):
             feedback.progress = self.progress
 
             goal.publish_feedback(feedback)
-
+            prevError=delta_yaw
+            prevTime = now
             time.sleep(0.1)
+            
 
         # Stop the robot after reaching target yaw
         self.stop_bot()
