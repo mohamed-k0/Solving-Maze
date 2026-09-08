@@ -11,20 +11,21 @@ from rclpy.executors import MultiThreadedExecutor
 
 import math
 
-from rcl_interfaces.msg import SetParametersResult
 from interfaces.action import Move
-
-
-from rclpy.action import ActionServer 
+from rclpy.action import ActionServer
+from rclpy.action.server import CancelResponse, GoalResponse
+from mazeSolve_pkg.pid_control import PID
 
 
 class MoveYawServer(Node):
     def __init__(self):
-        super().__init__('yawserverNew')
+        super().__init__('yaw_pid_server')
 
         # Initializing a variable to track the yaw progress
         self.progress = 0.0
         self.odom_received = False
+        self.active_goal = False
+        self.last_odom_time = None
 
 
         # Declare parameters for velocity and odometry topics
@@ -32,20 +33,18 @@ class MoveYawServer(Node):
         self.declare_parameter('odom_topic', '/odom')
         # PID
         # proportional gain
-        self.declare_parameter('Kp',1.0)
+        self.declare_parameter('Kp', 1.0)
         #integral gain
-        self.declare_parameter('Ki',0.0)
+        self.declare_parameter('Ki', 0.0)
         # derivative gain
-        self.declare_parameter('Kd',0.0)
+        self.declare_parameter('Kd', 0.0)
         #dedzone target
-        self.declare_parameter('deadzone_rad',0.05)
-        
-        self.declare_parameter('max_angular_vel',0.05)
+        self.declare_parameter('deadzone_rad', 0.05)
+        self.declare_parameter('max_angular_vel', 1.0)
         #integral windup 
-        self.declare_parameter('integral_clamp',0.05)
-        # timer 
-        self.declare_parameter('action_timeout',0.05)
-        self.declare_parameter('odom_timeout',0.05)
+        self.declare_parameter('integral_clamp', 0.5)
+        self.declare_parameter('action_timeout', 15.0)
+        self.declare_parameter('odom_timeout', 5.0)
 
         # Store value of parameters in variables
         cmd_vel_topic = self.get_parameter('cmd_vel_topic').value
@@ -60,13 +59,35 @@ class MoveYawServer(Node):
         self.odom_subscriber = self.create_subscription(Odometry, odom_topic, self.odom_callback, 10, callback_group = self.callback_gp)
 
         # Create the action server
-        self.action_server = ActionServer(self, Move, '/move_yaw', self.execute_callback, callback_group = self.callback_gp)
-        # pick up params live
-        self.add_on_set_parameters_callback(self.on_params_changed)
+        self.action_server = ActionServer(
+            self,
+            Move,
+            '/move_yaw',
+            execute_callback=self.execute_callback,
+            goal_callback=self.goal_callback,
+            cancel_callback=self.cancel_callback,
+            callback_group=self.callback_gp,
+        )
         self.get_logger().info('Yaw Server has started.')
-        
-    def on_params_changed(self,params):
-        return SetParametersResult(successful=True)
+
+        self.yaw_pid = PID(
+            self.get_parameter('Kp').value,
+            self.get_parameter('Ki').value,
+            self.get_parameter('Kd').value,
+            self.get_parameter('max_angular_vel').value,
+            -self.get_parameter('max_angular_vel').value,
+            self.get_parameter('integral_clamp').value,
+            -self.get_parameter('integral_clamp').value,
+            self.get_parameter('deadzone_rad').value,
+        )
+
+    def goal_callback(self, _request):
+        if self.active_goal:
+            return GoalResponse.REJECT
+        return GoalResponse.ACCEPT
+
+    def cancel_callback(self, _request):
+        return CancelResponse.ACCEPT
 
     def stop_bot(self):
         stop_msg = Twist()
@@ -74,6 +95,18 @@ class MoveYawServer(Node):
         stop_msg.linear.y = 0.0
         stop_msg.angular.z = 0.0        
         self.vel_publisher.publish(stop_msg)
+
+    def update_pid_from_parameters(self):
+        self.yaw_pid.kp = self.get_parameter('Kp').value
+        self.yaw_pid.ki = self.get_parameter('Ki').value
+        self.yaw_pid.kd = self.get_parameter('Kd').value
+        self.yaw_pid.deadzone = self.get_parameter('deadzone_rad').value
+        max_velocity = self.get_parameter('max_angular_vel').value
+        self.yaw_pid.out_max = max_velocity
+        self.yaw_pid.out_min = -max_velocity
+        integral_limit = self.get_parameter('integral_clamp').value
+        self.yaw_pid.integral_max = integral_limit
+        self.yaw_pid.integral_min = -integral_limit
     def normalize_angle(self,angle):
         while angle>math.pi:
             angle -=2*math.pi
@@ -93,96 +126,71 @@ class MoveYawServer(Node):
         return delta
 
     def execute_callback(self, goal):
-
-        # Goal received from the client
-        target_yaw = goal.request.target_yaw
-
-        self.get_logger().info(f"Received goal: {target_yaw:.2f}")
-        # --- Edge case 1: missing /odom ---
-        odom_wait_start = time.time()
-        while not self.odom_received:
-            if time.time() - odom_wait_start > 3.0:
-                self.get_logger().error('No /odom data received -- aborting')
-                goal.abort()
-                result = Move.Result()
-                result.success = False
-                result.message = "Aborted: no odometry data"
-                return result
-            time.sleep(0.05)
-        kp = self.get_parameter('Kp').value
-        ki = self.get_parameter('Ki').value
-        kd = self.get_parameter('Kd').value
-        deadzone = self.get_parameter('deadzone_rad').value
-        max_angular_vel = self.get_parameter('max_angular_vel').value
-        integral_clamp = self.get_parameter('integral_clamp').value
-        odom_timeout = self.get_parameter('odom_timeout').value
-        action_timeout = self.get_parameter('action_timeout').value
-        integral = 0.0
-        prevError = self.calculate_delta(target_yaw)
-        prevTime = time.time()
-        
-        
-        # --- Edge case 2: timeout ---
-        action_start_time = time.time()
-        max_duration = max(float(action_timeout), 0.1)
-
-        while True:
-            now = time.time()
-            if now - action_start_time > max_duration:
-                self.stop_bot()
-                self.get_logger().error('Error')
-                goal.abort()
-                result = Move.Result()
-                result.success = False
-                result.message = "Aborted: timeout"
-                return result
-
-            delta_yaw = self.calculate_delta(target_yaw)
-
-            # Check whether the change is within an acceptable range (It won't be perfectly aligned to zero value)
-            if abs(delta_yaw) <= deadzone:
-                break
-            dt = max(now-prevTime,1e-3)
-            if (delta_yaw>0 and prevError < 0) or (delta_yaw< 0 and prevError > 0):
-                integral = 0.0
-            integral+=delta_yaw*dt
-            integral=max(min(integral,integral_clamp),-integral_clamp)
-            derivative = (delta_yaw-prevError)/dt
-            angular_velocity=(kp*delta_yaw)+(ki*integral)+(kd*derivative)
-            angular_velocity = max(min(angular_velocity,max_angular_vel),-max_angular_vel)
-
-            # Create the command to be sent to /cmd_vel
-            msg = Twist()
-            # Putting linear speeds to zero to prevent any sort of movement during rotation
-            msg.linear.x = 0.0
-            msg.linear.y = 0.0
-            # assigning the angular velocity value to the angular velocity of the message
-            msg.angular.z = angular_velocity
-
-            self.vel_publisher.publish(msg)
-
-            # Send the feedback to the action client
-            feedback = Move.Feedback()
-            feedback.progress = self.progress
-
-            goal.publish_feedback(feedback)
-            prevError=delta_yaw
-            prevTime = now
-            time.sleep(0.1)
-            
-
-        # Stop the robot after reaching target yaw
-        self.stop_bot()
-        
-
-        goal.succeed()
-
-        # Create the result action
+        self.active_goal = True
         result = Move.Result()
-        result.success = True
-        result.message = "Successfully Rotated"
+        action_start_time = time.monotonic()
+        target_yaw = self.normalize_angle(goal.request.target_yaw)
+        odom_timeout = float(self.get_parameter('odom_timeout').value)
+        action_timeout = float(self.get_parameter('action_timeout').value)
 
-        return result
+        try:
+            while not self.odom_received:
+                if time.monotonic() - action_start_time > odom_timeout:
+                    goal.abort()
+                    result.success = False
+                    result.message = 'Aborted: no odometry data'
+                    return result
+                if goal.is_cancel_requested:
+                    goal.canceled()
+                    result.success = False
+                    result.message = 'Canceled while waiting for odometry'
+                    return result
+                time.sleep(0.05)
+
+            self.update_pid_from_parameters()
+            self.yaw_pid.reset()
+            previous_time = time.monotonic()
+            feedback = Move.Feedback()
+            feedback.current_action = 'rotating'
+
+            while rclpy.ok():
+                now = time.monotonic()
+                if now - action_start_time > action_timeout:
+                    goal.abort()
+                    result.success = False
+                    result.message = 'Aborted: timeout'
+                    return result
+                if goal.is_cancel_requested:
+                    goal.canceled()
+                    result.success = False
+                    result.message = 'Canceled'
+                    return result
+                if self.last_odom_time is None or now - self.last_odom_time > odom_timeout:
+                    goal.abort()
+                    result.success = False
+                    result.message = 'Aborted: odometry timeout'
+                    return result
+
+                delta_yaw = self.calculate_delta(target_yaw)
+                dt = max(now - previous_time, 1e-3)
+                previous_time = now
+                angular_velocity = self.yaw_pid.control(-delta_yaw, dt)
+
+                if abs(delta_yaw) <= self.yaw_pid.deadzone:
+                    goal.succeed()
+                    result.success = True
+                    result.message = 'Successfully rotated'
+                    return result
+
+                msg = Twist()
+                msg.angular.z = float(angular_velocity)
+                self.vel_publisher.publish(msg)
+                feedback.progress = float(self.progress)
+                goal.publish_feedback(feedback)
+                time.sleep(0.05)
+        finally:
+            self.active_goal = False
+            self.stop_bot()
 
 
 
@@ -201,10 +209,11 @@ class MoveYawServer(Node):
 
             self.progress = yaw
             self.odom_received = True
+            self.last_odom_time = time.monotonic()
         except:
             self.get_logger().warn('Failed to process odometry message')
 
-        self.get_logger().info(f"Current Yaw: {self.progress:.2f}")
+        self.get_logger().debug(f"Current Yaw: {self.progress:.2f}")
 
 
 

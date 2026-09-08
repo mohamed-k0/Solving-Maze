@@ -1,7 +1,7 @@
 # Maze Control — Quick Setup
 
-Get the maze simulation built and running. Assumes you already have **ROS 2
-Jazzy** installed on **Ubuntu 24.04**.
+Get the maze simulation built and running. Assumes you already have ROS 2
+installed and sourced.
 
 ---
 
@@ -9,7 +9,7 @@ Jazzy** installed on **Ubuntu 24.04**.
 
 ```bash
 sudo apt update
-sudo apt install -y ros-jazzy-ros-gz
+sudo apt install -y ros-$ROS_DISTRO-ros-gz
 ```
 
 Verify:
@@ -36,7 +36,8 @@ git clone https://github.com/eng-Aly/MIA26_phase2_ros_contest.git
 this is the robot that being spawned in the simulation so it's important to verify this step worked correctly
 
 ```bash
-sudo apt install -y ros-jazzy-turtlebot3-gazebo ros-jazzy-turtlebot3-msgs ros-jazzy-turtlebot3
+sudo apt install -y ros-$ROS_DISTRO-turtlebot3-gazebo \
+	ros-$ROS_DISTRO-turtlebot3-msgs ros-$ROS_DISTRO-turtlebot3
 ```
 
 Verify it's installed correctly
@@ -45,7 +46,7 @@ Verify it's installed correctly
 ros2 pkg prefix turtlebot3_gazebo
 ```
 
-Should print `/opt/ros/jazzy`.
+Should print a path under `/opt/ros/$ROS_DISTRO`.
 
 ---
 

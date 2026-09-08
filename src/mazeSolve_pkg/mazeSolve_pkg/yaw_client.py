@@ -1,6 +1,7 @@
-from platform import node
+import threading
+import time
 
-import rclpy, time
+import rclpy
 from rclpy.node import Node
 from rclpy.action import ActionClient
 import math
@@ -49,7 +50,9 @@ class Action_Node(Node):
     def send_yaw_goal(self,target):
         #waiting for server to start
         self.get_logger().info("waiting for yaw server...")
-        self.yaw_client.wait_for_server(timeout_sec = 1.5)
+        if not self.yaw_client.wait_for_server(timeout_sec=5.0):
+            self.get_logger().error("yaw server is not available")
+            return
         #make the goal msg
         gms = Move.Goal()
         gms.target_yaw = math.radians(target)
@@ -89,7 +92,9 @@ class Action_Node(Node):
 
         # Wait for the action server to be available
         self.get_logger().info("Waiting for movement server......")
-        self.move_client.wait_for_server(timeout_sec=1.5)
+        if not self.move_client.wait_for_server(timeout_sec=5.0):
+            self.get_logger().error("movement server is not available")
+            return
 
         # Create a goal message
         goal_msg = Move.Goal()
@@ -159,7 +164,9 @@ class Action_Node(Node):
 def main():
     rclpy.init()
     node = Action_Node()
-    node.solve_maze()
+    # The executor must spin while goals and service requests are being processed.
+    mission_thread = threading.Thread(target=node.solve_maze, daemon=True)
+    mission_thread.start()
     rclpy.spin(node)
     node.destroy_node()
     rclpy.shutdown()

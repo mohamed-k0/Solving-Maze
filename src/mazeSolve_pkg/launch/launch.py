@@ -44,8 +44,8 @@ def generate_launch_description():
 		),
 		Node(
 			package='mazeSolve_pkg',
-			executable='yawserverNew',
-			name='yawserverNew',
+			executable='yaw_pid_server',
+			name='yaw_pid_server',
 			output='screen',
 			parameters=[{
 				'cmd_vel_topic': cmd_vel_topic,

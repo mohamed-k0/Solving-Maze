@@ -30,10 +30,9 @@ setup(
         'console_scripts': [
             'action_x_server = mazeSolve_pkg.move_x_server:main',
             'yaw_client = mazeSolve_pkg.yaw_client:main',
-            'yawserver = mazeSolve_pkg.yawserver:main',
-        "yawserverNew = mazeSolve_pkg.move_yaw_server:main"
-            
-
+            'yaw_pid_server = mazeSolve_pkg.move_yaw_server:main',
+            'yawserverNew = mazeSolve_pkg.move_yaw_server:main',
+            'yawserver = mazeSolve_pkg.move_yaw_server:main',
         ],
     },
 )
