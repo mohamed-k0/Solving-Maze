@@ -11,7 +11,7 @@ from tf_transformations import euler_from_quaternion
 from rclpy.callback_groups import ReentrantCallbackGroup
 from rclpy.executors import MultiThreadedExecutor
 
-from pid_control import PID
+from mazeSolve_pkg.pid_control import PID
 
 
 class MoveX_Server(Node):
