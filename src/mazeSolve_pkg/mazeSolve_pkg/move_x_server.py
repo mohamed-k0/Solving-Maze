@@ -32,21 +32,27 @@ class MoveX_Server(Node):
         self.declare_parameter("linear_ki", 0.1)
         self.declare_parameter("linear_kd", 0.3)
 
-        # TODO: Heading Correction parameters
+        # Heading Correction parameters
+        self.declare_parameter("heading_kp", 1.0)
+        self.declare_parameter("heading_ki", 0.1)
+        self.declare_parameter("heading_kd", 0.1)
 
         # Output limits
         self.declare_parameter("max_lin_vel", 1.0)
 
-        # TODO: Maximum angular velocity for "Heading Correction"
+        # Maximum angular velocity for "Heading Correction"
+        self.declare_parameter("max_heading_vel",1.0)
 
         # PID control parameters
         self.declare_parameter("lin_deadzone", 0.02)
 
-        # TODO: Heading Correction deadzone
+        # Heading Correction deadzone
+        self.declare_parameter("heading_deadzone", 0.01)
 
         self.declare_parameter("lin_integral_limit", 1.0)
 
-        # TODO: Heading Correction Integral limit
+        # Heading Correction Integral limit
+        self.declare_parameter("heading_integral_limit", 1.0)
 
         # Completion and timeout parameters
         self.declare_parameter("tolerance", 0.02)
@@ -84,7 +90,15 @@ class MoveX_Server(Node):
 
         # << Heading Correction PID >>
 
-        # TODO
+        heading_kp = self.get_parameter("heading_kp").value
+        heading_ki = self.get_parameter("heading_ki").value
+        heading_kd = self.get_parameter("heading_kd").value
+        max_heading_vel = self.get_parameter("max_heading_vel").value
+        heading_deadzone = self.get_parameter("heading_deadzone").value
+        heading_integral_limit = self.get_parameter("heading_integral_limit").value
+
+        self.heading_pid = PID(heading_kp,heading_ki,heading_kd,max_heading_vel,-max_heading_vel,heading_integral_limit,-heading_integral_limit,heading_deadzone)
+
 
         # Callback parameters for Runtime updating
         self.add_on_set_parameters_callback(self.param_callback)
@@ -125,8 +139,27 @@ class MoveX_Server(Node):
                     self.linear_pid.out_max = param.value
                     self.linear_pid.out_min = -param.value
 
-                # TODO: Heading PID Parameters
+                # Heading PID Parameters
+                
+                case "heading_kp":
+                    self.heading_pid.kp = param.value
 
+                case "heading_ki":
+                    self.heading_pid.ki = param.value
+
+                case "heading_kd":
+                    self.heading_pid.kd = param.value
+
+                case "heading_deadzone":
+                    self.heading_pid.deadzone = param.value
+
+                case "heading_integral_limit":
+                    self.heading_pid.integral_max = param.value
+                    self.heading_pid.integral_min = -param.value
+
+                case "max_heading_vel":
+                    self.heading_pid.out_max = param.value
+                    self.heading_pid.out_min = -param.value
 
         return rclpy.parameter.SetParametersResult(successful = True)
 
@@ -137,7 +170,12 @@ class MoveX_Server(Node):
         try:
             self.position = msg.pose.pose.position
 
-            # TODO: Get Orientation from message 
+            # Get Orientation from message 
+            orientation = msg.pose.pose.orientation
+            quaternion = (orientation.x,orientation.y,orientation.z,orientation.w)
+            roll, pitch, yaw = euler_from_quaternion(quaternion)
+            self.yaw = yaw
+
 
             # Get the time using ROS clock for accuracy
             self.last_odom_time = self.get_clock().now()
@@ -203,11 +241,14 @@ class MoveX_Server(Node):
 
             # Make sure conditions are resetted
             self.linear_pid.reset()
-            # TODO: Reset conditions for Heading correction
+            # Reset conditions for Heading correction
+            self.heading_pid.reset()
+           
 
             # Set the Targets
             self.linear_pid.set_target(target)
-            # TODO: Set Target for Heading Correction
+            # Set Target for Heading Correction
+            self.heading_pid.set_target(0.0)
 
 
             previous_time = self.get_clock().now()
@@ -263,6 +304,9 @@ class MoveX_Server(Node):
                 lin_velocity = self.linear_pid.control(dist_done, dt)
 
                 # TODO: Heading Correction PID
+                heading_error = self.normalize_angle(self.yaw - initial_yaw)
+                self.previous_heading_error = heading_error
+                heading_correction = self.heading_pid.control(heading_error,dt)
 
                 # Distance within tolerance
                 error = target - dist_done
@@ -278,8 +322,10 @@ class MoveX_Server(Node):
                 msg.linear.x = float(lin_velocity)
                 msg.linear.y= 0.0
                 msg.linear.z = 0.0
-                # TODO: adjust Heading correction messages
-                msg.angular.z = 0.0
+                # adjust Heading correction messages
+                msg.angular.x = 0.0
+                msg.angular.y = 0.0
+                msg.angular.z = float(heading_correction)
 
                 self.publisher.publish(msg)
 
