@@ -1,0 +1,1 @@
+/root/training_ws_merge2/build/interfaces/rosidl_cmake/rosidl_cmake_export_typesupport_targets-extras.cmake

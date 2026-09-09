@@ -1,0 +1,1 @@
+/root/training_ws_merge2/src/build/interfaces/ament_cmake_core/interfacesConfig.cmake

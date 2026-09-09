@@ -1,0 +1,1 @@
+/root/training_ws_merge2/src/build/interfaces/rosidl_generator_rs/interfaces/rust/src/action.rs

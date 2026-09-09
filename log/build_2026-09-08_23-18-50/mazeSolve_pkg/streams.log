@@ -1,0 +1,53 @@
+[1.829s] Invoking command in '/root/training_ws_merge2/build/mazeSolve_pkg': PYTHONPATH=/root/training_ws_merge2/build/mazeSolve_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/root/training_ws_merge2/install/mazeSolve_pkg/lib/python3.12/site-packages:/root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages:/root/training_ws_merge2/build/maze_control:/root/training_ws_merge2/install/maze_control/lib/python3.12/site-packages:/root/training_ws_merge2/build/mazeSolve_pkg:/root/training_ws_merge2/install/mazeSolve_pkg/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /root/training_ws_merge2/build/mazeSolve_pkg/build
+[2.382s] running develop
+[2.748s] Removing /root/training_ws_merge2/install/mazeSolve_pkg/lib/python3.12/site-packages/mazeSolve-pkg.egg-link (link to .)
+[2.830s] Invoked command in '/root/training_ws_merge2/build/mazeSolve_pkg' returned '0': PYTHONPATH=/root/training_ws_merge2/build/mazeSolve_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/root/training_ws_merge2/install/mazeSolve_pkg/lib/python3.12/site-packages:/root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages:/root/training_ws_merge2/build/maze_control:/root/training_ws_merge2/install/maze_control/lib/python3.12/site-packages:/root/training_ws_merge2/build/mazeSolve_pkg:/root/training_ws_merge2/install/mazeSolve_pkg/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /root/training_ws_merge2/build/mazeSolve_pkg/build
+[2.832s] Invoking command in '/root/training_ws_merge2/src/mazeSolve_pkg': PYTHONPATH=/root/training_ws_merge2/build/mazeSolve_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/root/training_ws_merge2/install/mazeSolve_pkg/lib/python3.12/site-packages:/root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages:/root/training_ws_merge2/build/maze_control:/root/training_ws_merge2/install/maze_control/lib/python3.12/site-packages:/root/training_ws_merge2/build/mazeSolve_pkg:/root/training_ws_merge2/install/mazeSolve_pkg/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/mazeSolve_pkg build --build-base /root/training_ws_merge2/build/mazeSolve_pkg/build install --record /root/training_ws_merge2/build/mazeSolve_pkg/install.log --install-scripts $base/lib/mazeSolve_pkg --single-version-externally-managed install_data --force
+[3.441s] running egg_info
+[3.493s] writing ../../build/mazeSolve_pkg/mazeSolve_pkg.egg-info/PKG-INFO
+[3.493s] writing dependency_links to ../../build/mazeSolve_pkg/mazeSolve_pkg.egg-info/dependency_links.txt
+[3.494s] writing entry points to ../../build/mazeSolve_pkg/mazeSolve_pkg.egg-info/entry_points.txt
+[3.494s] writing requirements to ../../build/mazeSolve_pkg/mazeSolve_pkg.egg-info/requires.txt
+[3.495s] writing top-level names to ../../build/mazeSolve_pkg/mazeSolve_pkg.egg-info/top_level.txt
+[3.587s] reading manifest file '../../build/mazeSolve_pkg/mazeSolve_pkg.egg-info/SOURCES.txt'
+[3.589s] writing manifest file '../../build/mazeSolve_pkg/mazeSolve_pkg.egg-info/SOURCES.txt'
+[3.589s] running build
+[3.590s] running build_py
+[3.590s] creating /root/training_ws_merge2/build/mazeSolve_pkg/build
+[3.590s] creating /root/training_ws_merge2/build/mazeSolve_pkg/build/lib
+[3.590s] creating /root/training_ws_merge2/build/mazeSolve_pkg/build/lib/mazeSolve_pkg
+[3.591s] copying mazeSolve_pkg/pid_control.py -> /root/training_ws_merge2/build/mazeSolve_pkg/build/lib/mazeSolve_pkg
+[3.591s] copying mazeSolve_pkg/move_yaw_server.py -> /root/training_ws_merge2/build/mazeSolve_pkg/build/lib/mazeSolve_pkg
+[3.591s] copying mazeSolve_pkg/move_x_server.py -> /root/training_ws_merge2/build/mazeSolve_pkg/build/lib/mazeSolve_pkg
+[3.591s] copying mazeSolve_pkg/yawserver.py -> /root/training_ws_merge2/build/mazeSolve_pkg/build/lib/mazeSolve_pkg
+[3.592s] copying mazeSolve_pkg/__init__.py -> /root/training_ws_merge2/build/mazeSolve_pkg/build/lib/mazeSolve_pkg
+[3.592s] copying mazeSolve_pkg/yaw_client.py -> /root/training_ws_merge2/build/mazeSolve_pkg/build/lib/mazeSolve_pkg
+[3.593s] running install
+[3.607s] running install_lib
+[3.650s] creating /root/training_ws_merge2/install/mazeSolve_pkg/lib/python3.12/site-packages/mazeSolve_pkg
+[3.651s] copying /root/training_ws_merge2/build/mazeSolve_pkg/build/lib/mazeSolve_pkg/pid_control.py -> /root/training_ws_merge2/install/mazeSolve_pkg/lib/python3.12/site-packages/mazeSolve_pkg
+[3.651s] copying /root/training_ws_merge2/build/mazeSolve_pkg/build/lib/mazeSolve_pkg/move_yaw_server.py -> /root/training_ws_merge2/install/mazeSolve_pkg/lib/python3.12/site-packages/mazeSolve_pkg
+[3.652s] copying /root/training_ws_merge2/build/mazeSolve_pkg/build/lib/mazeSolve_pkg/move_x_server.py -> /root/training_ws_merge2/install/mazeSolve_pkg/lib/python3.12/site-packages/mazeSolve_pkg
+[3.653s] copying /root/training_ws_merge2/build/mazeSolve_pkg/build/lib/mazeSolve_pkg/yawserver.py -> /root/training_ws_merge2/install/mazeSolve_pkg/lib/python3.12/site-packages/mazeSolve_pkg
+[3.653s] copying /root/training_ws_merge2/build/mazeSolve_pkg/build/lib/mazeSolve_pkg/__init__.py -> /root/training_ws_merge2/install/mazeSolve_pkg/lib/python3.12/site-packages/mazeSolve_pkg
+[3.653s] copying /root/training_ws_merge2/build/mazeSolve_pkg/build/lib/mazeSolve_pkg/yaw_client.py -> /root/training_ws_merge2/install/mazeSolve_pkg/lib/python3.12/site-packages/mazeSolve_pkg
+[3.654s] byte-compiling /root/training_ws_merge2/install/mazeSolve_pkg/lib/python3.12/site-packages/mazeSolve_pkg/pid_control.py to pid_control.cpython-312.pyc
+[3.656s] byte-compiling /root/training_ws_merge2/install/mazeSolve_pkg/lib/python3.12/site-packages/mazeSolve_pkg/move_yaw_server.py to move_yaw_server.cpython-312.pyc
+[3.660s] byte-compiling /root/training_ws_merge2/install/mazeSolve_pkg/lib/python3.12/site-packages/mazeSolve_pkg/move_x_server.py to move_x_server.cpython-312.pyc
+[3.665s] byte-compiling /root/training_ws_merge2/install/mazeSolve_pkg/lib/python3.12/site-packages/mazeSolve_pkg/yawserver.py to yawserver.cpython-312.pyc
+[3.666s] byte-compiling /root/training_ws_merge2/install/mazeSolve_pkg/lib/python3.12/site-packages/mazeSolve_pkg/__init__.py to __init__.cpython-312.pyc
+[3.666s] byte-compiling /root/training_ws_merge2/install/mazeSolve_pkg/lib/python3.12/site-packages/mazeSolve_pkg/yaw_client.py to yaw_client.cpython-312.pyc
+[3.671s] running install_data
+[3.671s] copying resource/mazeSolve_pkg -> /root/training_ws_merge2/install/mazeSolve_pkg/share/ament_index/resource_index/packages
+[3.672s] copying package.xml -> /root/training_ws_merge2/install/mazeSolve_pkg/share/mazeSolve_pkg
+[3.672s] copying launch/launch.py -> /root/training_ws_merge2/install/mazeSolve_pkg/share/mazeSolve_pkg/launch
+[3.672s] running install_egg_info
+[3.721s] Copying ../../build/mazeSolve_pkg/mazeSolve_pkg.egg-info to /root/training_ws_merge2/install/mazeSolve_pkg/lib/python3.12/site-packages/mazeSolve_pkg-0.0.0-py3.12.egg-info
+[3.723s] running install_scripts
+[4.010s] Installing action_x_server script to /root/training_ws_merge2/install/mazeSolve_pkg/lib/mazeSolve_pkg
+[4.011s] Installing yaw_client script to /root/training_ws_merge2/install/mazeSolve_pkg/lib/mazeSolve_pkg
+[4.011s] Installing yaw_pid_server script to /root/training_ws_merge2/install/mazeSolve_pkg/lib/mazeSolve_pkg
+[4.012s] Installing yawserver script to /root/training_ws_merge2/install/mazeSolve_pkg/lib/mazeSolve_pkg
+[4.012s] Installing yawserverNew script to /root/training_ws_merge2/install/mazeSolve_pkg/lib/mazeSolve_pkg
+[4.013s] writing list of installed files to '/root/training_ws_merge2/build/mazeSolve_pkg/install.log'
+[4.102s] Invoked command in '/root/training_ws_merge2/src/mazeSolve_pkg' returned '0': PYTHONPATH=/root/training_ws_merge2/build/mazeSolve_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/root/training_ws_merge2/install/mazeSolve_pkg/lib/python3.12/site-packages:/root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages:/root/training_ws_merge2/build/maze_control:/root/training_ws_merge2/install/maze_control/lib/python3.12/site-packages:/root/training_ws_merge2/build/mazeSolve_pkg:/root/training_ws_merge2/install/mazeSolve_pkg/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/mazeSolve_pkg build --build-base /root/training_ws_merge2/build/mazeSolve_pkg/build install --record /root/training_ws_merge2/build/mazeSolve_pkg/install.log --install-scripts $base/lib/mazeSolve_pkg --single-version-externally-managed install_data --force

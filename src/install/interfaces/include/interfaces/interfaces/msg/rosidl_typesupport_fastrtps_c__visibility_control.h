@@ -1,0 +1,1 @@
+/root/training_ws_merge2/src/build/interfaces/rosidl_typesupport_fastrtps_c/interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h

@@ -1,0 +1,28 @@
+running develop
+running egg_info
+creating mazeSolve_pkg.egg-info
+writing mazeSolve_pkg.egg-info/PKG-INFO
+writing dependency_links to mazeSolve_pkg.egg-info/dependency_links.txt
+writing entry points to mazeSolve_pkg.egg-info/entry_points.txt
+writing requirements to mazeSolve_pkg.egg-info/requires.txt
+writing top-level names to mazeSolve_pkg.egg-info/top_level.txt
+writing manifest file 'mazeSolve_pkg.egg-info/SOURCES.txt'
+reading manifest file 'mazeSolve_pkg.egg-info/SOURCES.txt'
+writing manifest file 'mazeSolve_pkg.egg-info/SOURCES.txt'
+running build_ext
+Creating /root/training_ws_merge2/src/install/mazeSolve_pkg/lib/python3.12/site-packages/mazeSolve-pkg.egg-link (link to .)
+Installing action_x_server script to /root/training_ws_merge2/src/install/mazeSolve_pkg/lib/mazeSolve_pkg
+Installing yaw_client script to /root/training_ws_merge2/src/install/mazeSolve_pkg/lib/mazeSolve_pkg
+Installing yaw_pid_server script to /root/training_ws_merge2/src/install/mazeSolve_pkg/lib/mazeSolve_pkg
+Installing yawserver script to /root/training_ws_merge2/src/install/mazeSolve_pkg/lib/mazeSolve_pkg
+Installing yawserverNew script to /root/training_ws_merge2/src/install/mazeSolve_pkg/lib/mazeSolve_pkg
+
+Installed /root/training_ws_merge2/src/build/mazeSolve_pkg
+running symlink_data
+creating /root/training_ws_merge2/src/install/mazeSolve_pkg/share/ament_index
+creating /root/training_ws_merge2/src/install/mazeSolve_pkg/share/ament_index/resource_index
+creating /root/training_ws_merge2/src/install/mazeSolve_pkg/share/ament_index/resource_index/packages
+symbolically linking /root/training_ws_merge2/src/build/mazeSolve_pkg/resource/mazeSolve_pkg -> /root/training_ws_merge2/src/install/mazeSolve_pkg/share/ament_index/resource_index/packages
+symbolically linking /root/training_ws_merge2/src/build/mazeSolve_pkg/package.xml -> /root/training_ws_merge2/src/install/mazeSolve_pkg/share/mazeSolve_pkg
+creating /root/training_ws_merge2/src/install/mazeSolve_pkg/share/mazeSolve_pkg/launch
+symbolically linking /root/training_ws_merge2/src/build/mazeSolve_pkg/launch/launch.py -> /root/training_ws_merge2/src/install/mazeSolve_pkg/share/mazeSolve_pkg/launch

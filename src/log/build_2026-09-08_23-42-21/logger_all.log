@@ -1,0 +1,233 @@
+[0.191s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'interfaces', 'mazeSolve_pkg']
+[0.191s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['interfaces', 'mazeSolve_pkg'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7f8f1a66aff0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f8f1a792240>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f8f1a792240>>, mixin_verb=('build',))
+[0.252s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.253s] INFO:colcon.colcon_metadata.package_discovery.colcon_meta:Using configuration from '/root/.colcon/metadata/default/Gazebo.meta'
+[0.253s] INFO:colcon.colcon_metadata.package_discovery.colcon_meta:Using configuration from '/root/.colcon/metadata/default/fastdds.meta'
+[0.254s] INFO:colcon.colcon_metadata.package_discovery.colcon_meta:Using configuration from '/root/.colcon/metadata/default/fastrtps.meta'
+[0.254s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.254s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.254s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.254s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.254s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.254s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/root/training_ws_merge2/src'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(MIA26_phase2_ros_contest) by extensions ['ignore', 'ignore_ament_install']
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(MIA26_phase2_ros_contest) by extension 'ignore'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(MIA26_phase2_ros_contest) by extension 'ignore_ament_install'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(MIA26_phase2_ros_contest) by extensions ['colcon_pkg']
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(MIA26_phase2_ros_contest) by extension 'colcon_pkg'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(MIA26_phase2_ros_contest) by extensions ['colcon_meta']
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(MIA26_phase2_ros_contest) by extension 'colcon_meta'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(MIA26_phase2_ros_contest) by extensions ['ros']
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(MIA26_phase2_ros_contest) by extension 'ros'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(MIA26_phase2_ros_contest) by extensions ['cmake', 'python']
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(MIA26_phase2_ros_contest) by extension 'cmake'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(MIA26_phase2_ros_contest) by extension 'python'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(MIA26_phase2_ros_contest) by extensions ['python_setup_py']
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(MIA26_phase2_ros_contest) by extension 'python_setup_py'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(MIA26_phase2_ros_contest/assets) by extensions ['ignore', 'ignore_ament_install']
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(MIA26_phase2_ros_contest/assets) by extension 'ignore'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(MIA26_phase2_ros_contest/assets) by extension 'ignore_ament_install'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(MIA26_phase2_ros_contest/assets) by extensions ['colcon_pkg']
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(MIA26_phase2_ros_contest/assets) by extension 'colcon_pkg'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(MIA26_phase2_ros_contest/assets) by extensions ['colcon_meta']
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(MIA26_phase2_ros_contest/assets) by extension 'colcon_meta'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(MIA26_phase2_ros_contest/assets) by extensions ['ros']
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(MIA26_phase2_ros_contest/assets) by extension 'ros'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(MIA26_phase2_ros_contest/assets) by extensions ['cmake', 'python']
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(MIA26_phase2_ros_contest/assets) by extension 'cmake'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(MIA26_phase2_ros_contest/assets) by extension 'python'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(MIA26_phase2_ros_contest/assets) by extensions ['python_setup_py']
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(MIA26_phase2_ros_contest/assets) by extension 'python_setup_py'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(MIA26_phase2_ros_contest/maze_control) by extensions ['ignore', 'ignore_ament_install']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(MIA26_phase2_ros_contest/maze_control) by extension 'ignore'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(MIA26_phase2_ros_contest/maze_control) by extension 'ignore_ament_install'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(MIA26_phase2_ros_contest/maze_control) by extensions ['colcon_pkg']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(MIA26_phase2_ros_contest/maze_control) by extension 'colcon_pkg'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(MIA26_phase2_ros_contest/maze_control) by extensions ['colcon_meta']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(MIA26_phase2_ros_contest/maze_control) by extension 'colcon_meta'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(MIA26_phase2_ros_contest/maze_control) by extensions ['ros']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(MIA26_phase2_ros_contest/maze_control) by extension 'ros'
+[0.301s] DEBUG:colcon.colcon_core.package_identification:Package 'MIA26_phase2_ros_contest/maze_control' with type 'ros.ament_python' and name 'maze_control'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(interfaces) by extension 'ignore'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(interfaces) by extension 'ignore_ament_install'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(interfaces) by extensions ['colcon_pkg']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(interfaces) by extension 'colcon_pkg'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(interfaces) by extensions ['colcon_meta']
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(interfaces) by extension 'colcon_meta'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(interfaces) by extensions ['ros']
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(interfaces) by extension 'ros'
+[0.303s] DEBUG:colcon.colcon_core.package_identification:Package 'interfaces' with type 'ros.ament_cmake' and name 'interfaces'
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(mazeSolve_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(mazeSolve_pkg) by extension 'ignore'
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(mazeSolve_pkg) by extension 'ignore_ament_install'
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(mazeSolve_pkg) by extensions ['colcon_pkg']
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(mazeSolve_pkg) by extension 'colcon_pkg'
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(mazeSolve_pkg) by extensions ['colcon_meta']
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(mazeSolve_pkg) by extension 'colcon_meta'
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(mazeSolve_pkg) by extensions ['ros']
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(mazeSolve_pkg) by extension 'ros'
+[0.306s] DEBUG:colcon.colcon_core.package_identification:Package 'mazeSolve_pkg' with type 'ros.ament_python' and name 'mazeSolve_pkg'
+[0.306s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.307s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.307s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.307s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.307s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.339s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'maze_control' in 'MIA26_phase2_ros_contest/maze_control'
+[0.340s] Level 5:colcon.colcon_core.verb:set package 'interfaces' build argument 'cmake_args' from command line to 'None'
+[0.340s] Level 5:colcon.colcon_core.verb:set package 'interfaces' build argument 'cmake_target' from command line to 'None'
+[0.340s] Level 5:colcon.colcon_core.verb:set package 'interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.340s] Level 5:colcon.colcon_core.verb:set package 'interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.340s] Level 5:colcon.colcon_core.verb:set package 'interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.341s] Level 5:colcon.colcon_core.verb:set package 'interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.341s] Level 5:colcon.colcon_core.verb:set package 'interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.341s] Level 5:colcon.colcon_core.verb:set package 'interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.341s] Level 5:colcon.colcon_core.verb:set package 'interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.341s] DEBUG:colcon.colcon_core.verb:Building package 'interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/root/training_ws_merge2/src/build/interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/root/training_ws_merge2/src/install/interfaces', 'merge_install': False, 'path': '/root/training_ws_merge2/src/interfaces', 'symlink_install': False, 'test_result_base': None}
+[0.341s] Level 5:colcon.colcon_core.verb:set package 'mazeSolve_pkg' build argument 'cmake_args' from command line to 'None'
+[0.341s] Level 5:colcon.colcon_core.verb:set package 'mazeSolve_pkg' build argument 'cmake_target' from command line to 'None'
+[0.342s] Level 5:colcon.colcon_core.verb:set package 'mazeSolve_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.342s] Level 5:colcon.colcon_core.verb:set package 'mazeSolve_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.342s] Level 5:colcon.colcon_core.verb:set package 'mazeSolve_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[0.342s] Level 5:colcon.colcon_core.verb:set package 'mazeSolve_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[0.342s] Level 5:colcon.colcon_core.verb:set package 'mazeSolve_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[0.342s] Level 5:colcon.colcon_core.verb:set package 'mazeSolve_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.342s] Level 5:colcon.colcon_core.verb:set package 'mazeSolve_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.342s] DEBUG:colcon.colcon_core.verb:Building package 'mazeSolve_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/root/training_ws_merge2/src/build/mazeSolve_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/root/training_ws_merge2/src/install/mazeSolve_pkg', 'merge_install': False, 'path': '/root/training_ws_merge2/src/mazeSolve_pkg', 'symlink_install': False, 'test_result_base': None}
+[0.342s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.345s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.346s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/root/training_ws_merge2/src/interfaces' with build type 'ament_cmake'
+[0.346s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/root/training_ws_merge2/src/interfaces'
+[0.350s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.350s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.350s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.372s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/root/training_ws_merge2/src/build/interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/training_ws_merge2/src/install/maze_control:/root/training_ws_merge2/src/install/mazeSolve_pkg:/root/training_ws_merge2/install/maze_control:/root/training_ws_merge2/install/mazeSolve_pkg:/root/training_ws/install/mazeSolve_pkg:/opt/ros/jazzy /usr/bin/cmake --build /root/training_ws_merge2/src/build/interfaces -- -j8 -l8
+[1.178s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/root/training_ws_merge2/src/build/interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/training_ws_merge2/src/install/maze_control:/root/training_ws_merge2/src/install/mazeSolve_pkg:/root/training_ws_merge2/install/maze_control:/root/training_ws_merge2/install/mazeSolve_pkg:/root/training_ws/install/mazeSolve_pkg:/opt/ros/jazzy /usr/bin/cmake --build /root/training_ws_merge2/src/build/interfaces -- -j8 -l8
+[1.199s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/root/training_ws_merge2/src/build/interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/training_ws_merge2/src/install/maze_control:/root/training_ws_merge2/src/install/mazeSolve_pkg:/root/training_ws_merge2/install/maze_control:/root/training_ws_merge2/install/mazeSolve_pkg:/root/training_ws/install/mazeSolve_pkg:/opt/ros/jazzy /usr/bin/cmake --install /root/training_ws_merge2/src/build/interfaces
+[1.354s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(interfaces)
+[1.355s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/root/training_ws_merge2/src/build/interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/training_ws_merge2/src/install/maze_control:/root/training_ws_merge2/src/install/mazeSolve_pkg:/root/training_ws_merge2/install/maze_control:/root/training_ws_merge2/install/mazeSolve_pkg:/root/training_ws/install/mazeSolve_pkg:/opt/ros/jazzy /usr/bin/cmake --install /root/training_ws_merge2/src/build/interfaces
+[1.365s] Level 1:colcon.colcon_core.environment:checking '/root/training_ws_merge2/src/install/interfaces' for CMake module files
+[1.368s] Level 1:colcon.colcon_core.environment:checking '/root/training_ws_merge2/src/install/interfaces' for CMake config files
+[1.371s] Level 1:colcon.colcon_core.shell:create_environment_hook('interfaces', 'cmake_prefix_path')
+[1.372s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/training_ws_merge2/src/install/interfaces/share/interfaces/hook/cmake_prefix_path.ps1'
+[1.374s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/training_ws_merge2/src/install/interfaces/share/interfaces/hook/cmake_prefix_path.dsv'
+[1.376s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/training_ws_merge2/src/install/interfaces/share/interfaces/hook/cmake_prefix_path.sh'
+[1.378s] Level 1:colcon.colcon_core.environment:checking '/root/training_ws_merge2/src/install/interfaces/lib'
+[1.379s] Level 1:colcon.colcon_core.shell:create_environment_hook('interfaces', 'ld_library_path_lib')
+[1.379s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/training_ws_merge2/src/install/interfaces/share/interfaces/hook/ld_library_path_lib.ps1'
+[1.381s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/training_ws_merge2/src/install/interfaces/share/interfaces/hook/ld_library_path_lib.dsv'
+[1.382s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/training_ws_merge2/src/install/interfaces/share/interfaces/hook/ld_library_path_lib.sh'
+[1.384s] Level 1:colcon.colcon_core.environment:checking '/root/training_ws_merge2/src/install/interfaces/bin'
+[1.384s] Level 1:colcon.colcon_core.environment:checking '/root/training_ws_merge2/src/install/interfaces/lib/pkgconfig/interfaces.pc'
+[1.391s] Level 1:colcon.colcon_core.environment:checking '/root/training_ws_merge2/src/install/interfaces/lib/python3.12/site-packages'
+[1.392s] Level 1:colcon.colcon_core.shell:create_environment_hook('interfaces', 'pythonpath')
+[1.392s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/training_ws_merge2/src/install/interfaces/share/interfaces/hook/pythonpath.ps1'
+[1.393s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/training_ws_merge2/src/install/interfaces/share/interfaces/hook/pythonpath.dsv'
+[1.394s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/training_ws_merge2/src/install/interfaces/share/interfaces/hook/pythonpath.sh'
+[1.395s] Level 1:colcon.colcon_core.environment:checking '/root/training_ws_merge2/src/install/interfaces/bin'
+[1.395s] INFO:colcon.colcon_core.shell:Creating package script '/root/training_ws_merge2/src/install/interfaces/share/interfaces/package.ps1'
+[1.397s] INFO:colcon.colcon_core.shell:Creating package descriptor '/root/training_ws_merge2/src/install/interfaces/share/interfaces/package.dsv'
+[1.397s] INFO:colcon.colcon_core.shell:Creating package script '/root/training_ws_merge2/src/install/interfaces/share/interfaces/package.sh'
+[1.398s] INFO:colcon.colcon_core.shell:Creating package script '/root/training_ws_merge2/src/install/interfaces/share/interfaces/package.bash'
+[1.399s] INFO:colcon.colcon_core.shell:Creating package script '/root/training_ws_merge2/src/install/interfaces/share/interfaces/package.zsh'
+[1.400s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/root/training_ws_merge2/src/install/interfaces/share/colcon-core/packages/interfaces)
+[1.402s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(interfaces)
+[1.402s] Level 1:colcon.colcon_core.environment:checking '/root/training_ws_merge2/src/install/interfaces' for CMake module files
+[1.403s] Level 1:colcon.colcon_core.environment:checking '/root/training_ws_merge2/src/install/interfaces' for CMake config files
+[1.405s] Level 1:colcon.colcon_core.shell:create_environment_hook('interfaces', 'cmake_prefix_path')
+[1.405s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/training_ws_merge2/src/install/interfaces/share/interfaces/hook/cmake_prefix_path.ps1'
+[1.406s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/training_ws_merge2/src/install/interfaces/share/interfaces/hook/cmake_prefix_path.dsv'
+[1.407s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/training_ws_merge2/src/install/interfaces/share/interfaces/hook/cmake_prefix_path.sh'
+[1.408s] Level 1:colcon.colcon_core.environment:checking '/root/training_ws_merge2/src/install/interfaces/lib'
+[1.408s] Level 1:colcon.colcon_core.shell:create_environment_hook('interfaces', 'ld_library_path_lib')
+[1.408s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/training_ws_merge2/src/install/interfaces/share/interfaces/hook/ld_library_path_lib.ps1'
+[1.409s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/training_ws_merge2/src/install/interfaces/share/interfaces/hook/ld_library_path_lib.dsv'
+[1.409s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/training_ws_merge2/src/install/interfaces/share/interfaces/hook/ld_library_path_lib.sh'
+[1.410s] Level 1:colcon.colcon_core.environment:checking '/root/training_ws_merge2/src/install/interfaces/bin'
+[1.410s] Level 1:colcon.colcon_core.environment:checking '/root/training_ws_merge2/src/install/interfaces/lib/pkgconfig/interfaces.pc'
+[1.410s] Level 1:colcon.colcon_core.environment:checking '/root/training_ws_merge2/src/install/interfaces/lib/python3.12/site-packages'
+[1.411s] Level 1:colcon.colcon_core.shell:create_environment_hook('interfaces', 'pythonpath')
+[1.411s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/training_ws_merge2/src/install/interfaces/share/interfaces/hook/pythonpath.ps1'
+[1.412s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/training_ws_merge2/src/install/interfaces/share/interfaces/hook/pythonpath.dsv'
+[1.412s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/training_ws_merge2/src/install/interfaces/share/interfaces/hook/pythonpath.sh'
+[1.413s] Level 1:colcon.colcon_core.environment:checking '/root/training_ws_merge2/src/install/interfaces/bin'
+[1.414s] INFO:colcon.colcon_core.shell:Creating package script '/root/training_ws_merge2/src/install/interfaces/share/interfaces/package.ps1'
+[1.415s] INFO:colcon.colcon_core.shell:Creating package descriptor '/root/training_ws_merge2/src/install/interfaces/share/interfaces/package.dsv'
+[1.415s] INFO:colcon.colcon_core.shell:Creating package script '/root/training_ws_merge2/src/install/interfaces/share/interfaces/package.sh'
+[1.416s] INFO:colcon.colcon_core.shell:Creating package script '/root/training_ws_merge2/src/install/interfaces/share/interfaces/package.bash'
+[1.417s] INFO:colcon.colcon_core.shell:Creating package script '/root/training_ws_merge2/src/install/interfaces/share/interfaces/package.zsh'
+[1.417s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/root/training_ws_merge2/src/install/interfaces/share/colcon-core/packages/interfaces)
+[1.418s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/root/training_ws_merge2/src/mazeSolve_pkg' with build type 'ament_python'
+[1.418s] Level 1:colcon.colcon_core.shell:create_environment_hook('mazeSolve_pkg', 'ament_prefix_path')
+[1.418s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/training_ws_merge2/src/install/mazeSolve_pkg/share/mazeSolve_pkg/hook/ament_prefix_path.ps1'
+[1.420s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/training_ws_merge2/src/install/mazeSolve_pkg/share/mazeSolve_pkg/hook/ament_prefix_path.dsv'
+[1.421s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/training_ws_merge2/src/install/mazeSolve_pkg/share/mazeSolve_pkg/hook/ament_prefix_path.sh'
+[1.422s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.422s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.865s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/root/training_ws_merge2/src/mazeSolve_pkg'
+[1.866s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.866s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.937s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools commands: bdist_egg, editable_wheel, check, sdist, develop, clean, setopt, init_catalog, dist_info, compile_catalog, bdist_rpm, bdist_dumb, egg_info, upload, build, build_py, install_egg_info, bdist, update_catalog, build_ext, symlink_data, rotate, easy_install, test, upload_docs, saveopts, install_headers, build_scripts, build_clib, install_data, register, extract_messages, install_lib, install, alias, install_scripts
+[2.940s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/root/training_ws_merge2/src/mazeSolve_pkg': PYTHONPATH=/root/training_ws_merge2/src/build/mazeSolve_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/root/training_ws_merge2/src/install/mazeSolve_pkg/lib/python3.12/site-packages:/root/training_ws_merge2/src/install/interfaces/lib/python3.12/site-packages:/root/training_ws_merge2/build/maze_control:/root/training_ws_merge2/build/mazeSolve_pkg:/root/training_ws_merge2/src/build/maze_control:/root/training_ws_merge2/src/build/mazeSolve_pkg:/root/training_ws_merge2/src/install/maze_control/lib/python3.12/site-packages:/root/training_ws_merge2/src/install/mazeSolve_pkg/lib/python3.12/site-packages:/root/training_ws_merge2/install/maze_control/lib/python3.12/site-packages:/root/training_ws_merge2/install/mazeSolve_pkg/lib/python3.12/site-packages:/root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages:/root/training_ws/install/maze_control/lib/python3.12/site-packages:/root/training_ws/install/mazeSolve_pkg/lib/python3.12/site-packages:/root/training_ws/install/interfaces/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/mazeSolve_pkg build --build-base /root/training_ws_merge2/src/build/mazeSolve_pkg/build install --record /root/training_ws_merge2/src/build/mazeSolve_pkg/install.log --install-scripts $base/lib/mazeSolve_pkg --single-version-externally-managed install_data
+[3.865s] Level 1:colcon.colcon_core.environment:checking '/root/training_ws_merge2/src/install/mazeSolve_pkg' for CMake module files
+[3.866s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/root/training_ws_merge2/src/mazeSolve_pkg' returned '0': PYTHONPATH=/root/training_ws_merge2/src/build/mazeSolve_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/root/training_ws_merge2/src/install/mazeSolve_pkg/lib/python3.12/site-packages:/root/training_ws_merge2/src/install/interfaces/lib/python3.12/site-packages:/root/training_ws_merge2/build/maze_control:/root/training_ws_merge2/build/mazeSolve_pkg:/root/training_ws_merge2/src/build/maze_control:/root/training_ws_merge2/src/build/mazeSolve_pkg:/root/training_ws_merge2/src/install/maze_control/lib/python3.12/site-packages:/root/training_ws_merge2/src/install/mazeSolve_pkg/lib/python3.12/site-packages:/root/training_ws_merge2/install/maze_control/lib/python3.12/site-packages:/root/training_ws_merge2/install/mazeSolve_pkg/lib/python3.12/site-packages:/root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages:/root/training_ws/install/maze_control/lib/python3.12/site-packages:/root/training_ws/install/mazeSolve_pkg/lib/python3.12/site-packages:/root/training_ws/install/interfaces/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/mazeSolve_pkg build --build-base /root/training_ws_merge2/src/build/mazeSolve_pkg/build install --record /root/training_ws_merge2/src/build/mazeSolve_pkg/install.log --install-scripts $base/lib/mazeSolve_pkg --single-version-externally-managed install_data
+[3.867s] Level 1:colcon.colcon_core.environment:checking '/root/training_ws_merge2/src/install/mazeSolve_pkg' for CMake config files
+[3.868s] Level 1:colcon.colcon_core.environment:checking '/root/training_ws_merge2/src/install/mazeSolve_pkg/lib'
+[3.868s] Level 1:colcon.colcon_core.environment:checking '/root/training_ws_merge2/src/install/mazeSolve_pkg/bin'
+[3.868s] Level 1:colcon.colcon_core.environment:checking '/root/training_ws_merge2/src/install/mazeSolve_pkg/lib/pkgconfig/mazeSolve_pkg.pc'
+[3.869s] Level 1:colcon.colcon_core.environment:checking '/root/training_ws_merge2/src/install/mazeSolve_pkg/lib/python3.12/site-packages'
+[3.869s] Level 1:colcon.colcon_core.shell:create_environment_hook('mazeSolve_pkg', 'pythonpath')
+[3.869s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/training_ws_merge2/src/install/mazeSolve_pkg/share/mazeSolve_pkg/hook/pythonpath.ps1'
+[3.870s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/training_ws_merge2/src/install/mazeSolve_pkg/share/mazeSolve_pkg/hook/pythonpath.dsv'
+[3.871s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/training_ws_merge2/src/install/mazeSolve_pkg/share/mazeSolve_pkg/hook/pythonpath.sh'
+[3.872s] Level 1:colcon.colcon_core.environment:checking '/root/training_ws_merge2/src/install/mazeSolve_pkg/bin'
+[3.872s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mazeSolve_pkg)
+[3.872s] INFO:colcon.colcon_core.shell:Creating package script '/root/training_ws_merge2/src/install/mazeSolve_pkg/share/mazeSolve_pkg/package.ps1'
+[3.874s] INFO:colcon.colcon_core.shell:Creating package descriptor '/root/training_ws_merge2/src/install/mazeSolve_pkg/share/mazeSolve_pkg/package.dsv'
+[3.875s] INFO:colcon.colcon_core.shell:Creating package script '/root/training_ws_merge2/src/install/mazeSolve_pkg/share/mazeSolve_pkg/package.sh'
+[3.875s] INFO:colcon.colcon_core.shell:Creating package script '/root/training_ws_merge2/src/install/mazeSolve_pkg/share/mazeSolve_pkg/package.bash'
+[3.876s] INFO:colcon.colcon_core.shell:Creating package script '/root/training_ws_merge2/src/install/mazeSolve_pkg/share/mazeSolve_pkg/package.zsh'
+[3.876s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/root/training_ws_merge2/src/install/mazeSolve_pkg/share/colcon-core/packages/mazeSolve_pkg)
+[3.877s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[3.877s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[3.877s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[3.877s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[3.889s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[3.889s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[3.889s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[3.890s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[3.896s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.Spawn.ExecFailed: /usr/bin/dbus-launch terminated abnormally without any error message
+[3.897s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[3.898s] INFO:colcon.colcon_core.shell:Creating prefix script '/root/training_ws_merge2/src/install/local_setup.ps1'
+[3.900s] INFO:colcon.colcon_core.shell:Creating prefix util module '/root/training_ws_merge2/src/install/_local_setup_util_ps1.py'
+[3.903s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/root/training_ws_merge2/src/install/setup.ps1'
+[3.906s] INFO:colcon.colcon_core.shell:Creating prefix script '/root/training_ws_merge2/src/install/local_setup.sh'
+[3.907s] INFO:colcon.colcon_core.shell:Creating prefix util module '/root/training_ws_merge2/src/install/_local_setup_util_sh.py'
+[3.909s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/root/training_ws_merge2/src/install/setup.sh'
+[3.911s] INFO:colcon.colcon_core.shell:Creating prefix script '/root/training_ws_merge2/src/install/local_setup.bash'
+[3.912s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/root/training_ws_merge2/src/install/setup.bash'
+[3.914s] INFO:colcon.colcon_core.shell:Creating prefix script '/root/training_ws_merge2/src/install/local_setup.zsh'
+[3.914s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/root/training_ws_merge2/src/install/setup.zsh'

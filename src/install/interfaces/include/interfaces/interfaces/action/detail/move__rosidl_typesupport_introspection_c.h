@@ -1,0 +1,1 @@
+/root/training_ws_merge2/src/build/interfaces/rosidl_typesupport_introspection_c/interfaces/action/detail/move__rosidl_typesupport_introspection_c.h

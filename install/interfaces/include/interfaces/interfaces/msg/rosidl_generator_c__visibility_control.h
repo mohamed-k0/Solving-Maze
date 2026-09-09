@@ -1,0 +1,1 @@
+/root/training_ws_merge2/build/interfaces/rosidl_generator_c/interfaces/msg/rosidl_generator_c__visibility_control.h

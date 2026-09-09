@@ -1,0 +1,34 @@
+[2.496s] Invoking command in '/root/training_ws_merge2/src/build/maze_control': PYTHONPATH=/root/training_ws_merge2/src/build/maze_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/root/training_ws_merge2/src/install/maze_control/lib/python3.12/site-packages:/root/training_ws_merge2/src/install/interfaces/lib/python3.12/site-packages:/root/training_ws_merge2/src/install/maze_control/lib/python3.12/site-packages:/root/training_ws_merge2/src/install/mazeSolve_pkg/lib/python3.12/site-packages:/root/training_ws_merge2/install/maze_control/lib/python3.12/site-packages:/root/training_ws_merge2/install/mazeSolve_pkg/lib/python3.12/site-packages:/root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages:/root/training_ws/install/maze_control/lib/python3.12/site-packages:/root/training_ws/install/mazeSolve_pkg/lib/python3.12/site-packages:/root/training_ws/install/interfaces/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /root/training_ws_merge2/src/build/maze_control/build --no-deps symlink_data
+[3.098s] running develop
+[3.491s] running egg_info
+[3.492s] creating maze_control.egg-info
+[3.531s] writing maze_control.egg-info/PKG-INFO
+[3.532s] writing dependency_links to maze_control.egg-info/dependency_links.txt
+[3.533s] writing entry points to maze_control.egg-info/entry_points.txt
+[3.533s] writing requirements to maze_control.egg-info/requires.txt
+[3.534s] writing top-level names to maze_control.egg-info/top_level.txt
+[3.534s] writing manifest file 'maze_control.egg-info/SOURCES.txt'
+[3.619s] reading manifest file 'maze_control.egg-info/SOURCES.txt'
+[3.620s] writing manifest file 'maze_control.egg-info/SOURCES.txt'
+[3.664s] running build_ext
+[3.664s] Creating /root/training_ws_merge2/src/install/maze_control/lib/python3.12/site-packages/maze-control.egg-link (link to .)
+[3.666s] Installing maze_timer_node script to /root/training_ws_merge2/src/install/maze_control/lib/maze_control
+[3.666s] Installing wall_retraction_service script to /root/training_ws_merge2/src/install/maze_control/lib/maze_control
+[3.667s] 
+[3.668s] Installed /root/training_ws_merge2/src/build/maze_control
+[3.668s] running symlink_data
+[3.668s] creating /root/training_ws_merge2/src/install/maze_control/share/ament_index
+[3.669s] creating /root/training_ws_merge2/src/install/maze_control/share/ament_index/resource_index
+[3.669s] creating /root/training_ws_merge2/src/install/maze_control/share/ament_index/resource_index/packages
+[3.669s] symbolically linking /root/training_ws_merge2/src/build/maze_control/resource/maze_control -> /root/training_ws_merge2/src/install/maze_control/share/ament_index/resource_index/packages
+[3.669s] symbolically linking /root/training_ws_merge2/src/build/maze_control/package.xml -> /root/training_ws_merge2/src/install/maze_control/share/maze_control
+[3.670s] creating /root/training_ws_merge2/src/install/maze_control/share/maze_control/launch
+[3.670s] symbolically linking /root/training_ws_merge2/src/build/maze_control/launch/maze_simulation_tb3.launch.py -> /root/training_ws_merge2/src/install/maze_control/share/maze_control/launch
+[3.670s] creating /root/training_ws_merge2/src/install/maze_control/share/maze_control/worlds
+[3.671s] symbolically linking /root/training_ws_merge2/src/build/maze_control/worlds/maze_world.sdf -> /root/training_ws_merge2/src/install/maze_control/share/maze_control/worlds
+[3.671s] creating /root/training_ws_merge2/src/install/maze_control/share/maze_control/config
+[3.671s] symbolically linking /root/training_ws_merge2/src/build/maze_control/config/bridge_config.yaml -> /root/training_ws_merge2/src/install/maze_control/share/maze_control/config
+[3.671s] symbolically linking /root/training_ws_merge2/src/build/maze_control/config/gui.config -> /root/training_ws_merge2/src/install/maze_control/share/maze_control/config
+[3.671s] creating /root/training_ws_merge2/src/install/maze_control/share/maze_control/models
+[3.672s] creating /root/training_ws_merge2/src/install/maze_control/share/maze_control/models/simple_robot
+[3.762s] Invoked command in '/root/training_ws_merge2/src/build/maze_control' returned '0': PYTHONPATH=/root/training_ws_merge2/src/build/maze_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/root/training_ws_merge2/src/install/maze_control/lib/python3.12/site-packages:/root/training_ws_merge2/src/install/interfaces/lib/python3.12/site-packages:/root/training_ws_merge2/src/install/maze_control/lib/python3.12/site-packages:/root/training_ws_merge2/src/install/mazeSolve_pkg/lib/python3.12/site-packages:/root/training_ws_merge2/install/maze_control/lib/python3.12/site-packages:/root/training_ws_merge2/install/mazeSolve_pkg/lib/python3.12/site-packages:/root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages:/root/training_ws/install/maze_control/lib/python3.12/site-packages:/root/training_ws/install/mazeSolve_pkg/lib/python3.12/site-packages:/root/training_ws/install/interfaces/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /root/training_ws_merge2/src/build/maze_control/build --no-deps symlink_data

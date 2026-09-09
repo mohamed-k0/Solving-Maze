@@ -1,0 +1,108 @@
+[0.000000] (-) TimerEvent: {}
+[0.001688] (-) JobUnselected: {'identifier': 'interfaces'}
+[0.001865] (-) JobUnselected: {'identifier': 'maze_control'}
+[0.002070] (mazeSolve_pkg) JobQueued: {'identifier': 'mazeSolve_pkg', 'dependencies': OrderedDict({'interfaces': '/root/training_ws_merge2/install/interfaces'})}
+[0.004164] (mazeSolve_pkg) JobStarted: {'identifier': 'mazeSolve_pkg'}
+[0.104035] (-) TimerEvent: {}
+[0.204612] (-) TimerEvent: {}
+[0.305008] (-) TimerEvent: {}
+[0.405575] (-) TimerEvent: {}
+[0.506408] (-) TimerEvent: {}
+[0.608291] (-) TimerEvent: {}
+[0.708868] (-) TimerEvent: {}
+[0.809530] (-) TimerEvent: {}
+[0.909974] (-) TimerEvent: {}
+[1.010463] (-) TimerEvent: {}
+[1.110953] (-) TimerEvent: {}
+[1.211360] (-) TimerEvent: {}
+[1.315440] (-) TimerEvent: {}
+[1.415832] (-) TimerEvent: {}
+[1.516477] (-) TimerEvent: {}
+[1.620482] (-) TimerEvent: {}
+[1.720929] (-) TimerEvent: {}
+[1.821420] (-) TimerEvent: {}
+[1.923024] (-) TimerEvent: {}
+[2.023527] (-) TimerEvent: {}
+[2.124244] (-) TimerEvent: {}
+[2.224808] (-) TimerEvent: {}
+[2.327061] (-) TimerEvent: {}
+[2.427609] (-) TimerEvent: {}
+[2.529923] (-) TimerEvent: {}
+[2.632221] (-) TimerEvent: {}
+[2.733834] (-) TimerEvent: {}
+[2.834233] (-) TimerEvent: {}
+[2.934686] (-) TimerEvent: {}
+[3.035127] (-) TimerEvent: {}
+[3.135645] (-) TimerEvent: {}
+[3.236090] (-) TimerEvent: {}
+[3.336546] (-) TimerEvent: {}
+[3.437239] (-) TimerEvent: {}
+[3.537679] (-) TimerEvent: {}
+[3.638241] (-) TimerEvent: {}
+[3.738717] (-) TimerEvent: {}
+[3.839213] (-) TimerEvent: {}
+[3.939644] (-) TimerEvent: {}
+[4.040363] (-) TimerEvent: {}
+[4.140840] (-) TimerEvent: {}
+[4.241456] (-) TimerEvent: {}
+[4.334927] (mazeSolve_pkg) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/root/training_ws_merge2/build/mazeSolve_pkg/build', '--no-deps', 'symlink_data'], 'cwd': '/root/training_ws_merge2/build/mazeSolve_pkg', 'env': {'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'HOSTNAME': 'machine', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/root/training_ws_merge2/install/interfaces/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/root', 'OLDPWD': '/root/training_ws_merge2', 'ROS_PYTHON_VERSION': '3', 'COLCON_PREFIX_PATH': '/root/training_ws_merge2/install', 'ROS_DISTRO': 'jazzy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'XDG_RUNTIME_DIR': '/tmp/runtime-root', 'DISPLAY': ':0.0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/root/training_ws_merge2/install/maze_control:/root/training_ws_merge2/install/mazeSolve_pkg:/root/training_ws_merge2/install/interfaces:/opt/ros/jazzy', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/root/training_ws_merge2/build/mazeSolve_pkg', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/root/training_ws_merge2/build/mazeSolve_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/root/training_ws_merge2/install/mazeSolve_pkg/lib/python3.12/site-packages:/root/training_ws_merge2/install/interfaces/lib/python3.12/site-packages:/root/training_ws_merge2/build/maze_control:/root/training_ws_merge2/install/maze_control/lib/python3.12/site-packages:/root/training_ws_merge2/build/mazeSolve_pkg:/root/training_ws_merge2/install/mazeSolve_pkg/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/root/training_ws_merge2/install/interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[4.343682] (-) TimerEvent: {}
+[4.444780] (-) TimerEvent: {}
+[4.547263] (-) TimerEvent: {}
+[4.651523] (-) TimerEvent: {}
+[4.754100] (-) TimerEvent: {}
+[4.854687] (-) TimerEvent: {}
+[4.955142] (-) TimerEvent: {}
+[5.057266] (-) TimerEvent: {}
+[5.157677] (-) TimerEvent: {}
+[5.258060] (-) TimerEvent: {}
+[5.358497] (-) TimerEvent: {}
+[5.458863] (-) TimerEvent: {}
+[5.559357] (-) TimerEvent: {}
+[5.659907] (-) TimerEvent: {}
+[5.760397] (-) TimerEvent: {}
+[5.861969] (-) TimerEvent: {}
+[5.950642] (mazeSolve_pkg) StdoutLine: {'line': b'running develop\n'}
+[5.962207] (-) TimerEvent: {}
+[6.062707] (-) TimerEvent: {}
+[6.165296] (-) TimerEvent: {}
+[6.266101] (-) TimerEvent: {}
+[6.366601] (-) TimerEvent: {}
+[6.468525] (-) TimerEvent: {}
+[6.569763] (-) TimerEvent: {}
+[6.641061] (mazeSolve_pkg) StdoutLine: {'line': b'running egg_info\n'}
+[6.642221] (mazeSolve_pkg) StdoutLine: {'line': b'creating mazeSolve_pkg.egg-info\n'}
+[6.669941] (-) TimerEvent: {}
+[6.702969] (mazeSolve_pkg) StdoutLine: {'line': b'writing mazeSolve_pkg.egg-info/PKG-INFO\n'}
+[6.703741] (mazeSolve_pkg) StdoutLine: {'line': b'writing dependency_links to mazeSolve_pkg.egg-info/dependency_links.txt\n'}
+[6.704934] (mazeSolve_pkg) StdoutLine: {'line': b'writing entry points to mazeSolve_pkg.egg-info/entry_points.txt\n'}
+[6.706033] (mazeSolve_pkg) StdoutLine: {'line': b'writing requirements to mazeSolve_pkg.egg-info/requires.txt\n'}
+[6.706492] (mazeSolve_pkg) StdoutLine: {'line': b'writing top-level names to mazeSolve_pkg.egg-info/top_level.txt\n'}
+[6.709298] (mazeSolve_pkg) StdoutLine: {'line': b"writing manifest file 'mazeSolve_pkg.egg-info/SOURCES.txt'\n"}
+[6.770776] (-) TimerEvent: {}
+[6.871493] (-) TimerEvent: {}
+[6.887234] (mazeSolve_pkg) StdoutLine: {'line': b"reading manifest file 'mazeSolve_pkg.egg-info/SOURCES.txt'\n"}
+[6.890088] (mazeSolve_pkg) StdoutLine: {'line': b"writing manifest file 'mazeSolve_pkg.egg-info/SOURCES.txt'\n"}
+[6.972174] (-) TimerEvent: {}
+[6.992052] (mazeSolve_pkg) StdoutLine: {'line': b'running build_ext\n'}
+[6.992821] (mazeSolve_pkg) StdoutLine: {'line': b'Creating /root/training_ws_merge2/install/mazeSolve_pkg/lib/python3.12/site-packages/mazeSolve-pkg.egg-link (link to .)\n'}
+[6.994721] (mazeSolve_pkg) StdoutLine: {'line': b'Installing action_x_server script to /root/training_ws_merge2/install/mazeSolve_pkg/lib/mazeSolve_pkg\n'}
+[6.996025] (mazeSolve_pkg) StdoutLine: {'line': b'Installing yaw_client script to /root/training_ws_merge2/install/mazeSolve_pkg/lib/mazeSolve_pkg\n'}
+[6.996637] (mazeSolve_pkg) StdoutLine: {'line': b'Installing yaw_pid_server script to /root/training_ws_merge2/install/mazeSolve_pkg/lib/mazeSolve_pkg\n'}
+[6.997202] (mazeSolve_pkg) StdoutLine: {'line': b'Installing yawserver script to /root/training_ws_merge2/install/mazeSolve_pkg/lib/mazeSolve_pkg\n'}
+[6.997697] (mazeSolve_pkg) StdoutLine: {'line': b'Installing yawserverNew script to /root/training_ws_merge2/install/mazeSolve_pkg/lib/mazeSolve_pkg\n'}
+[6.998135] (mazeSolve_pkg) StdoutLine: {'line': b'\n'}
+[6.999128] (mazeSolve_pkg) StdoutLine: {'line': b'Installed /root/training_ws_merge2/build/mazeSolve_pkg\n'}
+[6.999423] (mazeSolve_pkg) StdoutLine: {'line': b'running symlink_data\n'}
+[6.999675] (mazeSolve_pkg) StdoutLine: {'line': b'creating /root/training_ws_merge2/install/mazeSolve_pkg/share/ament_index\n'}
+[7.001015] (mazeSolve_pkg) StdoutLine: {'line': b'creating /root/training_ws_merge2/install/mazeSolve_pkg/share/ament_index/resource_index\n'}
+[7.001547] (mazeSolve_pkg) StdoutLine: {'line': b'creating /root/training_ws_merge2/install/mazeSolve_pkg/share/ament_index/resource_index/packages\n'}
+[7.001779] (mazeSolve_pkg) StdoutLine: {'line': b'symbolically linking /root/training_ws_merge2/build/mazeSolve_pkg/resource/mazeSolve_pkg -> /root/training_ws_merge2/install/mazeSolve_pkg/share/ament_index/resource_index/packages\n'}
+[7.002148] (mazeSolve_pkg) StdoutLine: {'line': b'symbolically linking /root/training_ws_merge2/build/mazeSolve_pkg/package.xml -> /root/training_ws_merge2/install/mazeSolve_pkg/share/mazeSolve_pkg\n'}
+[7.002454] (mazeSolve_pkg) StdoutLine: {'line': b'creating /root/training_ws_merge2/install/mazeSolve_pkg/share/mazeSolve_pkg/launch\n'}
+[7.003690] (mazeSolve_pkg) StdoutLine: {'line': b'symbolically linking /root/training_ws_merge2/build/mazeSolve_pkg/launch/launch.py -> /root/training_ws_merge2/install/mazeSolve_pkg/share/mazeSolve_pkg/launch\n'}
+[7.072362] (-) TimerEvent: {}
+[7.149367] (mazeSolve_pkg) CommandEnded: {'returncode': 0}
+[7.173086] (-) TimerEvent: {}
+[7.195513] (mazeSolve_pkg) JobEnded: {'identifier': 'mazeSolve_pkg', 'rc': 0}
+[7.197538] (-) EventReactorShutdown: {}
